@@ -15,7 +15,9 @@ application using a relational data-base, user authentication and payment-cart w
 
 1. :open_file_folder: ```Add template```: This task is simply add the template in the static folder and link within the code.
 2. :open_file_folder: ```Create authentication app```: This task will be used the CI authentication app. (If it is not working should be created from scratch).
+    1. This app have to have a form in which users can upload their photo, name, email and password.
 3. :open_file_folder: ```Create in-house admin app```: It will be needed to be created a in-house page for the owner of the application.
+
     :paperclip: There will be needed to be added:
     1. login required.
     2. form that will add all the inputs for a new tour.
