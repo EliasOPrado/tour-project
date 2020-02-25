@@ -3,6 +3,8 @@
 This is the final project of Code Institute. The main goal is to create a full-stack
 application using a relational data-base, user authentication and payment-cart with Stripe.
 
+Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functionality example.
+
 ## Tasks that should be accomplished
 
 | Task           | Time required | Assigned to   | Current Status | Finished |
