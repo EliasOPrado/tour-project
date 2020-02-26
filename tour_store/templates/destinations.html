@@ -23,11 +23,17 @@
   </div>
   <div class="col-md-5">
     <h3>{{destination.tour_title}}</h3>
+    <h6>{{destination.location}}</h6>
     <p>{{destination.description|slice:":200"}}...</p>
-    <p>Start: {{destination.booking_start_date}} Location: {{destination.location}}</p>
+    <p>Start: {{destination.booking_start_date}} </p>
     <p>Ends: {{destination.booking_end_date}}</p>
     <h3>€ {{destination.price}}</h3>
-    <a class="btn btn-primary" href="#">View Project
+
+    <a class="btn btn-primary" href="{% url 'destinationDetails' id=destination.id %}" > View Project
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+    <a class="btn btn-primary" href="" >Add To Cart
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
   </div>

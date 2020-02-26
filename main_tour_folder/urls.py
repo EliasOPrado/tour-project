@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main_view, name="index" ),
-    path('destinations/', views.destinations, name="destinations")
+    #Include tour_store app
+    path('store/', include("tour_store.urls"))
 ]
 
 if settings.DEBUG:
