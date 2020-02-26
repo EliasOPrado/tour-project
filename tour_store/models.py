@@ -5,7 +5,7 @@ from django.db import models
 
 class tour_destinations(models.Model):
     """This is a model to create destinations by the owner. """
-    author = models.CharField(max_length=200, unique=True)
+    author = models.CharField(max_length=200, unique=False)
     tour_title = models.CharField(max_length=250)
     description = models.TextField()
     image = models.ImageField(upload_to='tour_images', blank=True)

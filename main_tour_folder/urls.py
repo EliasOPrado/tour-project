@@ -19,5 +19,6 @@ from tour_store import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.test_view, name="index" )
+    path('', views.main_view, name="index" ),
+    path('destinations/', views.destinations, name="destinations")
 ]
