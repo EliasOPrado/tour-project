@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import tour_destinations
+from .models import Destinations
 
 # Register your models here.
-admin.site.register(tour_destinations)
+admin.site.register(Destinations)

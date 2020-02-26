@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class tour_destinations(models.Model):
+class Destinations(models.Model):
     """This is a model to create destinations by the owner. """
     author = models.CharField(max_length=200, unique=False)
     tour_title = models.CharField(max_length=250)
