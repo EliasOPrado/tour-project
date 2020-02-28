@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main_view, name="index" ),
     #Include tour_store app
-    path('store/', include("tour_store.urls"))
+    path('store/', include("tour_store.urls")),
+    path('cart/', include("cart.urls"))
 ]
 
 if settings.DEBUG:

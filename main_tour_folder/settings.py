@@ -67,6 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Will enter the cart app, then contexts.py and finally cart_contents function
+                'cart.contexts.cart_contents',
             ],
         },
     },
