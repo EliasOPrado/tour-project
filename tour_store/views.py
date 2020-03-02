@@ -12,4 +12,5 @@ def destinations(request):
 def destination_details(request, id):
     # Get a singular destination, or return a 404
     details= get_object_or_404(Destinations, pk=id)
+
     return render(request, 'details.html', {'details':details})
