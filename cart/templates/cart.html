@@ -1,41 +1,46 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% load bootstrap_tags %}
 
 {% block content %}
-<div class="row row-flex">
+<div class="container">
+  <br>
+  <div class="row row-flex">
     {% for item in cart_items %}
+    <!-- dont forget that in context.py in cart/ folder these items are apended:
+         cart_items.append({'id': id, 'quantity': quantity, 'destination': destination}) -->
 
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
-
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0 product" src="{{ item.image.url}}" alt="">
-        </a>
-
-        <div class="caption">
-            <h3>{{ item.tour_title }}</h3>
-
-            <p>{{ item.price }}</p>
-
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control">
-                            <div class="input-group-addon">{{item.quantity}}</div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                </form>
+    <div class="col-md-4">
+      <div class="card profile-card-1">
+        <img src="{{ item.destination.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.destination.tour_title }}</h5>
+          <p class="card-text">{{item.destination.description|slice:":100"}}...</p>
+          <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleInputAmount" class="sr-only">New Qty</label>
+              <div class="input-group">
+                <div class="input-group-addon">Qty</div>
+                <input name="quantity" type="number" min="1" max="999" class="form-control">
+                <div class="input-group-addon">{{item.quantity}}</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+          </form>
         </div>
-    </div>
-    {% endfor %}
-</div>
-<div class="row">
+      </div>
+  </div>
+
+      {% endfor %}
+
+  </div>
+    <br>
+  <div class="row">
     <p>Total</p>
     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    <a href="" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+  </div>
 </div>
 
 {% endblock %}
