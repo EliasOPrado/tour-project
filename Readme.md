@@ -13,10 +13,10 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
 |----------------|---------------|---------------|----------------|-----------|
 | 1. Add template | > two days  | Elias | done 24/02 | <ul><li>- [x] </li></ul>
 | 2. Create tour_app | > A week  | Elias | done 26/02 | <ul><li>- [x] </li></ul>
-| 3. Create in-house admin app  | > 3 weeks | Elias | in progress | <ul><li>- [ ] </li></ul>
-| 4. Create authentication app | > A week  | Elias | in progress | <ul><li>- [ ] </li></ul>
-| 5. Create cart app  | > 5 hours  | Elias | in progress | <ul><li>- [ ] </li></ul>
-| 6. ...  | Null  | Elias | Null | <ul><li>- [ ] </li></ul>
+| 3. Create shopping-cart app  | > two weeks  | Elias | in progress | <ul><li>- [ ] </li></ul>
+| 4. Create in-house admin app  | > 3 weeks | Elias | in progress | <ul><li>- [ ] </li></ul>
+| 5. Create authentication app | > A week  | Elias | in progress | <ul><li>- [ ] </li></ul>
+| 6. Add UI/UX | 2 or 3 weeks  | Elias | - | <ul><li>- [ ] </li></ul>
 
 1. :open_file_folder: ```Add template```: This task is simply add the template in the static folder and link within the code.
 2. :open_file_folder: ```Create authentication app```: This task will be used the CI authentication app. (If it is not working should be created from scratch).

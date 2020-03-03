@@ -26,6 +26,8 @@ urlpatterns = [
     #Include tour_store app
     path('store/', include("tour_store.urls")),
     path('cart/', include("cart.urls")),
+    path('search/', include("search.urls")),
+    path('chekout/', include("checkout.urls")),
 ]
 
 if settings.DEBUG:
