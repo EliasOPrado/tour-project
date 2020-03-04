@@ -14,13 +14,12 @@
   <title>Modern Business - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/bootstrap.min.css' %}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+  <link  rel="stylesheet" href="{% static 'font-awesome/css/fontawesome.min.css' %}">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
 </head>
 
 <body>
@@ -34,7 +33,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-
+          <li>
+            <form action="{% url 'search' %}" method="GET">
+              <input type="text" name="q">
+              <button type="submit">Search</button>
+            </form>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -75,12 +79,7 @@
   </nav>
 
 
- <div class="container">
-   <form action="{% url 'search' %}" method="GET">
-     <input type="text" name="q">
-     <button type="submit">Search</button>
-   </form>
- </div>
+
   <!-- Page Content -->
 
   {% block content %}

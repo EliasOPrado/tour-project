@@ -21,9 +21,9 @@
 
                 <div class="caption">
                     <h3>{{ item.destination.tour_title }}</h3>
-                    <p class="product-description">{{ item.product.description|slice:":100" }}</p>
-                    <p>{{ item.destination }}</p>
-                    <p>item.destination.price</p>
+                    <p class="product-description">{{ item.destination.description|slice:":100" }}</p>
+
+                    <p>€ {{item.destination.price}}</p>
                 </div>
             </div>
         </div>

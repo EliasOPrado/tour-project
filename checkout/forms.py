@@ -1,28 +1,24 @@
-from django.db import models
-from tour_store.models import Destinations
+from django import forms
+from .models import Order
 
-# Create your models here.
-class Order(models.Model):
-    full_name = models.CharField(max_length=50, blank=False)
-    phone_number = models.CharField(max_length=20, blank=False)
-    country = models.CharField(max_length=40, blank=False)
-    postcode = models.CharField(max_length=20, blank=True)
-    town_or_city = models.CharField(max_length=40, blank=False)
-    street_address1 = models.CharField(max_length=40, blank=False)
-    street_address2 = models.CharField(max_length=40, blank=False)
-    county = models.CharField(max_length=40, blank=False)
-    date = models.DateField()
+class MakePaymentForm(forms.Form):
 
-    def __str__(self):
-        """The {0}-{1}-{2} is the order in which the id(0), date(1) and full_name(2) will be displayed """
-        return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
+    MONTH_CHOICES = [(i, i) for i in range(1, 12)]
+    YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]
+
+    credit_card_number = forms.CharField(label='Credit card number', required=False)
+    cvv = forms.CharField(label='Security code (CVV)', required=False)
+    expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
+    expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
+    stripe_id = forms.CharField(widget=forms.HiddenInput)
 
 
-class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False)
-    destination = models.ForeignKey(Destinations, null=False)
-    quantity = models.IntegerField(blank=False)
+class OrderForm(forms.ModelForm):
 
-    def __str__(self):
-        return "{0} {1} @ {2}".format(
-            self.quantity, self.destination.name, self.destination.price)
+    class Meta:
+        model = Order
+        fields = (
+            'full_name', 'phone_number', 'country', 'postcode',
+            'town_or_city', 'street_address1', 'street_address2',
+            'county'
+        )

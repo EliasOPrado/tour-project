@@ -6,7 +6,7 @@ from .forms import MakePaymentForm, OrderForm
 from .models import OrderLineItem
 from django.conf import settings
 from django.utils import timezone
-from products.models import Product
+from tour_store.models import Destinations
 import stripe
 
 # Create your views here.
@@ -27,11 +27,11 @@ def checkout(request):
             cart = request.session.get('cart', {})
             total = 0
             for id, quantity in cart.items():
-                product = get_object_or_404(Product, pk=id)
-                total += quantity * product.price
+                destination = get_object_or_404(Destinations, pk=id)
+                total += quantity * destination.price
                 order_line_item = OrderLineItem(
                     order=order,
-                    product=product,
+                    destination=destination,
                     quantity=quantity
                 )
                 order_line_item.save()
@@ -49,7 +49,7 @@ def checkout(request):
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 request.session['cart'] = {}
-                return redirect(reverse('products'))
+                return redirect(reverse('destination'))
             else:
                 messages.error(request, "Unable to take payment")
         else:
