@@ -126,7 +126,7 @@
       <div class="card my-4">
         <h5 class="card-header">Categories</h5>
         <!-- this is a form from CI tutorial -->
-        <form method="post" action="{% url 'add_to_cart' details.id %}">
+        <form method="POST" action="{% url 'add_to_cart' details.id %}">
           {% csrf_token %}
           <div class="input-group">
             <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">

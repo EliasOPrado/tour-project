@@ -25,4 +25,4 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return "{0} {1} @ {2}".format(
-            self.quantity, self.destination.name, self.destination.price)
+            self.quantity, self.destination.tour_title, self.destination.price)
