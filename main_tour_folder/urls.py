@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main_view, name="index" ),
-    #Include tour_store app
+    #Include tour_store apps
+    path('accounts/', include('accounts.urls')),
     path('store/', include("tour_store.urls")),
     path('cart/', include("cart.urls")),
     path('search/', include("search.urls")),

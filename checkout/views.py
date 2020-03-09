@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -19,7 +18,8 @@ def checkout(request):
         # call the two forms that will be used
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
-        # Then will check if both forms are valid
+
+        # Then will check if both forms are valid if yes, save
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
@@ -41,10 +41,10 @@ def checkout(request):
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
                     currency="EUR",
-                    description=request.user.email,
+                    description='destination..',
                     card=payment_form.cleaned_data['stripe_id']
                 )
-
+                print(customer)
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
 
@@ -59,5 +59,6 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
-
+        print(payment_form)
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
+print(settings.STRIPE_PUBLISHABLE)
