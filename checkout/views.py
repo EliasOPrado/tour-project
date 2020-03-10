@@ -20,6 +20,8 @@ def checkout(request):
         payment_form = MakePaymentForm(request.POST)
 
         # Then will check if both forms are valid if yes, save
+        print(order_form.is_valid(), payment_form.is_valid())
+        print(payment_form.errors)
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
@@ -44,7 +46,6 @@ def checkout(request):
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id'],
                 )
-
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
 
@@ -59,5 +60,4 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
-
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
