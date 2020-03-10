@@ -38,7 +38,7 @@ def checkout(request):
                 order_line_item.save()
 
             try:
-                customer = stripe.Charges.create(
+                customer = stripe.Charge.create(
                     amount=int(total * 100),
                     currency="EUR",
                     description=request.user.email,
@@ -59,5 +59,5 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
-        print(payment_form)
+
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})

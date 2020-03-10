@@ -1,19 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bootstrap_tags %}
-<!-- head_js is a stripe requirement -->
-{% block head_js %}
-<div class="container">
-  <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
-  <script type="text/javascript">
-    //<![CDATA[
-    Stripe.publishableKey = '{{ publishable }}';
-    //]]>
-  </script>
-  <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-  {% endblock head_js %}
 
-  {% block content %}
+
+{% block content %}
+<div class="container">
   <div class="row row-flex">
     {% for item in cart_items %}
     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
@@ -56,4 +47,15 @@
     </div>
   </form>
 </div>
+
+<!-- head_js is a stripe requirement -->
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript">
+  //<![CDATA[
+  Stripe.publishableKey = '{{ publishable }}';
+  //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock head_js %}
 {% endblock %}

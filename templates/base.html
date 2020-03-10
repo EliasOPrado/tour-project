@@ -48,17 +48,21 @@
             <!-- FOR TOUR_STORE APP -->
             <a class="nav-link" href="{% url 'destination' %}">Retreats</a>
           </li>
+          {% if user.is_authenticated %}
+
           <li class="nav-item">
-            <a class="nav-link" href="">Contact</a>
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
           </li>
           <li class="nav-item">
             <!-- FOR AUTHENTICATION APP -->
             <!-- dont forget to add if/else based on session -->
-            <a class="nav-link" href="services.html">Login</a>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Logout</a>
-          </li>
+          {% endif %}
           <!-- FOR CART APP -->
           <li class="nav-item">
             <!-- the view cart button will log you into the cart.html url -->
