@@ -12,7 +12,7 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET
 
 
-#@login_required()
+@login_required()
 def checkout(request):
     if request.method == "POST":
         # call the two forms that will be used
@@ -41,7 +41,7 @@ def checkout(request):
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
                     currency="EUR",
-                    description='destination..',
+                    description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
                 )
                 print(customer)
@@ -59,6 +59,5 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
-        print(payment_form)
+
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
-print(settings.STRIPE_PUBLISHABLE)
