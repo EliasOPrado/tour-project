@@ -14,7 +14,8 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
 | 1. Add template | > two days  | Elias | done 24/02 | <ul><li>- [x] </li></ul>
 | 2. Create tour_app | > A week  | Elias | done 26/02 | <ul><li>- [x] </li></ul>
 | 3. Create shopping-cart app  | > two weeks  | Elias | in progress | <ul><li>- [ ] </li></ul>
-| 4. Create authentication app | > A week  | Elias | in progress | <ul><li>- [ ] </li></ul>
+| 4. Create authentication app | > A week  | Elias | done 10/03 | <ul><li>- [x] </li></ul>
+| 5. Add pagination functionality | > 3 weeks | Elias | in progress | <ul><li>- [ ] </li></ul>
 | 5. Create in-house admin app  | > 3 weeks | Elias | in progress | <ul><li>- [ ] </li></ul>
 | 6. Add UI/UX | 2 or 3 weeks  | Elias | - | <ul><li>- [ ] </li></ul>
 
@@ -30,4 +31,4 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
     4. List of orders?
     5. ....
 4. ```Create cart app```: This app will be the last and the hardest one.
-5. ```Create authentication app``` This app has to have signup, signin and logut. 
+5. ```Create authentication app``` This app has to have signup, signin and logut.

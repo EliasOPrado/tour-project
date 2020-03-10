@@ -38,13 +38,13 @@ def checkout(request):
                 order_line_item.save()
 
             try:
-                customer = stripe.Charge.create(
+                customer = stripe.Charges.create(
                     amount=int(total * 100),
                     currency="EUR",
                     description=request.user.email,
-                    card=payment_form.cleaned_data['stripe_id']
+                    card=payment_form.cleaned_data['stripe_id'],
                 )
-                print(customer)
+
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
 
@@ -59,5 +59,5 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
-
+        print(payment_form)
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
