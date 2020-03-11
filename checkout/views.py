@@ -20,14 +20,13 @@ def checkout(request):
         payment_form = MakePaymentForm(request.POST)
 
         # Then will check if both forms are valid if yes, save
-        print(order_form.is_valid(), payment_form.is_valid())
-        print(payment_form.errors)
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
 
             cart = request.session.get('cart', {})
+            print(cart)
             total = 0
             for id, quantity in cart.items():
                 destination = get_object_or_404(Destinations, pk=id)
@@ -51,7 +50,7 @@ def checkout(request):
 
             if customer.paid:
                 messages.error(request, "You have successfully paid")
-                request.session['cart'] = {}
+                request.session['cart'] = {} #clear the cart in session
                 return redirect(reverse('destination'))
             else:
                 messages.error(request, "Unable to take payment")

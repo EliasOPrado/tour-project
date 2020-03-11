@@ -17,5 +17,8 @@ def cart_contents(request):
         total += quantity * destination.price
         destination_count += quantity
         cart_items.append({'id': id, 'quantity': quantity, 'destination': destination})
-    #cart_item will loop into the cart.html
+    #cart_item will loop into the cart.
+    print(cart_items)
+    print(destination_count)
+    print(cart)
     return {'cart_items': cart_items, 'total': total, 'destination_count': destination_count}

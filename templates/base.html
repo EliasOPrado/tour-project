@@ -19,12 +19,12 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
 
-  {% block head_js %}
-  {% endblock head_js %}
 </head>
 
 <body>
 
+    {% block head_js %}
+    {% endblock head_js %}
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -66,16 +66,22 @@
           </li>
           {% endif %}
           <!-- FOR CART APP -->
+          {% if destination_count > 0 %}
           <li class="nav-item">
             <!-- the view cart button will log you into the cart.html url -->
             <a class="nav-link" href="{% url 'view_cart' %}">
               <i class="fa fa-shipping-cart"></i>Cart
-              {% if destination_count > 0 %}
               <label class="badge badge-warning">{{ destination_count }}</label>
-              {% endif %}
             </a>
           </li>
-
+          {% else %}
+          <li class="nav-item" disabled>
+            <!-- the view cart button will log you into the cart.html url -->
+            <a class="nav-link" href="" disabled>
+              <i class="fa fa-shipping-cart"></i>Cart
+            </a>
+          </li>
+          {% endif %}
           <!-- THIS IS THE ORIGINAL CART LIST -->
           <!-- <li class="nav-item">
             <a class="nav-link" href="services.html">Cart</a>
@@ -105,7 +111,6 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
