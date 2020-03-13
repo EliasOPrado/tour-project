@@ -44,26 +44,59 @@
   <hr>
 
   <!-- Pagination -->
-  {% if destinations.has_other_pages %}
-  <ul class="pagination">
-    {% if destinations.has_previous %}
-      <li><a href="?page={{ destinations.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in destinations.paginator.page_range %}
-      {% if destinations.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+
+  <!--
+  The function of this pagination is at tour_store.views.destinations
+   -->
+  <nav aria-label="Page navigation example">
+    {% if destinations.has_other_pages %}
+    <ul class="pagination">
+
+      <!-- conditional to display whether the previows (<<) button shold be activated or deactivated  -->
+      {% if destinations.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ destinations.previous_page_number }}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
       {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      <li class="page-item disabled">
+        <a class="page-link" href=""aria-label="Previous">
+        <span>&laquo;</span>
+        </a>
+      </li>
       {% endif %}
-    {% endfor %}
-    {% if destinations.has_next %}
-      <li><a href="?page={{ destinations.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
+
+      <!-- Loop pagination displays the pagination numbers and the actived current page (Bootstrap 4.4)-->
+      {% for page in destinations.paginator.page_range %}
+      {% if destinations.number == page %}
+      <li class="page-item active">
+        <a class="page-link" href="{{ page }}">
+          {{ page }}
+        </a>
+      </li>
+      {% else %}
+      <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+      {% endif %}
+      {% endfor %}
+
+      <!-- conditional to display whether the next (>>) button shold be activated or deactivated    -->
+      {% if destinations.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ destinations.next_page_number }}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href=""aria-label="Next">
+        <span>&raquo;</span>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
     {% endif %}
-  </ul>
-{% endif %}
+  </nav>
 </div>
+
 {% endblock content %}
