@@ -16,3 +16,23 @@ body {
 .portfolio-item {
  margin-bottom: 30px;
 }
+
+li.search {
+  padding-right: 180px;
+}
+
+.card.card-style {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 30px;
+}
+
+.card.card-style2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 30px;
+}

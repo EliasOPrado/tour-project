@@ -3,20 +3,33 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Destinations
 
 # Create your views here.
+""" solve the caroulsel issue """
 def main_view(request):
-    return render(request, 'main.html')
+    #Here need to make a destination var and get all objects
+    #loop tem on the main page with nice cards
+    show_destinations = Destinations.object.all()
 
+    # show_destinations is to loop destinations in the main page.
+    return render(request, 'main.html', {'show_destinations': show_destinations})
+
+    #make multiples carousels with different slides <<<<
 
 def destinations(request):
     """
-    This function should run the pagination
+    This function will display the pagination
+    if the number of elements are not > than
+    the number of the 'paginator'==3 the Pagination
+    will desappear.
     """
     destination = Destinations.objects.all()
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(destination, 1)
+    # Will display the number of elements per page, in this case 3.
+    paginator = Paginator(destination, 3)
+
     try:
         destinations = paginator.page(page)
+        print(destinations)
 
     except PageNotAnInteger:
         destinations = paginator.page(1)
