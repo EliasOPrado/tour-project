@@ -7,7 +7,7 @@ from .models import Destinations
 def main_view(request):
     #Here need to make a destination var and get all objects
     #loop tem on the main page with nice cards
-    show_destinations = Destinations.object.all()
+    show_destinations = Destinations.objects.all()
 
     # show_destinations is to loop destinations in the main page.
     return render(request, 'main.html', {'show_destinations': show_destinations})
