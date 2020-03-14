@@ -12,25 +12,25 @@
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
       <!-- image dimensions are 1900x1080 -->
-      <div class="carousel-item active" style="background-image: url({% static 'images/retreat1.jpeg'%})">
+      <div class="carousel-item active image1" style="background-image: url({% static 'images/retreat1.jpeg'%})">
         <div class="carousel-caption d-none d-md-block">
-          <h3>First Slide</h3>
-          <p>This is a description for the first slide.</p>
+          <h3>Yoga Teacher Trainings Retreat</h3>
+          <!-- <p>This is a description for the first slide.</p> -->
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
       <!-- image dimensions are 1900x1080 -->
-      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+      <div class="carousel-item image2" style="background-image: url({% static 'images/sailing-greece.jpeg'%})">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Second Slide</h3>
-          <p>This is a description for the second slide.</p>
+          <h3>One Week Long Sailing Retreat Greece</h3>
+          <!-- <p>This is a description for the second slide.</p> -->
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+      <div class="carousel-item image3" style="background-image: url({% static 'images/suica.jpeg'%})">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Third Slide</h3>
-          <p>This is a description for the third slide.</p>
+          <h3>Yoga Retreats in the European mountains</h3>
+          <!-- <p>This is a description for the third slide.</p> -->
         </div>
       </div>
     </div>
@@ -46,12 +46,12 @@
 </header>
 
 
-<div class="container">
-  <h1 class="my-4">HERE YOU HAVE TO LOOP THE BEST AMOUNT OF DESTINATIONS</h1>
+<div class="container2">
+  <h1 class="my-4 text-center">Find the best retreat</h1>
 
   <!-- Portfolio Section -->
-  <div class="row">
-  {% for destination in show_destinations|slice:"3" %}
+  <div class="row row2">
+    {% for destination in show_destinations|slice:"3" %}
     <div class="col-lg-4 col-sm-6 portfolio-item">
       <div class="card h-100">
         <a href="{% url 'destinationDetails' id=destination.id %}">
@@ -61,17 +61,29 @@
           <h4 class="card-title">
             <a href="{% url 'destinationDetails' id=destination.id %}">{{destination.tour_title}}</a>
           </h4>
-          <p class="card-text">{{destination.description|slice:":200"}}...</p>
+          <p class="card-text">{{destination.description|slice:":150"}}...</p>
         </div>
       </div>
     </div>
-  {% endfor %}
-    </div>
+    {% endfor %}
+  </div>
 
   <!-- /.row -->
+  <section class="py-5 bg-light">
+    <div class="container container2 text-center">
+      <h2>About Us</h2>
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- Features Section -->
-  <div class="row">
+  <div class="row row2">
     <div class="col-lg-6">
       <h2>Modern Business Features</h2>
       <p>The Modern Business template by Start Bootstrap includes:</p>
@@ -94,14 +106,5 @@
 
   <hr>
 
-  <!-- Call to Action Section -->
-  <div class="row mb-4">
-    <div class="col-md-8">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-    </div>
-    <div class="col-md-4">
-      <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-    </div>
-  </div>
 </div>
 {% endblock content %}

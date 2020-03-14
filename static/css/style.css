@@ -13,6 +13,19 @@ body {
  background-size: cover;
 }
 
+.carousel-inner.carousel.item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.9s ease-in-out left;
+  -moz-transition: 0.9s ease-in-out left;
+  -o-transition: 0.9s ease-in-out left;
+  transition: 0.9s ease-in-out left;
+}
+
+.carousel-caption.d-none.d-md-block h3 {
+  padding-bottom: 196px;
+}
+
 .portfolio-item {
  margin-bottom: 30px;
 }
@@ -67,3 +80,24 @@ li.search {
   margin-right: 100px;
   padding: 30px;
 }
+
+.row.row2{
+  padding: 30px;
+}
+
+section.py-5.bg-light{
+  height: 500px;
+}
+
+.container.container2{
+  padding-top: 120px;
+}
+
+@media (min-width: 2000px) {
+  .image2{
+    position: absolute;
+    top: 45vh;
+    left: 110vh;
+  }
+
+    }
