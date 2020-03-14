@@ -21,6 +21,37 @@ li.search {
   padding-right: 180px;
 }
 
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none; */
+}
+
+.card-img-top {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-bottom-right-radius: calc(.25rem - 1px);
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
 .card.card-style {
   margin-top: 150px;
   margin-bottom: 150px;
