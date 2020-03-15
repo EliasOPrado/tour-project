@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <div class="container">
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">{{ details.tour_title }}
@@ -125,7 +124,7 @@
       <!-- WILL GET BOTH WIDGETS -->
       <!-- Categories Widget -->
       <div class="card my-4">
-        <h5 class="card-header">Categories</h5>
+        <h5 class="card-header">Add to cart</h5>
         <!-- this is a form from CI tutorial -->
         <form method="POST" action="{% url 'add_to_cart' details.id %}">
           {% csrf_token %}

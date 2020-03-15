@@ -54,15 +54,14 @@
     {% for destination in show_destinations|slice:"3" %}
     <div class="col-lg-4 col-sm-6 portfolio-item">
       <div class="card h-100">
+
         <a href="{% url 'destinationDetails' id=destination.id %}">
+          <h5 class="card-title">{{destination.tour_title}}</h5>
           <img class="card-img-top" src="{{ destination.image.url}}" alt="">
         </a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="{% url 'destinationDetails' id=destination.id %}">{{destination.tour_title}}</a>
-          </h4>
-          <p class="card-text">{{destination.description|slice:":150"}}...</p>
-        </div>
+
+
+
       </div>
     </div>
     {% endfor %}
