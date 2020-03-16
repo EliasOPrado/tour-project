@@ -1,6 +1,12 @@
 /* Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)*/
 body {
- padding-top: 56px;
+  margin:0;
+  padding:0;
+  width: 100%;
+  padding-top: 56px;
+  /* removes the x-asis scrolling */
+  overflow-x: hidden;
+ overflow-y: auto;
 }
 
 .carousel-item {
@@ -93,6 +99,62 @@ section.py-5.bg-light{
   padding-top: 120px;
 }
 
+/* startbootstrap code below*/
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container3 {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  html,body{
+    /* removes the x-asis scrolling */
+   overflow-x: hidden;
+   overflow-y: auto;
+  }
+  header {
+    background: url("{% static 'images/sailing.jpeg' %}") black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+/* startbootstrap code above*/
 @media (min-width: 2000px) {
   .image2{
     position: absolute;
