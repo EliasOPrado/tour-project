@@ -26,20 +26,15 @@
     {% for destination in show_destinations|slice:"3" %}
     <div class="col-lg-4 col-sm-6 portfolio-item">
       <div class="card h-100">
-
         <a href="{% url 'destinationDetails' id=destination.id %}">
           <h5 class="card-title">{{destination.tour_title}}</h5>
           <img class="card-img-top" src="{{ destination.image.url}}" alt="">
         </a>
-
-
-
       </div>
     </div>
     {% endfor %}
   </div>
 
-  <!-- /.row -->
   <section class="py-5 bg-light">
     <div class="container container2 text-center">
       <h2>About Us</h2>
@@ -50,10 +45,8 @@
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- Features Section -->
   <section class="py-5 bg-white">
     <div class="container container2 text-center">
       <h2>Another container</h2>
@@ -68,5 +61,4 @@
   </section>
   </div>
 
-</div>
 {% endblock content %}

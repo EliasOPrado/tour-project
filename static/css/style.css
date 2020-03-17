@@ -1,4 +1,6 @@
 /* Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)*/
+{% load static %}
+
 body {
   margin:0;
   padding:0;
@@ -143,12 +145,11 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   html,body{
-    /* removes the x-asis scrolling */
    overflow-x: hidden;
    overflow-y: auto;
   }
   header {
-    background: url("{% static 'images/sailing.jpeg' %}") black no-repeat center center scroll;
+    background: url("static/images/sailing.jpeg") black no-repeat center center scroll;
   }
   header video {
     display: none;
