@@ -38,8 +38,11 @@ body {
  margin-bottom: 30px;
 }
 
-li.search {
-  padding-right: 180px;
+
+form.header__search {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 10px;
 }
 
 .card {
@@ -143,7 +146,7 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.9;
   z-index: 1;
 }
 

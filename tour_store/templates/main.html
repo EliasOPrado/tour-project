@@ -3,15 +3,26 @@
 {% block content %}
 
 <header>
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="{% static 'videos/yoga.mp4' %}" type="video/mp4">
-  </video>
-  <div class="container3 h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3 ">Video Header</h1>
-        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
+  <div class="overlay">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="{% static 'videos/yoga.mp4' %}" type="video/mp4">
+    </video>
+    <div class="container3 h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3 ">Video Header</h1>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+              <form action="{% url 'search' %}" method="GET" class="header__search">
+                <div class="input-group">
+                  <input type="text" name="q" placeholder="search" class="form-control">
+                  <div class="input-group-append">
+                    <button class="btn btn-warning" type="submit" name="button"><i class="fas fa-search"></i></button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -64,4 +75,4 @@
   </section>
 </div> -->
 
-{% endblock content %}
+  {% endblock content %}

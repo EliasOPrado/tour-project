@@ -26,7 +26,6 @@ def checkout(request):
             order.save()
 
             cart = request.session.get('cart', {})
-            print(cart)
             total = 0
             for id, quantity in cart.items():
                 destination = get_object_or_404(Destinations, pk=id)
