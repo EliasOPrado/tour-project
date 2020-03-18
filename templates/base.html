@@ -19,6 +19,23 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<style media="screen">
+@media (pointer: coarse) and (hover: none) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  header {
+    background: url("{% static 'images/woman.jpg'%}") black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -35,7 +52,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="align-self-start d-none d-md-block  search">
-            
+
           </li>
           <li class="nav-item">
             <!-- FOR TOUR_STORE APP -->
