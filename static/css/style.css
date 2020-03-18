@@ -89,6 +89,10 @@ li.search {
   padding: 30px;
 }
 
+
+h5.card-title{
+  padding-top: 35%;
+}
 .row.row2{
   padding: 30px;
 }
@@ -149,11 +153,12 @@ header .overlay {
    overflow-y: auto;
   }
   header {
-    background: url("static/images/sailing.jpeg") black no-repeat center center scroll;
+    background: url("static/images/suica.jpeg") black no-repeat center center scroll;
   }
   header video {
     display: none;
   }
+
 }
 /* startbootstrap code above*/
 @media (min-width: 2000px) {

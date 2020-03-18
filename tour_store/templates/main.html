@@ -10,7 +10,7 @@
   <div class="container3 h-100">
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
-        <h1 class="display-3">Video Header</h1>
+        <h1 class="display-3 ">Video Header</h1>
         <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
       </div>
     </div>
@@ -22,18 +22,22 @@
   <h1 class="my-4 text-center">Find the best retreat</h1>
 
   <!-- Portfolio Section -->
+
   <div class="row row2">
     {% for destination in show_destinations|slice:"3" %}
     <div class="col-lg-4 col-sm-6 portfolio-item">
-      <div class="card h-100">
-        <a href="{% url 'destinationDetails' id=destination.id %}">
-          <h5 class="card-title">{{destination.tour_title}}</h5>
-          <img class="card-img-top" src="{{ destination.image.url}}" alt="">
-        </a>
-      </div>
+      <a class="card-title" href="{% url 'destinationDetails' id=destination.id %}">
+        <div class="card text-white">
+          <img src="{{ destination.image.url}}" class="card-img-top" alt="destination">
+          <div class="card-img-overlay text-center">
+            <h5 class="card-title ">{{destination.tour_title}}</h5>
+          </div>
+        </div>
+      </a>
     </div>
     {% endfor %}
   </div>
+
 
   <section class="py-5 bg-light">
     <div class="container container2 text-center">
@@ -47,18 +51,17 @@
     </div>
   </section>
 
-  <section class="py-5 bg-white">
+  <!-- <section class="py-5 bg-white">
     <div class="container container2 text-center">
       <h2>Another container</h2>
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6">
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Lorem ipsum dolor sit amet,  rerum quos facilis repellat architecto commodi facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+          <p>Lorem ipsum dolor sit amet, rerum quos facilis repellat architecto commodi facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
         </div>
       </div>
     </div>
-
   </section>
-  </div>
+</div> -->
 
 {% endblock content %}
