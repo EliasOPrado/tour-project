@@ -1,24 +1,26 @@
 /* Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)*/
-{% load static %}
+  {
+  % load static %
+}
 
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   width: 100%;
   padding-top: 56px;
   /* removes the x-asis scrolling */
   overflow-x: hidden;
- overflow-y: auto;
+  overflow-y: auto;
 }
 
 .carousel-item {
- height: 65vh;
- min-height: 300px;
- background: no-repeat center center scroll;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .carousel-inner.carousel.item {
@@ -35,9 +37,8 @@ body {
 }
 
 .portfolio-item {
- margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-
 
 form.header__search {
   padding-left: 25%;
@@ -46,34 +47,35 @@ form.header__search {
 }
 
 .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: none; */
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: none;
+  */
 }
 
 .card-img-top {
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    border-bottom-left-radius: calc(.25rem - 1px);
-    border-bottom-right-radius: calc(.25rem - 1px);
-    width: 100%;
-    height: 25vw;
-    object-fit: cover;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(.25rem - 1px);
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
 }
 
 .card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
-    text-align: center;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  text-align: center;
 }
 
 .card.card-style {
@@ -92,27 +94,26 @@ form.header__search {
   padding: 30px;
 }
 
-
-h5.card-title{
+h3.card-title {
   padding-top: 35%;
 }
-.row.row2{
+
+.row.row2 {
   padding: 30px;
 }
 
-section.py-5.bg-light{
+section.py-5.bg-light {
   height: 500px;
 }
 
-.container.container2{
+.container.container2 {
   padding-top: 120px;
 }
 
 /* startbootstrap code below*/
-
 header {
   position: relative;
-  background-color: black;
+  /* background-color: black; */
   height: 75vh;
   min-height: 25rem;
   width: 100%;
@@ -121,8 +122,8 @@ header {
 
 header video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 65%;
+  left: 65%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -145,30 +146,18 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.9;
+  /* background-color: black;
+  opacity: 0.9; */
   z-index: 1;
 }
 
-@media (pointer: coarse) and (hover: none) {
-  html,body{
-   overflow-x: hidden;
-   overflow-y: auto;
-  }
-  header {
-    background: url("static/images/suica.jpeg") black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
 
-}
+
 /* startbootstrap code above*/
 @media (min-width: 2000px) {
-  .image2{
+  .image2 {
     position: absolute;
     top: 45vh;
     left: 110vh;
   }
-
-    }
+}

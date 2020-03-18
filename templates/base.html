@@ -27,11 +27,26 @@
   }
 
   header {
-    background: url("{% static 'images/woman.jpg'%}") black no-repeat center center scroll;
+    background: url("{% static 'images/retreat3.jpeg'%}") white no-repeat center scroll;
+    position: relative;
   }
 
   header video {
     display: none;
+  }
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Need to fix the opacity */
+    /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100% );
+    opacity: 0.6; */
+    z-index: 1;
+  }
+  header h1 {
+    z-index: 2;
   }
 }
 
