@@ -16,7 +16,7 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
 | 3. Create shopping-cart app  | > two weeks  | Elias | done 10/03 | <ul><li>- [x] </li></ul>
 | 4. Create authentication app | > A week  | Elias | done 09/03 | <ul><li>- [x] </li></ul>
 | 5. Add pagination functionality | > One hour| Elias | done 13/03 | <ul><li>- [x] </li></ul>
-| 5. Make deployment | > 3 weeks | Elias | done 13/03 | <ul><li>- [x] </li></ul>
+| 5. Make deployment | > 3 weeks | Elias | done 13/03 | <ul><li>- [ ] </li></ul>
 | 5. Create in-house admin app  | > 3 weeks | Elias | in progress | <ul><li>- [ ] </li></ul>
 | 6. Add UI/UX | 2 or 3 weeks  | Elias | - | <ul><li>- [ ] </li></ul>
 
