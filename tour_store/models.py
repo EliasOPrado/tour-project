@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Destinations(models.Model):
-    """This is a model to create destinations by the owner. """
+
     author = models.CharField(max_length=200, unique=False)
     tour_title = models.CharField(max_length=250)
     description = models.TextField()
@@ -16,3 +16,17 @@ class Destinations(models.Model):
 
     def __str__(self):
         return self.tour_title
+
+class Comment(models.Model):
+    post = models.ForeignKey(Destinations,on_delete=models.CASCADE,related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return 'Comment {} by {}'.format(self.body, self.name)
