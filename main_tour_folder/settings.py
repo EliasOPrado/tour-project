@@ -27,9 +27,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
 
@@ -102,11 +101,10 @@ if 'DATABASE_URL' in os.environ:
 else:
     print("Postgres URL not found, using sqlite instead")
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 
 
 # Password validation
