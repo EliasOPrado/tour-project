@@ -11,15 +11,10 @@
   <div class="row">
     <div class="col-lg-8">
       <!-- Page Heading/Breadcrumbs -->
-
-
-
       <!-- Preview Image -->
+      <br>
       <img class="img-fluid rounded" src="{{ details.image.url}}" alt="">
 
-      <hr>
-
-      <p>Posted on January 1, 2017 at 12:00 PM</p>
       <hr>
 
       <p class="lead">{{ details.description }}</p>
@@ -47,7 +42,7 @@
         </div>
         {% endfor %}
       </div>
-      <div class="">
+  <div class="card card-body card-padding-bottom">
         {% if new_comment %}
         <div class="alert alert-success" role="alert">
           Your comment is awaiting moderation
@@ -55,8 +50,8 @@
         {% else %}
 
         <div class=" my-4">
-          <h5 class="card-header">Leave a Comment:</h5>
-          <div class="">
+          <h5>Leave a Comment:</h5>
+              <br>
             <form method="post">
               <div class="form-group">
                 {{ comment_form | as_bootstrap }}
@@ -70,17 +65,18 @@
         </div>
       </div>
 
-    </div>
+
 
 
     <div class="col-md-4">
 
-      <div class="card my-4">
-        <h5 class="card-header">Add to cart</h5>
+      <div class="card card-body my-4">
+        <h5 class="">Add to cart</h5>
         <!-- this is a form from CI tutorial -->
         <br>
         <h4>  € {{details.price}}</h4>
         <br>
+        <p>Start: {{details.booking_start_date}} <br>Ends: {{details.booking_end_date}} </p>
         <form method="POST" action="{% url 'add_to_cart' details.id %}">
           {% csrf_token %}
           <div class="input-group">

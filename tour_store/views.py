@@ -53,7 +53,7 @@ def destination_details(request, id):
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
             # Assign the current post to the comment
-            new_comment.post = post
+            new_comment.post = details
             # Save the comment to the database
             new_comment.save()
     else:

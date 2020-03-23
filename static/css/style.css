@@ -74,7 +74,11 @@ form.header__search {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.card.card-body.card-padding-bottom{
+  margin-bottom: 50px;
 }
 
 .card.card-style {
@@ -108,11 +112,6 @@ section.py-5.bg-light {
 .container.container2 {
   padding-top: 120px;
 }
-
-/* .form-group {
-    margin-bottom: 1rem;
-    width: 90%;
-} */
 
 /* startbootstrap code below*/
 header {
