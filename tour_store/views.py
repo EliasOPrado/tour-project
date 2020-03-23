@@ -44,8 +44,7 @@ def destination_details(request, id):
     # Get a singular destination, or return a 404
     details= get_object_or_404(Destinations, pk=id)
     template_name = 'details.html'
-    post = get_object_or_404(Destinations, pk=id)
-    comments = post.comments.filter(active=True)
+    comments = details.comments.filter(active=True)
     new_comment = None
     # Comment posted
     if request.method == 'POST':
@@ -62,7 +61,6 @@ def destination_details(request, id):
         comment_form = CommentForm()
 
     return render(request, template_name, {'details':details,
-                                           'post': post,
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
