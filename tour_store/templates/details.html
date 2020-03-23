@@ -3,15 +3,16 @@
 
 {% block content %}
 <div class="container">
-  <div class="row">
-
-  <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">{{ details.tour_title }}
     <small>by
       <a href="#">{{ details.author }}</a>
     </small>
   </h1>
-<div class="col-lg-8">
+  <div class="row">
+    <div class="col-lg-8">
+      <!-- Page Heading/Breadcrumbs -->
+
+
 
       <!-- Preview Image -->
       <img class="img-fluid rounded" src="{{ details.image.url}}" alt="">
@@ -26,9 +27,9 @@
       <hr>
 
 
-    <!-- Comments Form -->
+      <!-- Comments Form -->
 
-      <div class="card my-4">
+      <div class=" my-4">
         <!-- comments -->
         {% with comments.count as total_comments %}
         <h4>{{ total_comments }} comments</h4>
@@ -53,7 +54,7 @@
         </div>
         {% else %}
 
-        <div class="card my-4">
+        <div class=" my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="">
             <form method="post">
@@ -69,27 +70,30 @@
         </div>
       </div>
 
-  </div>
-
-
-  <div class="col-md-4 card">
-
-    <div class="card my-4">
-      <h5 class="card-header">Add to cart</h5>
-      <!-- this is a form from CI tutorial -->
-      <form method="POST" action="{% url 'add_to_cart' details.id %}">
-        {% csrf_token %}
-        <div class="input-group">
-          <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
-          <span class="input-group-btn">
-
-            <button class="btn btn-success" type="submit">Add</button>
-
-          </span>
-        </div>
-      </form>
     </div>
-  </div>
+
+
+    <div class="col-md-4">
+
+      <div class="card my-4">
+        <h5 class="card-header">Add to cart</h5>
+        <!-- this is a form from CI tutorial -->
+        <br>
+        <h4>  € {{details.price}}</h4>
+        <br>
+        <form method="POST" action="{% url 'add_to_cart' details.id %}">
+          {% csrf_token %}
+          <div class="input-group">
+            <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
+            <span class="input-group-btn">
+
+              <button class="btn btn-success" type="submit">Add</button>
+
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 <!-- /.row -->

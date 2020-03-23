@@ -55,9 +55,8 @@ form.header__search {
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
-  background-clip: border-box;
-  border: none;
-  */
+  /* background-clip: border-box; */
+  /* border: none; */
 }
 
 .card-img-top {
@@ -109,6 +108,11 @@ section.py-5.bg-light {
 .container.container2 {
   padding-top: 120px;
 }
+
+/* .form-group {
+    margin-bottom: 1rem;
+    width: 90%;
+} */
 
 /* startbootstrap code below*/
 header {
