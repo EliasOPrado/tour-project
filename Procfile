@@ -1,1 +1,1 @@
-web: gunicorn main_tour_folder.wsgi:application
+web: gunicorn main_tour_folder.wsgi
