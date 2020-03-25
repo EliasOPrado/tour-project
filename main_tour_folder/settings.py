@@ -29,7 +29,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+
+"""
+Set debug = True when developing and False to deploy.
+"""
+DEBUG = True
 
 ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
 
