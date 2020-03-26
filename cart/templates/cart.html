@@ -12,7 +12,7 @@
     <!-- dont forget that in context.py in cart/ folder these items are apended:
          cart_items.append({'id': id, 'quantity': quantity, 'destination': destination}) -->
 
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
       <div class="card profile-card-1">
         <img src="{{ item.destination.image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -42,21 +42,24 @@
     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
     <a href="{% url 'checkout'%}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
   </div>
-</div>
+</div> -->
 <!-- OLD CART TEMPLATE ABOVE-->
 <!--  -->
 <!--  -->
 
 {% block content %}
+{% include 'header2.html' %}
+<br>
+<br>
 <div class="px-4 px-lg-0">
   <!-- For demo purpose -->
-  <div class="container text-white py-5 text-center">
+  <!-- <div class="container text-white py-5 text-center">
     <h1 class="display-4">Bootstrap 4 shopping cart</h1>
     <p class="lead mb-0">Build a fully structred shopping cart page using Bootstrap 4. </p>
     <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets" class="text-white font-italic">
             <u>Bootstrapious</u></a>
     </p>
-  </div>
+  </div> -->
   <!-- End -->
 
   <div class="pb-5">
@@ -93,31 +96,17 @@
                       <img src="{{ item.destination.image.url}}" alt="" width="70" class="img-fluid rounded shadow-sm">
                       <div class="ml-3 d-inline-block align-middle">
                         <!-- TITLE HERE -->
-                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ item.destination.tour_title }}</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ item.destination.tour_title }}</a></h5>
+                        <!-- <span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span> -->
                       </div>
                     </div>
                   </th>
                   <!-- PRICE -->
                   <td class="border-0 align-middle"><strong>€{{ item.price }}</strong></td>
                   <!-- QUANTITY -->
-                  <td class="border-0 align-middle">
-                    <strong>
-                      <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                        {% csrf_token %}
-                        <div class="form-group">
-                          <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                          <div class="input-group">
-                            <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="1" max="999" class="form-control">
-                            <div class="input-group-addon">{{item.quantity}}</div>
-                          </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                      </form>
-                  </strong>
-                </td>
+                  <td class="border-0 align-middle"><strong>{{item.quantity}}</strong></td>
                 <!-- ADD DELETE FUNCTION HERE -->
-                  <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  <td class="border-0 align-middle"><a href="{{ item.remove.id }}" class="text-dark"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 {% endfor %}
                 <!-- PRODUCT WILL LOOP HERE -->
@@ -151,13 +140,13 @@
           <div class="p-4">
             <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
             <ul class="list-unstyled mb-4">
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>€{{ total }}</strong></li>
+              <!-- <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$0.00</strong></li> -->
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                <h5 class="font-weight-bold">$400.00</h5>
+                <h5 class="font-weight-bold">€{{ total }}</h5>
               </li>
-            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+            </ul><a href="{% url 'checkout'%}" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
           </div>
         </div>
       </div>
@@ -165,4 +154,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}
