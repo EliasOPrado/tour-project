@@ -113,10 +113,11 @@ section.py-5.bg-light {
   padding-top: 120px;
 }
 
-/* .container3{
+/* this is a custom backgroud for shopping cart */
+/* .px-4.px-lg-0{
   background: #eecda3;
   background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
-  background: linear-gradient(to right, #eecda3, #ef629f);
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 100vh;
 } */
 

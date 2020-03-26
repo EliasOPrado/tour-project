@@ -34,7 +34,7 @@
     <div id="credit-card-errors" style="display: none;">
       <div id="alert-message block-message error" id="stripe-error-message"></div>
     </div>
-
+  <div class="row">
     <div class="form-group col-md-6">
       {{ order_form | as_bootstrap }}
     </div>
@@ -42,7 +42,7 @@
     <div class="form-group col-md-6">
       {{ payment_form | as_bootstrap }}
     </div>
-
+  </div>
 
     <div class="form-group col-md-12">
       <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
