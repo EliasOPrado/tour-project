@@ -4,6 +4,10 @@ from django.shortcuts import render, redirect, reverse
 
 def view_cart(request):
     """A view that renders the cart contents page """
+
+    """ You will need to create the delete_cart functionality here"""
+
+
     return render(request, 'cart.html')
 
 def add_to_cart(request, id):

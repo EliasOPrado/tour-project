@@ -7,14 +7,12 @@ def cart_contents(request):
     every page
     """
     cart = request.session.get('cart', {})
-    print(cart)
     cart_items = []
     total = 0
     destination_count = 0
 
     for id, quantity in cart.items():
         destination = get_object_or_404(Destinations, pk=id)
-        #remove = request.session.pop('cart')
         price = destination.price
         total += quantity * destination.price
         destination_count += quantity

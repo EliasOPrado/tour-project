@@ -95,15 +95,16 @@
           <li class="nav-item">
             <!-- the view cart button will log you into the cart.html url -->
             <a class="nav-link" href="{% url 'view_cart' %}">
-              <i class="fa fa-shipping-cart"></i>Cart
+              <!-- <i class="fa fa-shipping-cart"></i> -->
+              Cart
               <label class="badge badge-warning">{{ destination_count }}</label>
             </a>
           </li>
           {% else %}
           <li class="nav-item" disabled>
             <!-- the view cart button will log you into the cart.html url -->
-            <a class="nav-link" href="" disabled>
-              <i class="fas fa-cart-arrow-down"></i> Cart
+            <a class="nav-link"disabled>
+              <i class="fas fa-cart-arrow-down"></i>Cart
             </a>
           </li>
           {% endif %}
