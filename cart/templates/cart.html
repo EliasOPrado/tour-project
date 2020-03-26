@@ -104,7 +104,7 @@
                   <!-- QUANTITY -->
                   <td class="border-0 align-middle"><strong>{{item.quantity}}</strong></td>
                 <!-- ADD DELETE FUNCTION HERE -->
-                  <td class="border-0 align-middle"><a href="{{ item.id_to_be_removed.id }}" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  <td class="border-0 align-middle"><a href="{{ item.id_to_be_removed }}" class="text-dark"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 {% endfor %}
                 <!-- PRODUCT WILL LOOP HERE -->
@@ -123,7 +123,7 @@
             <div class="input-group mb-4 border rounded-pill p-2">
               <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
               <div class="input-group-append border-0">
-                <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
+                <button id="button-addon3" type="button" class="btn btn-info px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                 <h5 class="font-weight-bold">€{{ total }}</h5>
               </li>
-            </ul><a href="{% url 'checkout'%}" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+            </ul><a href="{% url 'checkout'%}" class="btn btn-info rounded-pill py-2 btn-block">Procceed to checkout</a>
           </div>
         </div>
       </div>

@@ -1,24 +1,9 @@
 {% extends 'base.html' %}
-
-
 {% load static %}
 {% block content %}
-
-
 {% include 'header.html' %}
 <div class="container">
-  <h1 class="mt-4 mb-3">Portfolio 1
-    <small>Subheading</small>
-  </h1>
-
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-      <a href="index.html">Home</a>
-    </li>
-    <li class="breadcrumb-item active">Portfolio 1</li>
-  </ol>
-
-  <!-- Project One -->
+  <hr><br>
   {% for destination in destinations %}
   <div class="row">
     <div class="col-md-7">
@@ -33,19 +18,14 @@
       <p>Start: {{destination.booking_start_date}} </p>
       <p>Ends: {{destination.booking_end_date}}</p>
       <h3>€ {{destination.price}}</h3>
-
-      <a class="btn btn-primary" href="{% url 'destinationDetails' id=destination.id %}"> View Project
+      <a class="btn btn-info rounded py-2 btn-block" href="{% url 'destinationDetails' id=destination.id %}"> View Retreat
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
     </div>
   </div>
-  <!-- /.row -->
     <hr>
   {% endfor %}
-
-
   <!-- Pagination -->
-
   <!-- The function of this pagination is at tour_store.views.destinations -->
   <nav aria-label="Page navigation example">
     {% if destinations.has_other_pages %}
