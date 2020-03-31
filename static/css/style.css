@@ -70,7 +70,9 @@ body {
 .padding.px-4.px-lg-0.bg-light{
   padding-top: 50px;
 }
-
+.paddingDetail {
+  padding-top: 60px;
+}
 .navbar-brand.brand-style{
   color: #555;
 }

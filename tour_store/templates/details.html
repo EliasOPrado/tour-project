@@ -2,7 +2,8 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<div class="container">
+{% include 'normal-navbar.html' %}
+<div class="container paddingDetail">
   <h1 class="mt-4 mb-3">{{ details.tour_title }}
     <small>by
       <a href="#">{{ details.author }}</a>
