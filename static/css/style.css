@@ -177,6 +177,9 @@ section.py-5.bg-light {
   padding-top: 120px;
 }
 
+.dark-grey-text{
+  color:black;
+}
 /* this is a custom backgroud for shopping cart */
 /* .px-4.px-lg-0{
   background: #eecda3;
