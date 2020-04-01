@@ -105,7 +105,7 @@ body {
   transition: 0.9s ease-in-out left;
 }
 
-.carousel-caption.d-none.d-md-block h3 {
+.carousel-caption.d-none.d-md-block h1 {
   padding-bottom: 196px;
 }
 
