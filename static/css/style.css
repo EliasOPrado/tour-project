@@ -67,6 +67,15 @@ body {
 
 /* Bootstrapious above */
 
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid #555;
+    border-radius: .25rem;
+}
+
 .padding.px-4.px-lg-0.bg-light{
   padding-top: 50px;
 }
