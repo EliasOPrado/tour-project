@@ -11,6 +11,7 @@ def cart_contents(request):
     total = 0
     destination_count = 0
 
+    print(cart)
     for id, quantity in cart.items():
         destination = get_object_or_404(Destinations, pk=id)
         price = destination.price

@@ -34,15 +34,18 @@ def adjust_cart(request, id):
     """
     Adjust the quantity of the specified product to the specified
     amount
+
+    url for this function should be <str:id> not <int:id>
     """
+
     cart = request.session.get('cart', {})
-    print(cart[id])
-    quantity = cart[id] - 1
+    quantity = cart[id] - 1 #decreases the cart quantity until deletes from cart
 
     if quantity > 0:
         cart[id] = quantity
     else:
         cart.pop(id)
-
     request.session['cart'] = cart
+    if cart == {}:
+        return redirect(reverse('destination'))
     return redirect(reverse('view_cart'))

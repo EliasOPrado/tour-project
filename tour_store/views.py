@@ -30,7 +30,7 @@ def destinations(request):
 
     try:
         destinations = paginator.page(page)
-        print(destinations)
+        
 
     except PageNotAnInteger:
         destinations = paginator.page(1)
