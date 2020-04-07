@@ -1,12 +1,9 @@
 from django.shortcuts import render, redirect, reverse
-
+from tour_store.models import Destinations
 # Create your views here.
 
 def view_cart(request):
     """A view that renders the cart contents page """
-
-    """ You will need to create the delete_cart functionality here"""
-
 
     return render(request, 'cart.html')
 
@@ -24,17 +21,28 @@ def add_to_cart(request, id):
 
     return redirect(reverse('view_cart'))
 
+# def remove_from_cart(request, id):
+#     """ Remove an item from the cart """
+#     print(cart)
+#     cart = request.session.get('cart', {})
+#     quantity = request.POST.get('quantity')
+#     cart.pop(id, quantity) # Then pop the item out of it
+#     return redirect(reverse('view_cart'))
+
 
 def adjust_cart(request, id):
     """
     Adjust the quantity of the specified product to the specified
     amount
     """
-    quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
+    print(cart[id])
+    quantity = cart[id] - 1
+
     if quantity > 0:
         cart[id] = quantity
     else:
         cart.pop(id)
-        request.session['cart'] = cart
+
+    request.session['cart'] = cart
     return redirect(reverse('view_cart'))

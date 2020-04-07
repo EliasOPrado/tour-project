@@ -104,7 +104,7 @@
                   <!-- QUANTITY -->
                   <td class="border-0 align-middle"><strong>{{item.quantity}}</strong></td>
                 <!-- ADD DELETE FUNCTION HERE -->
-                  <td class="border-0 align-middle"><a href="{{ item.id_to_be_removed }}" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  <td class="border-0 align-middle"><a href="{% url 'adjust_cart' item.id%}" class="text-dark"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 {% endfor %}
                 <!-- PRODUCT WILL LOOP HERE -->
