@@ -36,8 +36,8 @@ def adjust_cart(request, id):
     amount
 
     url for this function should be <str:id> not <int:id>
+    - otherwise you need to add str() method for each dict representation.
     """
-
     cart = request.session.get('cart', {})
     quantity = cart[id] - 1 #decreases the cart quantity until deletes from cart
 
@@ -46,6 +46,6 @@ def adjust_cart(request, id):
     else:
         cart.pop(id)
     request.session['cart'] = cart
-    if cart == {}:
+    if not cart: #if all products be deleted from cart return to destination page
         return redirect(reverse('destination'))
     return redirect(reverse('view_cart'))
