@@ -239,6 +239,42 @@ header .overlay {
 }
 
 
+.pagination > li > a
+{
+    background-color: white;
+    color: #555;
+    border: 1px solid #17a2b8;;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #17a2b8;
+    background-color: #eee;
+    border-color: #ddd;
+
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #17a2b8;
+    border: solid 1px #17a2b8;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #555;
+    border: solid 1px #17a2b8;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
 
 /* startbootstrap code above*/
 @media (min-width: 2000px) {

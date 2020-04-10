@@ -10,12 +10,13 @@
     <div class="container3 h-100">
       <div class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-white">
-          <h1 class="display-3 ">Video Header</h1>
+          <h4 class="display-3 ">The best wellness retreats.</h4>
           <div class="row d-flex justify-content-center">
             <div class="col-md-6">
               <form action="{% url 'search' %}" method="GET" class="header__search">
                 <div class="input-group">
-                  <input type="text" name="q" placeholder="Search for a location." class="form-control">
+                  <!-- Change the search input phrase here -->
+                  <input type="text" name="q" placeholder="Search for `Thailand`." class="form-control">
                   <div class="input-group-append">
                     <button class="btn btn-warning" type="submit" name="button"><i class="fas fa-search"></i></button></div>
                 </div>
