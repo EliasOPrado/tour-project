@@ -33,8 +33,8 @@
         <li class="nav-item">
           <!-- the view cart button will log you into the cart.html url -->
           <a class="nav-link" href="{% url 'view_cart' %}">
-            <!-- <i class="fa fa-shipping-cart"></i> -->
-            Cart
+            <i class="fas fa-cart-arrow-down"></i>
+
             <label class="badge badge-warning">{{ destination_count }}</label>
           </a>
         </li>
@@ -42,7 +42,7 @@
         <li class="nav-item" disabled>
           <!-- the view cart button will log you into the cart.html url -->
           <a class="nav-link"disabled>
-            <i class="fas fa-cart-arrow-down"></i>Cart
+            <i class="fas fa-shopping-cart"></i>
           </a>
         </li>
         {% endif %}
