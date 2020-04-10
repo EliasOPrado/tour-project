@@ -16,9 +16,11 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
 | 3. Create shopping-cart app  | > two weeks  | Elias | done 10/03 | <ul><li>- [x] </li></ul>
 | 4. Create authentication app | > A week  | Elias | done 09/03 | <ul><li>- [x] </li></ul>
 | 5. Add pagination functionality | > One hour| Elias | done 13/03 | <ul><li>- [x] </li></ul>
-| 5. Make deployment | > 3 weeks | Elias | done 13/03 | <ul><li>- [ ] </li></ul>
-| 5. Create in-house admin app  | > 3 weeks | Elias | in progress | <ul><li>- [ ] </li></ul>
-| 6. Add UI/UX | 2 or 3 weeks  | Elias | - | <ul><li>- [ ] </li></ul>
+| 5. Make deployment | > 3 weeks | Elias | done 13/03 | :suspect:
+| 5. Create in-house admin app  | > 3 weeks | Elias | Removed  | <ul><li>- [ ] </li></ul>
+| 6. Add UI/UX | 2 or 3 weeks  | Elias | In progress | <ul><li>- [ ] </li></ul>
+| 6. Initiate testing | 2 or 3 weeks  | Elias | - | <ul><li>- [ ] </li></ul>
+
 
 1. ```Add template```: This task is simply add the template in the static folder and link within the code.
 2. ```Create authentication app```: This task will be used the CI authentication app. (If it is not working should be created from scratch).
