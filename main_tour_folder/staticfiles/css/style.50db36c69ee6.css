@@ -90,7 +90,7 @@ body {
 
 .carousel-item {
   height: 65vh;
-  min-height: 300px;
+  min-height: 600px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -108,7 +108,7 @@ body {
 }
 
 .carousel-caption.d-none.d-md-block h1 {
-  padding-bottom: 196px;
+  padding-bottom: 231px;
 }
 
 .portfolio-item {
