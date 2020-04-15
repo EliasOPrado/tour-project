@@ -1,5 +1,7 @@
 # Tour Project with Django
 
+[![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
+
 This is the final project of Code Institute. The main goal is to create a full-stack
 application using a relational data-base, user authentication and payment-cart with Stripe.
 
