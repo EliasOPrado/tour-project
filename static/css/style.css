@@ -90,7 +90,7 @@ body {
 
 .carousel-item {
   height: 65vh;
-  min-height: 300px;
+  min-height: 600px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -108,16 +108,13 @@ body {
 }
 
 .carousel-caption.d-none.d-md-block h1 {
-  padding-bottom: 196px;
+  padding-bottom: 231px;
 }
 
 .portfolio-item {
   margin-bottom: 30px;
 }
 
-.header-height{
-  height: 500px;
-}
 
 form.header__search {
   padding-left: 25%;
@@ -125,11 +122,6 @@ form.header__search {
   padding-top: 10px;
 }
 
-img.retreat-img.img-fluid.rounded.mb-3.mb-md-0 {
-  width: 200px; /* You can set the dimensions to whatever you want */
-  height: 200px;
-  object-fit: cover;
-}
 
 .card {
   position: relative;
@@ -213,7 +205,7 @@ section.py-5.bg-light {
 header {
   position: relative;
   /* background-color: black; */
-  height: 75vh;
+  height: 90vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
