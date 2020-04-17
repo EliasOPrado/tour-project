@@ -8,8 +8,8 @@
   {% for destination in destinations %}
   <div class="row">
     <div class="col-md-7">
-      <a href="#">
-        <img class=" img-fluid rounded mb-3 mb-md-0" src="{{ destination.image.url}}" alt="">
+      <a href="{% url 'destinationDetails' id=destination.id %}">
+        <img class=" img-fluid rounded mb-3 mb-md-0" src="{{ destination.image.url}}"  alt="">
       </a>
     </div>
     <div class="col-md-5 ">

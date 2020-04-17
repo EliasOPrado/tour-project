@@ -39,7 +39,7 @@
     <div class="col-lg-4 col-sm-6 portfolio-item">
       <a class="card-title" href="{% url 'destinationDetails' id=destination.id %}">
         <div class="card text-white">
-          <img src="{{ destination.image.url}}" class="card-img-top" alt="destination">
+          <img src="{{ destination.image.url}}" href="{% url 'destinationDetails' id=destination.id %}" class="card-img-top" alt="destination">
           <div class="card-img-overlay text-center">
             <h3 class="card-title ">{{destination.tour_title}}</h3>
           </div>
