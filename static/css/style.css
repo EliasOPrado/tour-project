@@ -279,7 +279,12 @@ header .overlay {
     background-color: #17a2b8;
     border-color: #17a2b8;
 }
-
+.footer-color{
+  background-color: #45526e !important;
+}
+.page-footer{
+  color: #fff;
+}
 /* startbootstrap code above*/
 @media (min-width: 2000px) {
   .image2 {
