@@ -54,8 +54,10 @@ body {
 .navbar.active .navbar-brand {
     color: #555;
 }
+.btn.btn-info.rounded.py-2.btn-block{
+  margin-top: 25px;
 
-
+}
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
     .navbar {
@@ -242,7 +244,14 @@ header .overlay {
   z-index: 1;
 }
 
-
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 294px;
+    padding: 0;
+    overflow: hidden;
+}
 .pagination > li > a
 {
     background-color: white;

@@ -65,9 +65,6 @@
         </div>
       </div>
 
-
-
-
     <div class="col-md-4">
 
       <div class="card card-body my-4">
@@ -76,7 +73,8 @@
         <br>
         <h4>  € {{details.price}}</h4>
         <br>
-        <p>Start: {{details.booking_start_date}} <br>Ends: {{details.booking_end_date}} </p>
+        <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{details.booking_start_date}} -  {{details.booking_end_date}}</strong></p>
+
         <form method="POST" action="{% url 'add_to_cart' details.id %}">
           {% csrf_token %}
           <div class="input-group">
