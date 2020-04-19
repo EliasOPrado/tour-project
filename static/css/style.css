@@ -13,6 +13,14 @@ body {
   overflow-y: auto;
 }
 
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
 /* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar */
 .navbar {
     transition: all 0.4s;
@@ -124,9 +132,6 @@ form.header__search {
   padding-top: 10px;
 }
 
-.retreat-style{
-  
-}
 .card {
   position: relative;
   display: -ms-flexbox;

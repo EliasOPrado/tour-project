@@ -1,4 +1,8 @@
-<nav class="navbar  navbar-expand-lg fixed-top py-3">
+
+<!-- Added conditional to alert message be displayed above navbar and display active class.
+ As there is another conditional around the style.js link on base.html (line 274)to deactivate the script 
+ - when message is displayed adding the .active class with django. -->
+<nav class="navbar  navbar-expand-lg {% if not messages %}fixed-top{% else %}active{% endif%} py-3">
   <div class="container">
 
     <a class="navbar-brand" href="{% url 'index' %}"><i class="fas fa-spa fa-lg" ></i> Tour Project</a>
