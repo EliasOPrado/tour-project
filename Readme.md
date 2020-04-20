@@ -19,7 +19,6 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
 | 4. Create authentication app | > A week  | Elias | done 09/03 | <ul><li>- [x] </li></ul>
 | 5. Add pagination functionality | > One hour| Elias | done 13/03 | <ul><li>- [x] </li></ul>
 | 5. Make deployment | > 3 weeks | Elias | done 13/03 | :suspect:
-| 5. Create in-house admin app  | > 3 weeks | Elias | Removed  | <ul><li>- [ ] </li></ul>
 | 6. Add UI/UX | 2 or 3 weeks  | Elias | In progress | <ul><li>- [ ] </li></ul>
 | 6. Initiate testing | 2 or 3 weeks  | Elias | - | <ul><li>- [ ] </li></ul>
 
@@ -37,13 +36,3 @@ Use this (Tourist Website)[https://colorlib.com/preview/#vacation] as functional
     5. ....
 4. ```Create cart app```: This app will be the last and the hardest one.
 5. ```Create authentication app``` This app has to have signup, signin and logut.
-
-## Author
-
-<table>
-    <tr>
-        <td style="text-align:center">
-            <a href="https://github.com/EliasOPrado" target="blank" rel="noopener"><img src="https://avatars1.githubusercontent.com/u/39608843?s=460&u=564dc93f62af428cb3e7eb3dbe2476b11f7950c5&v=4"><br><sub>@EliasOPrado</sub></a>
-        </td>
-    </tr>
-</table>
