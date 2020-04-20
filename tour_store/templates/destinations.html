@@ -15,7 +15,7 @@
     <div class="col-md-5 ">
       <h3>{{destination.tour_title}}</h3>
       <h6>{{destination.location}}</h6>
-      <p >{{destination.description|slice:":150"}}...</p>
+      <p >{{destination.description|safe|slice:":150"}}...</p>
 
       <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{destination.booking_start_date}} -  {{destination.booking_end_date}}</strong></p>
 

@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 
@@ -7,7 +7,7 @@ class Destinations(models.Model):
 
     author = models.CharField(max_length=200, unique=False)
     tour_title = models.CharField(max_length=250)
-    description = models.TextField()
+    description = RichTextUploadingField()
     image = models.ImageField(upload_to='tour_images', blank=True)
     location = models.CharField(max_length=250)
     booking_start_date = models.DateField()
