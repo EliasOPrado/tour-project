@@ -85,7 +85,7 @@
           </ul>
           <!-- <a href="{% url 'checkout'%}" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a> -->
           <div class="form-group col-md-12">
-            <input class="btn btn-success rounded-pill py-2 btn-block" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+            <input class="btn btn-success rounded-pill py-2 btn-block submitBtn" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
           </div>
         </div>
     </div>
@@ -95,6 +95,13 @@
 </div>
 
 </div>
-
+<script>
+  $(function(){
+     $(".submitBtn").click(function () {
+       $(".submitBtn").attr("disabled", true);
+       $('#submit_payment_btn').submit();
+     });
+   });
+</script>
 
 {% endblock %}
