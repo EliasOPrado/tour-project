@@ -1,22 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bootstrap_tags %}
-
-
 {% block content %}
 {% include 'normal-navbar.html' %}
 
-<!-- head_js is a stripe requirement -->
-{% block head_js %}
-
-<script type="text/javascript">
-  //<![CDATA[
-  Stripe.publishableKey = '{{ publishable }}';
-  //]]>
-</script>
-<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-{% endblock head_js %}
 
 <div class="padding px-4 px-lg-0 bg-light">
   <div class="container text-white py-5 text-center">
@@ -95,13 +82,6 @@
 </div>
 
 </div>
-<script>
-  $(function(){
-     $(".submitBtn").click(function () {
-       $(".submitBtn").attr("disabled", true);
-       $('#submit_payment_btn').submit();
-     });
-   });
-</script>
+
 
 {% endblock %}
