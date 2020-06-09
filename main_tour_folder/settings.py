@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 """
 Set debug = True when developing and False to deploy.
 """
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
 
@@ -196,6 +196,12 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     },
 }
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.getenv("EMAIL_ADDRESS")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_PORT = 587
 
 
 #=====================================================================================================================#

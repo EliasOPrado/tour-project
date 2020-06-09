@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main_view, name="index" ),
     #Include tour_store apps
-    path('accounts/', include('accounts.urls')),
+    path('accounts/', include('accounts.urls')), #account reset url
     path('store/', include("tour_store.urls")),
     path('cart/', include("cart.urls")),
     path('search/', include("search.urls")),
