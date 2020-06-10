@@ -66,16 +66,7 @@ body {
   margin-top: 25px;
 
 }
-/* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #fff;
-    }
 
-    .navbar .navbar-brand, .navbar .nav-link {
-        color: #555;
-    }
-}
 
 /* Bootstrapious above */
 
@@ -310,10 +301,21 @@ header .overlay {
   }
 }
 
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
 
 /* iPads (portrait) ----------- */
 @media only screen
-and (max-device-width : 768px)
+and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
   header {
@@ -325,49 +327,9 @@ and (orientation : portrait) {
 }
 }
 
-  @media only screen
-  and (min-device-width : 768px)
-  and (max-device-width : 1024px)
-  and (orientation : landscape)
-  and (-webkit-min-device-pixel-ratio : 2) {
-    header {
-      background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
-      position: relative;
-    }
-    .carousel-caption.d-none.d-md-block h1 {
-      padding-bottom: 250px;
-  }
-}
 
-/* Ipad Pro */
-@media only screen
-and (max-width: 1024px)
-and (max-height: 1366px)
-and (orientation: portrait)
-and (-webkit-min-device-pixel-ratio: 1.5) {
-  header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
-    position: relative;
-  }
-  .carousel-caption.d-none.d-md-block h1 {
-      padding-bottom: 430px;
-  }
-}
-@media only screen
-and (min-width: 1024px)
-and (max-height: 1366px)
-and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 1.5) {
-  header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
-    position: relative;
-  }
-  .carousel-caption.d-none.d-md-block h1 {
-      padding-bottom: 300px;
-  }
-}
 
-@media (pointer: coarse) and (hover: none)  {
+@media (hover: none) and (pointer: coarse)  {
 
   html,
   body {
@@ -390,14 +352,67 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
     left: 0;
     height: 100%;
     width: 100%;
-    /* Need to fix the opacity */
-    /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100% );
-opacity: 0.6; */
+
     z-index: 1;
   }
 
   header h1 {
     z-index: 2;
   }
+}
 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio : 2) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
+    position: relative;
+  }
+
+  .carousel-caption.d-none.d-md-block h1 {
+    padding-bottom: 250px;
+  }
+  header video {
+    display: none;
+  }
+}
+
+/* Ipad Pro */
+/* Ipad pro potrait */
+ @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.png") white no-repeat center scroll;
+    position: relative;
+  }
+  .carousel-caption.d-none.d-md-block h1 {
+      padding-bottom: 430px;
+  }
+  /* to avoid video appear in this media query*/
+  header video {
+    display: none;
+  }
+}
+/* Ipad pro landscape */
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
+    position: relative;
+  }
+  .carousel-caption.d-none.d-md-block h1 {
+      padding-bottom: 300px;
+  }
+  /* to avoid video appear in this media query*/
+  header video {
+    display: none;
+  }
 }
