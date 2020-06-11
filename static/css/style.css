@@ -242,6 +242,11 @@ header .overlay {
   z-index: 1;
 }
 
+.img-fluid.alter_img{
+  max-width: 100%;
+  height: 200px;
+}
+
 .embed-responsive {
     position: relative;
     display: block;
