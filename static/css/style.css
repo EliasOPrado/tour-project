@@ -391,6 +391,7 @@ and (orientation : portrait) {
     display: none;
   }
 
+
   header .overlay {
     position: absolute;
     top: 0;
@@ -415,7 +416,6 @@ and (-webkit-min-device-pixel-ratio : 2) {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
     position: relative;
   }
-
   .carousel-caption.d-none.d-md-block h1 {
     padding-bottom: 250px;
   }
@@ -438,6 +438,8 @@ and (-webkit-min-device-pixel-ratio : 2) {
   .carousel-caption.d-none.d-md-block h1 {
       padding-bottom: 430px;
   }
+
+
   /* to avoid video appear in this media query*/
   header video {
     display: none;
@@ -461,6 +463,24 @@ and (-webkit-min-device-pixel-ratio : 2) {
     display: none;
   }
 }
+
+@media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+ }
+
+@media (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+  .col-lg-6.col-sm-9 {
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+ }
 
 /*
 CHECK the project fonts,
