@@ -407,11 +407,30 @@ and (orientation : portrait) {
   }
 }
 
+/* iPhone 6, 7, & 8 in landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  /* remove skew style */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+}
+
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  /* remove skew style */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+}
+
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio : 2) {
+and (orientation : portrait) {
   header {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
     position: relative;
@@ -419,6 +438,12 @@ and (-webkit-min-device-pixel-ratio : 2) {
   .carousel-caption.d-none.d-md-block h1 {
     padding-bottom: 250px;
   }
+
+  .testimonial p {
+      width: 70%;
+      margin-left: 40px;
+  }
+
   header video {
     display: none;
   }
@@ -438,7 +463,6 @@ and (-webkit-min-device-pixel-ratio : 2) {
   .carousel-caption.d-none.d-md-block h1 {
       padding-bottom: 430px;
   }
-
 
   /* to avoid video appear in this media query*/
   header video {
