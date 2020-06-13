@@ -359,7 +359,7 @@ h1.font-weight-bold.testimonials {
 
 
 /* iPads (portrait) ----------- */
-@media only screen
+/* @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
@@ -370,11 +370,12 @@ and (orientation : portrait) {
   .carousel-caption.d-none.d-md-block h1 {
     padding-bottom: 300px;
 }
-}
+} */
 
 
 
-@media (hover: none) and (pointer: coarse)  {
+@media (hover: none)
+and (pointer: coarse)  {
 
   html,
   body {
@@ -390,7 +391,6 @@ and (orientation : portrait) {
   header video {
     display: none;
   }
-
 
   header .overlay {
     position: absolute;
@@ -418,6 +418,7 @@ and (orientation : landscape) {
   }
 }
 
+/* iPhone 6, 7, & 8 Plus in portrait & landscape */
 @media only screen
 and (min-device-width : 414px)
 and (max-device-width : 736px) {
@@ -427,6 +428,7 @@ and (max-device-width : 736px) {
   }
 }
 
+/* iPad potrait */
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -510,5 +512,5 @@ and (orientation : portrait) {
 CHECK the project fonts,
 Add a about us page with person section,
 Add a JS effect on main page,
-Use the comment form to create a contact us page.
+Use the comment form to create a contact us page.[done]
  */

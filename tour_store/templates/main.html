@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load bootstrap_tags %}
 {% include 'transparent-navbar.html' %}
 
 <header>
@@ -118,8 +119,8 @@
   </div>
 
 
-
-  <section class="py-5 ">
+<div class="row">
+  <section class=" col-md-6 py-5 ">
     <div class="container container2 text-center">
       <h2>About Us</h2>
       <div class="row d-flex justify-content-center">
@@ -130,5 +131,27 @@
       </div>
     </div>
   </section>
+    <div class=" col-md-6 card card-body card-padding-bottom">
+          {% if new_contact %}
+          <div class="alert alert-success" role="alert">
+            Your comment is awaiting moderation
+          </div>
+          {% else %}
+
+          <div class=" my-4">
+            <h5>Get in touch:</h5>
+                <br>
+              <form method="post">
+                <div class="form-group">
+                  {{ contact_form | as_bootstrap }}
+                  {% csrf_token %}
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+              </form>
+              {% endif %}
+            </div>
+          </div>
+
+  </div>
 
   {% endblock content %}

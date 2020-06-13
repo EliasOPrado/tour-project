@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Destinations
 
@@ -9,9 +9,29 @@ def main_view(request):
     #Here need to make a destination var and get all objects
     #loop tem on the main page with nice cards
     show_destinations = Destinations.objects.all()
+    #contacts = details.contact.filter(active=True)
+    new_contact = None
+    # Comment posted
+    if request.method == 'POST':
+        contact_form = ContactForm(data=request.POST)
+        if contact_form.is_valid():
+
+            # Create contact object but don't save to database yet
+            new_contact = contact_form.save(commit=False)
+            # Assign the current post to the comment
+            #new_contact.post = details
+            # Save the comment to the database
+            new_contact.save()
+    else:
+        contact_form = ContactForm()
 
     # show_destinations is to loop destinations in the main page.
-    return render(request, 'main.html', {'show_destinations': show_destinations})
+    return render(request, 'main.html', {
+        'show_destinations': show_destinations,
+        
+        'new_contact': new_contact,
+        'contact_form': contact_form
+    })
 
     #make multiples carousels with different slides <<<<
 
@@ -19,7 +39,7 @@ def destinations(request):
     """
     This function will display the pagination
     if the number of elements are not > than
-    the number of the 'paginator'==3 the Pagination
+    the number. if the 'paginator'==3 the Pagination
     will desappear.
     """
     destination = Destinations.objects.all()
