@@ -155,8 +155,8 @@ USE_TZ = True
 #=====================================================================================================================#
 ##             Active config for AWS usage  | Comment this if you want to use this app without AWS config            ##
 #=====================================================================================================================#
-Static files (CSS, JavaScript, Images)
-https://docs.djangoproject.com/en/3.0/howto/static-files/
+# #Static files (CSS, JavaScript, Images)
+# #https://docs.djangoproject.com/en/3.0/howto/static-files/
 """ AWS configuration """
 AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
