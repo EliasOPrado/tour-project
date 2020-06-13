@@ -1,0 +1,574 @@
+/* Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)*/
+
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* padding-top: 56px; only use this command when using a normal navbar. <<*/
+  /* removes the x-asis scrolling */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+/* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar */
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+/* To fix BRAND - FLOWER icon color */
+
+.navbar .navbar-brand {
+    /* color: #17a2b8; */
+    color: #fff;
+}
+
+
+/* Change navbar styling on scroll  */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+.btn.btn-info.rounded.py-2.btn-block{
+  margin-top: 25px;
+
+}
+
+
+/* Bootstrapious above */
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid #555;
+    border-radius: .25rem;
+}
+
+.padding.px-4.px-lg-0.bg-light{
+  padding-top: 50px;
+}
+.paddingDetail {
+  padding-top: 60px;
+}
+.navbar-brand.brand-style{
+  color: #555;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 600px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-inner.carousel.item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.9s ease-in-out left;
+  -moz-transition: 0.9s ease-in-out left;
+  -o-transition: 0.9s ease-in-out left;
+  transition: 0.9s ease-in-out left;
+}
+
+.carousel-caption.d-none.d-md-block h1 {
+  padding-bottom: 231px;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+
+form.header__search {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 10px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  /* background-clip: border-box; */
+  /* border: none; */
+}
+
+.card-img-top {
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(.25rem - 1px);
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  /* text-align: center; */
+}
+
+.col-md-4.card.card-body.card-padding-bottom{
+  margin-bottom: 50px;
+}
+
+.card.card-style {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 30px;
+}
+
+.card.card-style2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 30px;
+}
+
+h3.card-title {
+  padding-top: 35%;
+}
+
+.row.row2 {
+  padding: 30px;
+}
+
+section.py-5.bg-light {
+  height: 500px;
+}
+
+.container.container2 {
+  padding: 100px;
+
+}
+
+.dark-grey-text{
+  color:black;
+}
+/* this is a custom backgroud for shopping cart */
+/* .px-4.px-lg-0{
+  background: #eecda3;
+  background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+} */
+
+/* startbootstrap code below*/
+header {
+  position: relative;
+  /* background-color: black; */
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container3 {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: black;
+  opacity: 0.9; */
+  z-index: 1;
+}
+
+/* testimonial      */
+.img-fluid.alter_img{
+  max-width: 100%;
+  height: 200px;
+}
+
+.orange-text .fa-star, .fa-star-half-alt {
+    color: orange;
+}
+
+.z-depth-1, .card.gradient-card:focus-within .card-image {
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+
+p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle{
+  width: 40%;
+}
+.testimonial p {
+  width: 70%;
+  margin-left: 70px;
+}
+
+.row.skew1 {
+  transform-origin: left top;
+    transform: skewY(-4deg);
+    z-index: -2;
+    margin-top: 100px;
+    /* background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%); */
+    /* background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%); */
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+.testimonial.skew2.container-fluid {
+  transform-origin: left top;
+transform: skewY(4deg);
+padding-bottom: 700px;
+width: 100%;
+height: 200px;
+}
+
+h1.font-weight-bold.testimonials {
+  margin-bottom: 3rem!important;
+}
+
+ textarea.form-control {
+    height: 5rem;
+    /* changes resize to scroll */
+    resize: none;
+}
+
+ /* .col-md-6.py-5  {
+    margin-top: 100px;
+ } */
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 294px;
+    padding: 0;
+    overflow: hidden;
+}
+.pagination > li > a
+{
+    background-color: white;
+    color: #555;
+    border: 1px solid #17a2b8;;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #17a2b8;
+    background-color: #eee;
+    border-color: #ddd;
+
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #17a2b8;
+    border: solid 1px #17a2b8;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #555;
+    border: solid 1px #17a2b8;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.footer-color{
+  background-color: #45526e !important;
+}
+.page-footer{
+  color: #fff;
+}
+/* startbootstrap code above*/
+@media (min-width: 2000px) {
+  .image2 {
+    position: absolute;
+    top: 45vh;
+    left: 110vh;
+  }
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+
+/* iPads (portrait) ----------- */
+/* @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
+    position: relative;
+  }
+  .carousel-caption.d-none.d-md-block h1 {
+    padding-bottom: 300px;
+}
+} */
+
+
+
+@media (hover: none)
+and (pointer: coarse)  {
+
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat3.jpeg") white no-repeat center scroll;
+    position: relative;
+  }
+
+  header video {
+    display: none;
+  }
+
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    z-index: 1;
+  }
+
+  header h1 {
+    z-index: 2;
+  }
+}
+
+/* iPhone 6, 7, & 8 in potrait*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .text {
+        width: 80%;
+  }
+  .container.container2 {
+    padding: 0;
+  }
+
+  .col-lg-6.col-sm-9.text{
+    width: 80%;
+  }
+
+  .col-md-4.card.card-body.card-padding-bottom {
+    margin: 40px;
+  }
+}
+
+/* iPhone 6, 7, & 8 in landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  /* remove skew style */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+}
+
+/* iPhone 6, 7, & 8 Plus in portrait & landscape */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  /* remove skew style */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+  /* main.html form */
+  .col-md-4.card.card-body.card-padding-bottom {
+    margin: 30px;
+  }
+}
+
+/* iPhone X landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) {
+
+  .container.container2 {
+    padding: 0;
+  }
+
+  .card.card-body.card-padding-bottom {
+    height: 500px;
+  }
+}
+
+/* iPad potrait */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
+    position: relative;
+  }
+  .carousel-caption.d-none.d-md-block h1 {
+    padding-bottom: 250px;
+  }
+
+  .testimonial p {
+      width: 70%;
+      margin-left: 40px;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+/* Ipad Pro */
+/* Ipad pro potrait */
+ @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.png") white no-repeat center scroll;
+    position: relative;
+  }
+  .carousel-caption.d-none.d-md-block h1 {
+      padding-bottom: 430px;
+  }
+
+  /* to avoid video appear in this media query*/
+  header video {
+    display: none;
+  }
+  /* about us */
+.container.container2 {
+    padding: 0;
+    padding-top: 70px;
+}
+/* form */
+.col-md-4.card.card-body.card-padding-bottom {
+    margin-bottom: 50px;
+    height: 500px;
+}
+}
+/* Ipad pro landscape */
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
+    position: relative;
+  }
+  .carousel-caption.d-none.d-md-block h1 {
+      padding-bottom: 300px;
+  }
+  /* to avoid video appear in this media query*/
+  header video {
+    display: none;
+  }
+}
+
+@media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+ }
+
+@media (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */
+  .row.bg-light.skew1 {
+    display: none;
+  }
+  .col-lg-6.col-sm-9 {
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+ }
+
+/*
+CHECK the project fonts,
+Add a about us page with person section,
+Add a JS effect on main page,
+Use the comment form to create a contact us page.[done]
+ */

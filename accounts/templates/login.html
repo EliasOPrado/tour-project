@@ -3,7 +3,7 @@
 {% load bootstrap_tags %}
 {% block content %}
 {% include 'normal-navbar.html' %}
-<div class="card shadow-sm card-style">
+<div class="card shadow-sm card-style login-style">
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform ">
         <fieldset class="form-group">
             <legend>Login</legend>

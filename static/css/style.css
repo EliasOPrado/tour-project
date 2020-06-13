@@ -204,7 +204,7 @@ section.py-5.bg-light {
 header {
   position: relative;
   /* background-color: black; */
-  height: 90vh;
+  height: 100vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -291,6 +291,17 @@ h1.font-weight-bold.testimonials {
     resize: none;
 }
 
+.card.card-style.login-style,
+.card.card-style2.register-style {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding: 30px;
+}
+ /* .col-md-6.py-5  {
+    margin-top: 100px;
+ } */
 
 .embed-responsive {
     position: relative;
@@ -451,7 +462,6 @@ and (max-device-width : 736px) {
   .row.bg-light.skew1 {
     display: none;
   }
-
   /* main.html form */
   .col-md-4.card.card-body.card-padding-bottom {
     margin: 30px;
@@ -471,7 +481,7 @@ and (orientation : landscape) {
 
   .card.card-body.card-padding-bottom {
     height: 500px;
-  }  
+  }
 }
 
 /* iPad potrait */
