@@ -17,7 +17,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'contact', 'created_on', 'active')
+    list_display = ('name', 'email', 'subject', 'message', 'created_on', 'active')
     list_filter = ('active', 'created_on')
     search_fields = ('name', 'email', 'body')
 

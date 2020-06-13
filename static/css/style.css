@@ -285,6 +285,12 @@ h1.font-weight-bold.testimonials {
   margin-bottom: 3rem!important;
 }
 
+/* form */
+
+textarea.form-control {
+    height: 5rem;
+}
+
 
 
 .embed-responsive {
