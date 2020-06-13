@@ -20,3 +20,4 @@ class ContactForm(forms.ModelForm):
             'subject':forms.TextInput(attrs={'class': 'form-control'}),
             'message':forms.Textarea(attrs={'class': 'form-control','height': '5rem'}),
         }
+        

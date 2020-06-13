@@ -285,12 +285,11 @@ h1.font-weight-bold.testimonials {
   margin-bottom: 3rem!important;
 }
 
-/* form */
-
-textarea.form-control {
+ textarea.form-control {
     height: 5rem;
+    /* changes resize to scroll */
+    resize: none;
 }
-
 
 
 .embed-responsive {
@@ -413,6 +412,25 @@ and (pointer: coarse)  {
   }
 }
 
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .text {
+        width: 80%;
+  }
+  .container.container2 {
+    padding: 0;
+  }
+
+  .col-lg-6.col-sm-9.text{
+    width: 80%;
+  }
+
+  .card.card-body.card-padding-bottom {
+    margin: 40px;
+  }
+}
+
 /* iPhone 6, 7, & 8 in landscape */
 @media only screen
 and (min-device-width : 375px)
@@ -432,6 +450,12 @@ and (max-device-width : 736px) {
   .row.bg-light.skew1 {
     display: none;
   }
+
+  /* main.html form */
+  .card.card-body.card-padding-bottom {
+    margin: 50px;
+  }
+
 }
 
 /* iPad potrait */
@@ -476,6 +500,16 @@ and (orientation : portrait) {
   header video {
     display: none;
   }
+  /* about us */
+.container.container2 {
+    padding: 0;
+    padding-top: 70px;
+}
+/* form */
+.card.card-body.card-padding-bottom {
+    margin-bottom: 50px;
+    height: 500px;
+}
 }
 /* Ipad pro landscape */
 @media only screen
