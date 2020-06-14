@@ -480,6 +480,14 @@ and (orientation : landscape) {
   .card.card-body.card-padding-bottom {
     height: 500px;
   }
+
+  .testimonial p {
+    width: 70%;
+    margin-left: 40px;
+}
+.col-md-4.card.card-body.card-padding-bottom {
+  margin: 30px;
+}
 }
 
 /* iPad potrait */
@@ -503,7 +511,11 @@ and (orientation : portrait) {
   header video {
     display: none;
   }
+  .container.container2 {
+    padding: 0;
 }
+}
+
 
 /* Ipad Pro */
 /* Ipad pro potrait */
