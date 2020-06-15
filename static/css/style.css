@@ -156,6 +156,10 @@ form.header__search {
   margin-bottom: 50px;
 }
 
+.comment-margin-bottom{
+    margin-bottom: 50px;
+}
+
 .card.card-style {
   margin-top: 150px;
   margin-bottom: 150px;
