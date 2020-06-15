@@ -424,6 +424,25 @@ and (pointer: coarse)  {
   header h1 {
     z-index: 2;
   }
+
+  p img.wysiwyg-img{
+    width: 290px;
+  }
+}
+
+/* iphone 4/4s potrait */
+@media only screen
+and (min-device-width: 320px)
+ and (max-device-width: 480px)
+ and (-webkit-device-pixel-ratio: 2)
+ and (device-aspect-ratio: 2/3)
+  and (orientation:portrait)
+{
+  /* this style is done from within the django admin
+  where the style should be placed within the wysiwyg app*/
+  p img.wysiwyg-img{
+    width: 290px;
+  }
 }
 
 /* iPhone 6, 7, & 8 in potrait*/
@@ -524,6 +543,9 @@ and (orientation : portrait) {
   }
   .container.container2 {
     padding: 0;
+}
+p img.wysiwyg-img {
+    width: 400px;
 }
 }
 
