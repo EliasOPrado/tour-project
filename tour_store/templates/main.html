@@ -10,7 +10,7 @@
       <source src="{% static 'videos/yoga.mp4' %}" type="video/mp4">
     </video>
     <div class="container3 h-100">
-      <div class="d-flex h-100 text-center align-items-center">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1800" class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-white for-wide-screen">
           <h2 class="display-4 ">The best wellness retreats.</h2>
           <div class="row d-flex justify-content-center">
@@ -36,13 +36,13 @@
 
   <!-- Portfolio Section -->
 
-  <div class="row row2">
+  <div class="row row2" >
     {% for destination in show_destinations|slice:"3" %}
-    <div class="col-lg-4 col-sm-6 portfolio-item">
+    <div data-aos="fade-up" class="col-lg-4 col-sm-6 portfolio-item">
       <a class="card-title" href="{% url 'destinationDetails' id=destination.id %}">
         <div class="card text-white">
           <img src="{{ destination.image.url}}" class="card-img-top" alt="destination">
-          <div class="card-img-overlay text-center">
+          <div class="card-img-overlay shadow text-center">
             <h3 class="card-title ">{{destination.tour_title}}</h3>
           </div>
         </div>
@@ -58,7 +58,7 @@
                    <h1 class="font-weight-bold testimonials">Testimonials</h1>
                    <!-- <p class="dark-grey-text w-responsive mx-auto mb-5 subtitle"> Success says by itself. Here you can see real story from real members who joined Gym and changed their lives.</p>-->
                    <div class="row text-center">
-                       <div class="col-md-4 mb-md-0 mb-5">
+                       <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="800">
                            <div class="testimonial">
                                <div class="avatar mx-auto">
                                    <img src="{% static 'images/avatar1.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member2g">
@@ -77,7 +77,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-md-4 mb-md-0 mb-5">
+                       <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="900">
                            <div class="testimonial">
                                <div class="avatar mx-auto">
                                    <img src="{% static 'images/avatar2.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="trainer">
@@ -95,7 +95,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-md-4">
+                       <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
                            <div class="testimonial">
                                <div class="avatar mx-auto">
                                    <img src="{% static 'images/avatar3.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member">
@@ -120,7 +120,7 @@
 
 
 <div class="row">
-  <section class=" col-md-6 py-5 ">
+  <section  class=" col-md-6 py-5 ">
     <div class="container container2 text-center">
       <h2>About Us</h2>
       <div class="row d-flex justify-content-center">
@@ -131,7 +131,7 @@
       </div>
     </div>
   </section>
-    <div class=" col-md-4 card card-body card-padding-bottom">
+    <div class=" col-md-4 card card-body card-padding-bottom shadow" data-aos="zoom-out">
           {% if new_contact %}
           <div class="alert alert-success" role="alert">
             Your comment is awaiting moderation

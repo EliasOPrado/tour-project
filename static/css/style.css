@@ -370,22 +370,6 @@ h1.font-weight-bold.testimonials {
 }
 
 
-/* iPads (portrait) ----------- */
-/* @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-  header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
-    position: relative;
-  }
-  .carousel-caption.d-none.d-md-block h1 {
-    padding-bottom: 300px;
-}
-} */
-
-
-
 @media (hover: none)
 and (pointer: coarse)  {
 
@@ -471,8 +455,8 @@ and (max-device-width : 667px) {
   .card.card-style.login-style, .card.card-style2.register-style {
     margin-top: 150px;
     margin-bottom: 150px;
-    margin-left: 30px;
-    margin-right: 400px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px;
     width: 350px;
   }
@@ -628,7 +612,7 @@ and (orientation : landscape) {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
   header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
     position: relative;
   }
   .carousel-caption.d-none.d-md-block h1 {
@@ -656,22 +640,33 @@ and (orientation : landscape) {
     padding-right: 0;
     padding-left: 0;
   }
+  .card.card-style.login-style, .card.card-style2.register-style {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 300px;
+  }
  }
 
 /* wide screen */
  @media (min-width: 2000px) {
-     header {
+   header {
+     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
+     position: relative;
+   }
+     /* header {
        position: relative;
-       /* background-color: black; */
        height: 100vh;
        min-height: 25rem;
        width: 280vh;
        overflow: hidden;
-     }
+     } */
 
-     .w-100.text-white.for-wide-screen {
+     /* .w-100.text-white.for-wide-screen {
        margin-left: 330px;
-     }
+     } */
 
      .image2 {
        position: absolute;

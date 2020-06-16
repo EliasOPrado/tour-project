@@ -156,6 +156,10 @@ form.header__search {
   margin-bottom: 50px;
 }
 
+.comment-margin-bottom{
+    margin-bottom: 50px;
+}
+
 .card.card-style {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -171,6 +175,7 @@ form.header__search {
   margin-right: 100px;
   padding: 30px;
 }
+
 
 h3.card-title {
   padding-top: 35%;
@@ -352,13 +357,6 @@ h1.font-weight-bold.testimonials {
   color: #fff;
 }
 /* startbootstrap code above*/
-@media (min-width: 2000px) {
-  .image2 {
-    position: absolute;
-    top: 45vh;
-    left: 110vh;
-  }
-}
 
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
@@ -370,22 +368,6 @@ h1.font-weight-bold.testimonials {
         color: #555;
     }
 }
-
-
-/* iPads (portrait) ----------- */
-/* @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-  header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
-    position: relative;
-  }
-  .carousel-caption.d-none.d-md-block h1 {
-    padding-bottom: 300px;
-}
-} */
-
 
 
 @media (hover: none)
@@ -419,6 +401,31 @@ and (pointer: coarse)  {
   header h1 {
     z-index: 2;
   }
+
+  p img.wysiwyg-img{
+    width: 290px;
+  }
+}
+
+/* iphone 4/4s potrait */
+@media only screen
+and (min-device-width: 320px)
+ and (max-device-width: 480px)
+ and (-webkit-device-pixel-ratio: 2)
+ and (device-aspect-ratio: 2/3)
+  and (orientation:portrait)
+{
+  /* this style is done from within the django admin
+  where the style should be placed within the wysiwyg app*/
+  p img.wysiwyg-img{
+    width: 290px;
+  }
+  .card.card-style.login-style, .card.card-style2.register-style {
+    margin-left: 10px;
+    margin-right: 400px;
+    padding: 30px;
+    width: 300px;
+}
 }
 
 /* iPhone 6, 7, & 8 in potrait*/
@@ -438,6 +445,20 @@ and (max-device-width : 667px) {
 
   .col-md-4.card.card-body.card-padding-bottom {
     margin: 40px;
+  }
+
+  /* this style is done from within the django admin
+  where the style should be placed within the wysiwyg app*/
+  p img.wysiwyg-img{
+    width: 350px;
+  }
+  .card.card-style.login-style, .card.card-style2.register-style {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 350px;
   }
 }
 
@@ -480,6 +501,14 @@ and (orientation : landscape) {
   .card.card-body.card-padding-bottom {
     height: 500px;
   }
+
+  .testimonial p {
+    width: 70%;
+    margin-left: 40px;
+}
+.col-md-4.card.card-body.card-padding-bottom {
+  margin: 30px;
+}
 }
 
 /* iPad potrait */
@@ -491,21 +520,54 @@ and (orientation : portrait) {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
     position: relative;
   }
+
   .carousel-caption.d-none.d-md-block h1 {
     padding-bottom: 250px;
   }
 
   .testimonial p {
-      width: 70%;
-      margin-left: 40px;
+    width: 70%;
+    margin-left: 40px;
   }
 
   header video {
     display: none;
   }
+
+  .container.container2 {
+    padding: 0;
+  }
+
+  p img.wysiwyg-img {
+    width: 400px;
+  }
+
+  .card.card-style.login-style, .card.card-style2.register-style {
+    margin-top: 200px;
+    margin-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 500px;
+  }
 }
 
-/* Ipad Pro */
+/* iPad landscape*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .card.card-style.login-style, .card.card-style2.register-style {
+    margin-top: 100px;
+    margin-bottom: 70px;
+    margin-left: 270px;
+    margin-right: 400px;
+    padding: 30px;
+    width: 500px;
+  }
+}
+
+
 /* Ipad pro potrait */
  @media only screen
   and (min-device-width: 1024px)
@@ -533,6 +595,14 @@ and (orientation : portrait) {
 .col-md-4.card.card-body.card-padding-bottom {
     margin-bottom: 50px;
     height: 500px;
+}
+.card.card-style.login-style, .card.card-style2.register-style {
+    margin-top: 300px;
+    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 500px;
 }
 }
 /* Ipad pro landscape */
@@ -570,7 +640,41 @@ and (orientation : portrait) {
     padding-right: 0;
     padding-left: 0;
   }
+  .card.card-style.login-style, .card.card-style2.register-style {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 300px;
+  }
  }
+
+/* wide screen */
+ @media (min-width: 2000px) {
+   header {
+     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat7.jpg") white no-repeat center scroll;
+     position: relative;
+   }
+     /* header {
+       position: relative;
+       height: 100vh;
+       min-height: 25rem;
+       width: 280vh;
+       overflow: hidden;
+     } */
+
+     /* .w-100.text-white.for-wide-screen {
+       margin-left: 330px;
+     } */
+
+     .image2 {
+       position: absolute;
+       top: 45vh;
+       left: 110vh;
+     }
+   }
+
 
 /*
 CHECK the project fonts,
