@@ -25,6 +25,10 @@
     </div>
   </div>
     <hr>
+    {% empty %}
+    <div class="row justify-content-center mb-4  ">
+    <h1>Sorry, we dont have this destination yet!</h1>
+    </div>
   {% endfor %}
   <!-- Pagination -->
   <!-- The function of this pagination is at tour_store.views.destinations -->
