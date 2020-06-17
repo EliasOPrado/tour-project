@@ -1,8 +1,8 @@
 
-<!-- Added conditional to alert message be displayed above navbar and display active class.
- As there is another conditional around the style.js link on base.html (line 274)to deactivate the script 
+<!-- Added conditional to alert message be displayed below navbar and display active class.
+ As there is another conditional around the style.js link on base.html (line 274)to deactivate the script
  - when message is displayed adding the .active class with django. -->
-<nav class="navbar  navbar-expand-lg {% if not messages %}fixed-top{% else %}active{% endif%} py-3">
+<nav class="navbar  navbar-expand-lg {%if not messages %} fixed-top {%else%}fixed-top active{%endif%} py-3">
   <div class="container">
 
     <a class="navbar-brand" href="{% url 'index' %}"><i class="fas fa-spa fa-lg" ></i> Tour Project</a>
@@ -13,6 +13,7 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+
         <li class="align-self-start d-none d-md-block  search">
 
         </li>
@@ -62,3 +63,14 @@
     </div>
   </div>
 </nav>
+{% if messages %}
+<div id="message_container"class="alert alert-success" >
+  <br><br><br>
+  <div class="messages">
+    {% for message in messages %}
+    {{ message }}
+    <a  href="#"class="del-msg"></a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -156,7 +156,7 @@ form.header__search {
   margin-bottom: 50px;
 }
 
-.comment-margin-bottom{
+.card.card-body.card-padding-bottom.comment-margin-bottom{
     margin-bottom: 50px;
 }
 
@@ -426,6 +426,10 @@ and (min-device-width: 320px)
     padding: 30px;
     width: 300px;
 }
+.col-md-4.card.card-body.card-padding-bottom {
+    margin-left: 30px;
+    margin-right: 30px;
+}
 }
 
 /* iPhone 6, 7, & 8 in potrait*/
@@ -572,10 +576,10 @@ and (orientation : landscape) {
  @media only screen
   and (min-device-width: 1024px)
   and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (-webkit-min-device-pixel-ratio: 1.5)
   and (orientation: portrait) {
   header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.png") white no-repeat center scroll;
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat9.png") white no-repeat center scroll;
     position: relative;
   }
   .carousel-caption.d-none.d-md-block h1 {
@@ -609,7 +613,7 @@ and (orientation : landscape) {
 @media only screen
   and (min-device-width: 1024px)
   and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (-webkit-min-device-pixel-ratio: 1.5)
   and (orientation: landscape) {
   header {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
@@ -628,8 +632,14 @@ and (orientation : landscape) {
   .row.bg-light.skew1 {
     display: none;
   }
- }
 
+ }
+@media(max-width: 360px){
+  .col-md-4.card.card-body.card-padding-bottom {
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+}
 @media (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */
   .row.bg-light.skew1 {
     display: none;
@@ -667,6 +677,10 @@ and (orientation : landscape) {
      /* .w-100.text-white.for-wide-screen {
        margin-left: 330px;
      } */
+     .row.row2 {
+    padding: 30px;
+    margin-bottom: 220px;
+}
 
      .image2 {
        position: absolute;
@@ -678,7 +692,7 @@ and (orientation : landscape) {
 
 /*
 CHECK the project fonts,
-Add a about us page with person section,
-Add a JS effect on main page,
-Use the comment form to create a contact us page.[done]
+change image for potrait in different width screens
+fix h color for header
+test
  */

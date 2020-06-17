@@ -35,15 +35,6 @@
 </head>
 
 <body>
-  {% if messages %}
-  <div class="alert alert-success" >
-    <div class="messages">
-      {% for message in messages %}
-      {{ message }}
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
 
 
 
@@ -201,7 +192,15 @@
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+  // for AOS effects
+AOS.init();
+
+// for message time on screen
+var delete_message = document.getElementById("message_container");
+
+setTimeout(function(){
+delete_message.style.display = "none";
+}, 3000);
   </script>
 </body>
 
