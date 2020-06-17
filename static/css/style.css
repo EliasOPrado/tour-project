@@ -72,9 +72,18 @@ html,body {
     padding: .25rem .75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: transparent;
     border: 1px solid #555;
     border-radius: .25rem;
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
 }
 
 .padding.px-4.px-lg-0.bg-light{
@@ -197,13 +206,7 @@ section.py-5.bg-light {
 .dark-grey-text{
   color:black;
 }
-/* this is a custom backgroud for shopping cart */
-/* .px-4.px-lg-0{
-  background: #eecda3;
-  background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-} */
+
 
 /* startbootstrap code below*/
 header {
@@ -274,8 +277,6 @@ p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle{
     transform: skewY(-4deg);
     z-index: -2;
     margin-top: 100px;
-    /* background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%); */
-    /* background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%); */
     background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 }
 .testimonial.skew2.container-fluid {
@@ -314,6 +315,7 @@ h1.font-weight-bold.testimonials {
     padding: 0;
     overflow: hidden;
 }
+/* startbootstrap code */
 .pagination > li > a
 {
     background-color: white;
@@ -356,7 +358,6 @@ h1.font-weight-bold.testimonials {
 .page-footer{
   color: #fff;
 }
-/* startbootstrap code above*/
 
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
@@ -369,7 +370,7 @@ h1.font-weight-bold.testimonials {
     }
 }
 
-
+/* touch screen devices */
 @media (hover: none)
 and (pointer: coarse)  {
 
@@ -410,26 +411,28 @@ and (pointer: coarse)  {
 /* iphone 4/4s potrait */
 @media only screen
 and (min-device-width: 320px)
- and (max-device-width: 480px)
- and (-webkit-device-pixel-ratio: 2)
- and (device-aspect-ratio: 2/3)
-  and (orientation:portrait)
-{
+and (max-device-width: 480px)
+and (-webkit-device-pixel-ratio: 2)
+and (device-aspect-ratio: 2/3)
+and (orientation:portrait) {
+
   /* this style is done from within the django admin
-  where the style should be placed within the wysiwyg app*/
-  p img.wysiwyg-img{
+  where the style should be placed within the wysiwyg app as attr*/
+  p img.wysiwyg-img {
     width: 290px;
   }
+
   .card.card-style.login-style, .card.card-style2.register-style {
     margin-left: 10px;
     margin-right: 400px;
     padding: 30px;
     width: 300px;
-}
-.col-md-4.card.card-body.card-padding-bottom {
+  }
+
+  .col-md-4.card.card-body.card-padding-bottom {
     margin-left: 30px;
     margin-right: 30px;
-}
+  }
 }
 
 /* iPhone 6, 7, & 8 in potrait*/
@@ -497,7 +500,6 @@ and (min-device-width : 375px)
 and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3)
 and (orientation : landscape) {
-
   .container.container2 {
     padding: 0;
   }
@@ -509,10 +511,11 @@ and (orientation : landscape) {
   .testimonial p {
     width: 70%;
     margin-left: 40px;
-}
-.col-md-4.card.card-body.card-padding-bottom {
-  margin: 30px;
-}
+  }
+
+  .col-md-4.card.card-body.card-padding-bottom {
+    margin: 30px;
+  }
 }
 
 /* iPad potrait */
@@ -573,41 +576,41 @@ and (orientation : landscape) {
 
 
 /* Ipad pro potrait */
- @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 1.5)
-  and (orientation: portrait) {
-  header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat9.png") white no-repeat center scroll;
-    position: relative;
-  }
-  .carousel-caption.d-none.d-md-block h1 {
-      padding-bottom: 430px;
-  }
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 1.5)
+and (orientation: portrait) {
+    header {
+      background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat9.png") white no-repeat center scroll;
+      position: relative;
+    }
+    .carousel-caption.d-none.d-md-block h1 {
+        padding-bottom: 430px;
+    }
 
-  /* to avoid video appear in this media query*/
-  header video {
-    display: none;
+    /* to avoid video appear in this media query*/
+    header video {
+      display: none;
+    }
+    /* about us */
+  .container.container2 {
+      padding: 0;
+      padding-top: 70px;
   }
-  /* about us */
-.container.container2 {
-    padding: 0;
-    padding-top: 70px;
-}
-/* form */
-.col-md-4.card.card-body.card-padding-bottom {
-    margin-bottom: 50px;
-    height: 500px;
-}
-.card.card-style.login-style, .card.card-style2.register-style {
-    margin-top: 300px;
-    margin-bottom: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px;
-    width: 500px;
-}
+  /* form */
+  .col-md-4.card.card-body.card-padding-bottom {
+      margin-bottom: 50px;
+      height: 500px;
+  }
+  .card.card-style.login-style, .card.card-style2.register-style {
+      margin-top: 300px;
+      margin-bottom: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px;
+      width: 500px;
+  }
 }
 /* Ipad pro landscape */
 @media only screen
@@ -616,7 +619,7 @@ and (orientation : landscape) {
   and (-webkit-min-device-pixel-ratio: 1.5)
   and (orientation: landscape) {
   header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat4.jpg") white no-repeat center scroll;
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
     position: relative;
   }
   .carousel-caption.d-none.d-md-block h1 {
@@ -662,34 +665,26 @@ and (orientation : landscape) {
 
 /* wide screen */
  @media (min-width: 2000px) {
-   header {
-     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
-     position: relative;
-   }
-     /* header {
-       position: relative;
-       height: 100vh;
-       min-height: 25rem;
-       width: 280vh;
-       overflow: hidden;
-     } */
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
+    position: relative;
+  }
 
-     /* .w-100.text-white.for-wide-screen {
-       margin-left: 330px;
-     } */
-     .row.row2 {
+
+  .row.row2 {
     padding: 30px;
     margin-bottom: 220px;
-}
+  }
 
-     .image2 {
-       position: absolute;
-       top: 45vh;
-       left: 110vh;
-     }
-     .card.card-style.login-style,
-     .card.card-style2.register-style {
-       margin-left: 1000px;
-margin-right: 1000px;
-     }
-   }
+  .image2 {
+    position: absolute;
+    top: 45vh;
+    left: 110vh;
+  }
+
+  .card.card-style.login-style,
+  .card.card-style2.register-style {
+    margin-left: 1000px;
+    margin-right: 1000px;
+  }
+}
