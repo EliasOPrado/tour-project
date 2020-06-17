@@ -687,12 +687,9 @@ and (orientation : landscape) {
        top: 45vh;
        left: 110vh;
      }
+     .card.card-style.login-style,
+     .card.card-style2.register-style {
+       margin-left: 1000px;
+margin-right: 1000px;
+     }
    }
-
-
-/*
-CHECK the project fonts,
-change image for potrait in different width screens
-fix h color for header
-test
- */
