@@ -4,7 +4,7 @@
 {% block content %}
 {% include 'normal-navbar.html' %}
 <div class="container paddingDetail">
-  <h1 class="mt-4 mb-3">{{ details.tour_title }}
+  <h1 class="mt-4 mb-3 text-dark">{{ details.tour_title }}
     <!-- <small>  -->
       <!-- add {{ details.author }} into <a> element if you want to show the author's name.-->
       <!-- by <a href="#"></a> -->
@@ -15,7 +15,7 @@
       <!-- Page Heading/Breadcrumbs -->
       <!-- Preview Image -->
       <br>
-      <img class="img-fluid rounded" src="{{ details.image.url}}" alt="">
+      <img class="img-fluid rounded shadow-sm" src="{{ details.image.url}}" alt="">
 
       <hr>
 
@@ -44,7 +44,7 @@
         {% endfor %}
       </div>
 
-  <div class="card card-body card-padding-bottom comment-margin-bottom mb-5">
+  <div class="card card-body card-padding-bottom comment-margin-bottom mb-5 shadow-sm">
         {% if new_comment %}
         <div class="alert alert-success" role="alert">
           Your comment is awaiting moderation
@@ -68,7 +68,7 @@
 
     <div class="col-md-4">
 
-      <div class="card card-body my-4">
+      <div class="card card-body col-md-12 my-4 shadow-sm">
         <h5 class="">Add to cart</h5>
         <!-- this is a form from CI tutorial -->
         <br>

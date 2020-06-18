@@ -24,11 +24,11 @@ def main_view(request):
             new_contact.save()
     else:
         contact_form = ContactForm()
-
+        
     # show_destinations is to loop destinations in the main page.
     return render(request, 'main.html', {
         'show_destinations': show_destinations,
-        
+
         'new_contact': new_contact,
         'contact_form': contact_form
     })
