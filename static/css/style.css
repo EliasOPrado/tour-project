@@ -115,7 +115,7 @@ html,body {
   transition: 0.9s ease-in-out left;
 }
 
-.carousel-caption.d-none.d-md-block h1 {
+.carousel-caption.d-md-block h1 {
   padding-bottom: 231px;
 }
 
@@ -478,6 +478,9 @@ and (orientation : landscape) {
   .row.bg-light.skew1 {
     display: none;
   }
+  .carousel-caption.d-md-block h1 {
+    padding-bottom: 215px;
+  }
 }
 
 /* iPhone 6, 7, & 8 Plus in portrait & landscape */
@@ -528,7 +531,7 @@ and (orientation : portrait) {
     position: relative;
   }
 
-  .carousel-caption.d-none.d-md-block h1 {
+  .carousel-caption.d-md-block h1 {
     padding-bottom: 250px;
   }
 
@@ -585,7 +588,7 @@ and (orientation: portrait) {
       background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat9.png") white no-repeat center scroll;
       position: relative;
     }
-    .carousel-caption.d-none.d-md-block h1 {
+    .carousel-caption.d-md-block h1 {
         padding-bottom: 430px;
     }
 
@@ -622,7 +625,7 @@ and (orientation: portrait) {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat5.png") white no-repeat center scroll;
     position: relative;
   }
-  .carousel-caption.d-none.d-md-block h1 {
+  .carousel-caption.d-md-block h1 {
       padding-bottom: 300px;
   }
   /* to avoid video appear in this media query*/
