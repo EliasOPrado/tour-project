@@ -4,7 +4,7 @@ from django.db.models import Q
 
 class CaseInsensitiveAuth: #will be used at AUTHENTICATION_BACKENDS in main_tour_folder.settings
     """
-    Authenticate a of User by using a case-insensitive query to check a
+    Authenticate a User by using a case-insensitive query to check a
     combination of the supplied email/username and password.
     To avoid the risk of having two users with similar usernames,
     distinguished only by letter case (e.g. 'john' and 'John'), consider

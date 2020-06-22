@@ -1,7 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from tour_store.models import Destinations, Comment, Contact
-import json
+from tour_store.models import Destinations
 from django.utils import timezone
 
 class TestViews(TestCase):

@@ -32,10 +32,10 @@ class Comment(models.Model):
         return 'Comment {} by {}'.format(self.comment, self.name)
 
 class Contact(models.Model):
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    subject = models.CharField(max_length=40)
-    message = models.TextField()
+    name = models.CharField(max_length=80, blank=False)
+    email = models.EmailField(blank=False)
+    subject = models.CharField(max_length=40, blank=False)
+    message = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
 

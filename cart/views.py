@@ -7,6 +7,7 @@ def view_cart(request):
 
     return render(request, 'cart.html')
 
+
 def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     #Gets the name='quantity' from input form
@@ -20,14 +21,6 @@ def add_to_cart(request, id):
     request.session['cart'] = cart
 
     return redirect(reverse('view_cart'))
-
-# def remove_from_cart(request, id):
-#     """ Remove an item from the cart """
-#     print(cart)
-#     cart = request.session.get('cart', {})
-#     quantity = request.POST.get('quantity')
-#     cart.pop(id, quantity) # Then pop the item out of it
-#     return redirect(reverse('view_cart'))
 
 
 def adjust_cart(request, id):
