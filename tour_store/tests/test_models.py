@@ -1,7 +1,8 @@
 from django.test import TestCase
 from tour_store.models import Destinations, Comment, Contact
 from django.utils import timezone
-
+import datetime
+from mock import patch
 
 class TestModels(TestCase):
 
@@ -49,19 +50,22 @@ class TestModels(TestCase):
         comment.save()
         self.assertEquals(destination, comment.post)
 
-    def test_cotact_form(self):
-        contact = Contact.objects.create(
-            name = 'neil',
-            email='neil@email.com',
-            subject= 'this is a test.',
-            message = 'test',
-            created_on = timezone.now(),
-            active = False,
-        )
-        contact.save()
-        self.assertEquals(contact.name, 'neil')
-        self.assertEquals(contact.email, 'neil@email.com')
-        self.assertEquals(contact.subject, 'this is a test.')
-        self.assertEquals(contact.message, 'test')
-        self.assertEquals(contact.created_on, timezone.now())
-        self.assertEquals(contact.active, False)
+    def test_cotact_model(self):
+        # Add mock and patch to match both datetime.
+        #for the model and the assertEquals
+        with patch.object(timezone, 'now', return_value=datetime.datetime(2015, 1, 8, 11, 00)) as mock_now:
+            contact = Contact.objects.create(
+                name = 'neil',
+                email='neil@email.com',
+                subject= 'this is a test.',
+                message = 'test',
+                created_on = timezone.now(),
+                active = False,
+            )
+            contact.save()
+            self.assertEquals(contact.name, 'neil')
+            self.assertEquals(contact.email, 'neil@email.com')
+            self.assertEquals(contact.subject, 'this is a test.')
+            self.assertEquals(contact.message, 'test')
+            self.assertEquals(contact.created_on, timezone.now())
+            self.assertEquals(contact.active, False)
