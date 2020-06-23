@@ -1,7 +1,7 @@
 from django.test import TestCase
 from tour_store.forms import CommentForm, ContactForm
 
-class TestMForms(TestCase):
+class TestForms(TestCase):
 
     def test_comment_form(self):
         #test if the form is valid

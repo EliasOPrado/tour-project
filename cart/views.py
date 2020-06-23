@@ -1,10 +1,17 @@
 from django.shortcuts import render, redirect, reverse
 from tour_store.models import Destinations
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def view_cart(request):
     """A view that renders the cart contents page """
-
+    cart = request.session.get('cart', {})
+    print(cart)
+    print(cart)
+    # if trying to open cart page this view without a product in cart
+    # this view will redirect to destination
+    if not cart:
+        return redirect(reverse('destination'))
     return render(request, 'cart.html')
 
 
