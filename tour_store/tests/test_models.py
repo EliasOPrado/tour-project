@@ -48,7 +48,7 @@ class TestModels(TestCase):
             active = False,
         )
         comment.save()
-        self.assertEquals(destination, comment.post)
+        self.assertEquals(comment.post, destination)
 
     def test_cotact_model(self):
         # Add mock and patch to match both datetime.
