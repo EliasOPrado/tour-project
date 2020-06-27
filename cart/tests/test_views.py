@@ -10,6 +10,4 @@ class TestView(TestCase):
         page = self.client.get("/cart/view-cart")
 
         self.assertEqual(page.status_code, 302)
-        # no loading template to render...
-
-        #not tested cart functionality..
+    
