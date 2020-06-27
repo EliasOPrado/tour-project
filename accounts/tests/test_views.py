@@ -1,4 +1,5 @@
 from django.test import TestCase, Client
+from django.shortcuts import redirect
 from django.urls import reverse
 from tour_store.models import Destinations
 from django.utils import timezone
@@ -24,8 +25,9 @@ class TestView(TestCase):
                                 )
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "register.html")
+        
 
-     def test_get_login_customer_page(self):
+     def test_get_login_page(self):
         # test login url directs to login.html
         # url to login
         page = self.client.get("/accounts/login/")
@@ -34,19 +36,39 @@ class TestView(TestCase):
         # check Template Used is login.html
         self.assertTemplateUsed(page, "login.html")
 
-     def test_login_view_when_someone_logged_in(self):
-        ''' test trying to login when someone is already logged in '''
+     def test_login_view_when_a_user_is_log_in(self):
 
         # create a user
         user = User.objects.create_user('username',
                                         'test@test.com',
                                         'password')
-        # login the user
+        # login
         self.client.login(username='username',
                           password='password')
-        # url to login
+        # url to the login page
         page = self.client.get("/accounts/login/")
         # check for a status code 200
         self.assertEqual(page.status_code, 200)
         # check Template Used is profile.html
-        self.assertTemplateUsed(page, reverse('index'))
+        self.assertTemplateUsed(page, 'login.html')
+
+     def test_logout_view_after_user_already_logged_in(self):
+        #test logout view
+
+        # create a user
+        user = User.objects.create_user('username',
+                                        'test@email.com',
+                                        '@Password123')
+        # login
+        self.client.login(username='username',
+                          password='@Password123')
+        # url to the logout page
+        page = self.client.get("/accounts/logout/", follow=True)
+        # check for a status code 302
+        self.assertEqual(page.status_code, 200)
+        # check Template Used is main.html page
+        self.assertTemplateUsed(page, 'main.html')
+        # check the message stored is equal to the expected message
+        messages = list(get_messages(page.wsgi_request))
+        self.assertEqual(str(messages[0]),
+                         'You have successfully logged out')

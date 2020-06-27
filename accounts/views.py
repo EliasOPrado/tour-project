@@ -46,6 +46,7 @@ def login(request):
 
 
 
+
 def register(request):
     """A view that manages the registration form"""
     if request.method == 'POST':
