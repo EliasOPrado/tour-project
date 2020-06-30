@@ -4,6 +4,6 @@ from tour_store.models import Destinations
 
 def do_search(request):
     if request.method == "GET":
-        # 'q' is the name in the form that will be get// tour_title is the name that will be searched
+        # 'q' is the name in the form that will be get// "tour_title" (from Destinations model tag) is the name that will be searched 
         destinations = Destinations.objects.filter(location__icontains=request.GET['q'])
         return render(request, 'destinations.html', {'destinations': destinations})

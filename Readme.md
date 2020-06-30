@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
 
+The Tour Store app was developed and deployed by Elias Prado as the last project for the Code Institute Software Development diploma. This
+
 ## Table of contents
 <!--ts-->
 

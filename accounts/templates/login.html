@@ -4,16 +4,16 @@
 {% block content %}
 {% include 'normal-navbar.html' %}
 <div class="card shadow-sm card-style login-style">
+  <!-- Login form -->
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform ">
         <fieldset class="form-group">
             <legend>Login</legend>
             {% csrf_token %}
             {{ user_form | as_bootstrap }}
-
              <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
-
             <button type="submit" class="btn btn-info">Login</button>
         </fieldset>
     </form>
+  <!--/ Login form -->
     </div>
 {% endblock %}

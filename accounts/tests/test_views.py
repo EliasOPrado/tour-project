@@ -25,7 +25,7 @@ class TestView(TestCase):
                                 )
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "register.html")
-        
+
 
      def test_get_login_page(self):
         # test login url directs to login.html

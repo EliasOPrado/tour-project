@@ -37,7 +37,7 @@ def adjust_cart(request, id):
     - otherwise you need to add str() method for each dict representation.
     """
     cart = request.session.get('cart', {})
-    quantity = cart[id] - 1 #decreases the cart quantity until deletes from cart
+    quantity = cart[id] - 1 # decreases the cart quantity until deletes from cart
 
     if quantity > 0:
         cart[id] = quantity

@@ -4,10 +4,11 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Destinations
 
 # Create your views here.
-""" solve the caroulsel issue """
 def main_view(request):
-    #Here need to make a destination var and get all objects
-    #loop tem on the main page with nice cards
+    """
+    This function loads the main page with destinations,
+    and contact form.
+    """
     show_destinations = Destinations.objects.all()
     #contacts = details.contact.filter(active=True)
     new_contact = None
@@ -24,7 +25,7 @@ def main_view(request):
             new_contact.save()
     else:
         contact_form = ContactForm()
-        
+
     # show_destinations is to loop destinations in the main page.
     return render(request, 'main.html', {
         'show_destinations': show_destinations,
@@ -39,7 +40,8 @@ def destinations(request):
     """
     This function will display the pagination
     if the number of elements are not > than
-    the number. if the 'paginator'==3 the Pagination
+    the number of destinations in destinations.
+     if the 'paginator'==3 the Pagination
     will desappear.
     """
     destination = Destinations.objects.all()
@@ -60,9 +62,13 @@ def destinations(request):
     return render(request, 'destinations.html', {'destinations': destinations})
 
 def destination_details(request, id):
+    """
+    This function will display the details page,
+    with the coment form and comments.
+    """
     # Get a singular destination, or return a 404
     details= get_object_or_404(Destinations, pk=id)
-    comments = details.comments.filter(active=True)
+    comments = details.comments.filter(acti sssve=True)
     new_comment = None
     # Comment posted
     if request.method == 'POST':

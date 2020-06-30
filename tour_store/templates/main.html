@@ -13,8 +13,10 @@
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1800" class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-white for-wide-screen">
           <h2 class="display-4 font-weight-normal">The best wellness retreats.</h2>
+          <!-- row -->
           <div class="row d-flex justify-content-center">
             <div class="col-md-6">
+              <!-- Search form -->
               <form action="{% url 'search' %}" method="GET" class="header__search">
                 <div class="input-group search-input">
                   <!-- Change the search input phrase here -->
@@ -23,8 +25,10 @@
                     <button class="btn btn-warning" type="submit" name="button"><i class="fas fa-search"></i></button></div>
                 </div>
               </form>
+            <!--/ Search form -->
             </div>
           </div>
+        <!-- row -->
         </div>
       </div>
     </div>
@@ -33,9 +37,6 @@
 
 <div class="container2">
   <h1 class="my-4 text-center font-weight-bold text-dark">Top locations</h1>
-
-  <!-- Portfolio Section -->
-
   <div class="row row2" >
     {% for destination in show_destinations|slice:"3" %}
     <div data-aos="fade-up" class="col-lg-4 col-sm-6 portfolio-item">
@@ -52,20 +53,19 @@
   </div>
 
   <div class="row bg-light skew1">
+    <!-- Testimonials -->
     <!-- https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459 -->
        <div id="testimonial skew2" class="testimonial skew2 container-fluid">
                <section class="team-section text-center">
                    <h1 class="font-weight-bold testimonials text-dark">Testimonials</h1>
-                   <!-- <p class="dark-grey-text w-responsive mx-auto mb-5 subtitle"> Success says by itself. Here you can see real story from real members who joined Gym and changed their lives.</p>-->
                    <div class="row text-center">
+                       <!-- Testimonial 1-->
                        <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="1000">
                            <div class="testimonial">
                                <div class="avatar mx-auto">
                                    <img src="{% static 'images/avatar1.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member2g">
                                </div>
                                <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
-                               <!-- <h6 class="font-weight-bold blue-text my-3">Went to Thailand in 2018</h6> -->
-
                                <p class="font-weight-normal dark-grey-text">
                                    <i class="fa fa-quote-left pr-2"></i>Tour Project was a life changing for me. I had the opportunity to visit different places in Thailand and meet one of the harm and best people I ever seen.</p>
                                <div class="orange-text">
@@ -77,11 +77,14 @@
                                </div>
                            </div>
                        </div>
+                     <!--/ Testimonial 1-->
+                     <!-- Testimonial 2-->
                        <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="1100">
                            <div class="testimonial">
                                <div class="avatar mx-auto">
                                    <img src="{% static 'images/avatar2.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="trainer">
                                </div>
+
                                <h4 class="font-weight-bold dark-grey-text mt-4">Maria Kate</h4>
                                <!-- <h6 class="font-weight-bold blue-text my-3">Personal Trainer</h6> -->
                                <p class="font-weight-normal dark-grey-text">
@@ -95,13 +98,14 @@
                                </div>
                            </div>
                        </div>
+                      <!--/ Testimonial 2-->
+                      <!-- Testimonial 3-->
                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
                            <div class="testimonial">
                                <div class="avatar mx-auto">
                                    <img src="{% static 'images/avatar3.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member">
                                </div>
                                <h4 class="font-weight-bold dark-grey-text mt-4">John Doe</h4>
-                               <!-- <h6 class="font-weight-bold blue-text my-3">Gym Member</h6> -->
                                <p class="font-weight-normal dark-grey-text">
                                    <i class="fa fa-quote-left pr-2"></i>You will be delighted by doing one of the Tour Project retreats. At the begin of 2019 I visited one of the best retreat center Tour Project has in Brazil and did one of it's yoga classes too. I loved it!</p>
                                <div class="orange-text">
@@ -113,13 +117,16 @@
                                </div>
                            </div>
                        </div>
+                    <!--/ Testimonial 3-->
                    </div>
                </section>
            </div>
+       <!--/ Testinonials -->
   </div>
 
 
 <div class="row">
+  <!-- About us -->
   <section  class=" col-md-6 py-5 ">
     <div class="container container2 text-center">
       <h2 class="text-dark">About Us</h2>
@@ -131,6 +138,9 @@
       </div>
     </div>
   </section>
+  <!--/ About us -->
+
+  <!-- contact form -->
     <div class=" col-md-5 card card-body card-padding-bottom shadow" data-aos="zoom-out">
           {% if new_contact %}
           <div class="alert alert-success" role="alert">
@@ -153,7 +163,7 @@
               {% endif %}
             </div>
           </div>
-
+      <!--/ contact form -->
   </div>
 
   {% endblock content %}

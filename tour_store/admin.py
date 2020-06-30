@@ -3,8 +3,6 @@ from .models import Destinations, Comment, Contact
 
 # Register your models here.
 
-
-
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'comment', 'post', 'created_on', 'active')

@@ -5,6 +5,7 @@
 {% include 'header.html' %}
 <div class="container" >
   <hr><br>
+  <!--  -->
   {% for destination in destinations %}
   <div class="row " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
     <div class="col-md-7">
@@ -25,11 +26,13 @@
     </div>
   </div>
     <hr>
+    <!-- empty tag is a result message if there's no destinaions or the search dont match any query -->
     {% empty %}
     <div class="row justify-content-center mb-4  ">
     <h1>Sorry, we dont have this destination yet!</h1>
     </div>
   {% endfor %}
+
   <!-- Pagination -->
   <!-- The function of this pagination is at tour_store.views.destinations -->
   <nav aria-label="Page navigation example">
@@ -64,7 +67,7 @@
       {% endif %}
       {% endfor %}
 
-      <!-- conditional to display whether the next (>>) button shold be activated or deactivated    -->
+      <!-- conditional to display whether the next (>>) button should be activated or deactivated   -->
       {% if destinations.has_next %}
       <li class="page-item">
         <a class="page-link" href="?page={{ destinations.next_page_number }}" aria-label="Next">
@@ -81,6 +84,8 @@
     </ul>
     {% endif %}
   </nav>
+<!--/ Pagination -->
+
 </div>
 
 {% endblock content %}

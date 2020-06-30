@@ -4,9 +4,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Destinations(models.Model):
-
     author = models.CharField(max_length=200, unique=False)
     tour_title = models.CharField(max_length=250)
+    # RichTextUploadingField() is for the WYSIWYG fucntionality
     description = RichTextUploadingField()
     image = models.ImageField(upload_to='tour_images', blank=True)
     location = models.CharField(max_length=250)

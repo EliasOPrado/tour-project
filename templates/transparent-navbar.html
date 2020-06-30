@@ -1,6 +1,6 @@
 
 <!-- Added conditional to alert message be displayed below navbar and display active class.
- As there is another conditional around the style.js link on base.html (line 274)to deactivate the script
+ As there is another conditional around the style.js link on base.html (line 274) to deactivate the script
  - when message is displayed adding the .active class with django. -->
 <nav class="navbar  navbar-expand-lg {%if not messages %} fixed-top {%else%}fixed-top active{%endif%} py-3">
   <div class="container">
@@ -67,9 +67,10 @@
 <div id="message_container"class="alert alert-success" >
   <br><br><br>
   <div class="messages">
+    <!-- Message will auto delete in 3 seconds -->
     {% for message in messages %}
     {{ message }}
-    <a  href="#"class="del-msg"></a>
+    <!-- <a  href="#"class="del-msg"></a> -->
     {% endfor %}
   </div>
 </div>
