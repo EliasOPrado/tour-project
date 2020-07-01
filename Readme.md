@@ -46,6 +46,15 @@ The main goal of this project is to show the functionalities of an e-commerce us
 
 ## Functionality
 
+Tour Store website is composed by five different applications: `accounts`, `cart`, `checkout`, `search` and `tour_store`. Using MVC architecture from the Django framework, each application holds its own model, view and controller that interacts all together into the `main_tour_folder` which basically is the controller of the overall application.
+
+### Apps functionalities
+
+1. The accounts app holds the functionality of `register`, `login`, `logout` and the `reset password`.
+2. The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
+3. The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality. In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
+4. Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
+5. `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
 
 
 ## UX:
