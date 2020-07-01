@@ -70,7 +70,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 - `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the booking should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
 <img src="/static/images/cart_image.png">
 3. The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality. In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
-<img src="/static/images/checkout_image.png">
+<img src="/static/images/checkout_image.png" width="40%">
 4. Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
 5. `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
 
