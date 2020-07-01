@@ -68,7 +68,7 @@ def destination_details(request, id):
     """
     # Get a singular destination, or return a 404
     details= get_object_or_404(Destinations, pk=id)
-    comments = details.comments.filter(acti sssve=True)
+    comments = details.comments.filter(active=True)
     new_comment = None
     # Comment posted
     if request.method == 'POST':
