@@ -54,7 +54,8 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 1. The accounts app holds the functionality of register, login, logout and the reset password.
 #### Register page
-<img src=/static/images/register.png">
+<img src="/static/images/register.png">
+
 - An username, email and password is required to create an account.
 - Username must be unique.
 - Password should not be short, must contain at least 8 characters and should not be common.
