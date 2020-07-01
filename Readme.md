@@ -43,7 +43,6 @@ This website is to emulate a touristic retreat webpage that provides for tourist
 
 The main goal of this project is to show the functionalities of an e-commerce using different technologies. Since this project is about retreat holidays, in this material I had a different approach in terms of showing to users full detail of the program or retreat. Therefore, in this project, the product or destination will be provided a full post to give users a good idea about what they will have in terms of trip.
 
-- `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the book should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
 
 
 ## Functionality
@@ -55,7 +54,6 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 1. The accounts app holds the functionality of register, login, logout and the reset password.
 #### Register page
 <img src="/static/images/register.png">
-
 - An username, email and password is required to create an account.
 - Username must be unique.
 - Password should not be short, must contain at least 8 characters and should not be common.
@@ -69,9 +67,10 @@ Tour Store website is composed by five different applications: `accounts`, `cart
   <img src="/static/images/passwordreset.png">
 2. The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
 - Besides the destination the user will have a card that will allow them to add how many people will go to the trip.
-- `Importa`
-<img src=/static/images/cart_image.png">
+- `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the booking should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
+<img src="/static/images/cart_image.png">
 3. The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality. In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
+<img src="/static/images/checkout_image.png">
 4. Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
 5. `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
 
