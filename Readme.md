@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
 
-<img src="/static/images/mockup.png" width="600">
+<img src="/static/images/mockup.png" >
 
 ## Table of contents
 <!--ts-->
