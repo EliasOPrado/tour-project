@@ -50,7 +50,24 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 ### Apps functionalities
 
-1. The accounts app holds the functionality of `register`, `login`, `logout` and the `reset password`.
+#### The accounts app holds the functionality of `register`, `login`, `logout` and the `reset password`.
+1. Register page
+
+<div align="center">
+<img src=/static/images/register.png">
+</div>
+- An username, email and password is required to create an account.
+- Username must be unique.
+- Password should not be short, must contain at least 8 characters and should not be common.
+- As soon as the user creates its username they are redirected to home page.
+
+2. Login page
+- The login page is a normal page that will ask for for the name or email and the user password
+
+3. Reset password
+   - Step 1 and 2, at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
+   - Step 3, 4 and 5, You will receive an email with a link that will ask you to add a different password and finally setting your account.
+  <img src="/static/images/passwordreset.png">
 2. The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
 3. The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality. In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
 4. Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
