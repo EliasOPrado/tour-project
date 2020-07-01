@@ -1,8 +1,8 @@
-# Tour Project with Django
+# Tour Project
 
 [![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
 
-The Tour Store app was developed and deployed by Elias Prado as the last project for the Code Institute Software Development diploma. This
+<img src="/static/images/mockup.png" width="600">
 
 ## Table of contents
 <!--ts-->
@@ -36,10 +36,12 @@ The Tour Store app was developed and deployed by Elias Prado as the last project
 
 Project Milestone Four - Code Institute
 
-Tour Store is a website that emulates the functionality of a B2C (Business to Consumer) Tourism/ecommerce platform.
+The Tour Store app was developed and deployed by Elias Prado as the last project for the Code Institute Software Development diploma.
+This website is to emulate a touristic retreat webpage that provides for tourists different places to retreat and relax.
 
 ## Goal
 
+The main goal of this project is to show the functionalities of an e-commerce using different technologies. Since this project is about retreat holidays, in this material I had a different approach in terms of showing to users full detail of the program or retreat. Therefore, in this project, the product or destination will be provided a full post to give users a good idea about what they will have in terms of trip.
 
 
 ## Functionality
@@ -53,7 +55,7 @@ Tour Store is a website that emulates the functionality of a B2C (Business to Co
 ##### Home Page
 
 
-##### Categories
+##### Destinations
 
 
 
@@ -165,7 +167,7 @@ To deploy to Heroku there are some steps to e followed:
 
 ## Credits
 
-
+[Mdbootstrap](https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459 )
 
 ## Tasks that should be accomplished
 
