@@ -49,9 +49,11 @@ The main goal of this project is to show the functionalities of an e-commerce us
 
 Tour Store website is composed by five different applications: `accounts`, `cart`, `checkout`, `search` and `tour_store`. Using MVC architecture from the Django framework, each application holds its own model, view and controller that interacts all together into the `main_tour_folder` which basically is the controller of the overall application.
 
-### Apps functionalities
+## Apps functionalities
 
-1. The accounts app holds the functionality of register, login, logout and the reset password.
+### Accounts
+
+ The accounts app holds the functionality of register, login, logout and the reset password.
 #### Register page
 <img src="/static/images/register.png">
 - An username, email and password is required to create an account.
@@ -61,19 +63,25 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 #### Login page
 - The login page is a normal page that will ask for for the name or email and the user password.
-### Reset password
+#### Reset password
 - Step 1 and 2, at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
 - Step 3, 4 and 5, You will receive an email with a link that will ask you to add a different password and finally setting your account.
   <img src="/static/images/passwordreset.png">
-2. The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
+### Cart
+ The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
 - Besides the destination the user will have a card that will allow them to add how many people will go to the trip.
 - `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the booking should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
 <img src="/static/images/cart_image.png">
-3. The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality. In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
+### Checkout
+- The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality.
+- In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
+<p align="center">
 <img src="/static/images/checkout_image.png" width="40%">
-4. Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
-5. `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
-
+</p>
+### Search
+- Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
+### Tour_store
+- `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
 
 ## UX:
 
