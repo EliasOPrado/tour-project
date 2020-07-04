@@ -205,9 +205,11 @@ section.py-5.bg-light {
   color:black;
 }
 
+
 /* startbootstrap code below  <<<< */
 header {
   position: relative;
+  white-space: nowrap;
   height: 100vh;
   min-height: 25rem;
   width: 100%;

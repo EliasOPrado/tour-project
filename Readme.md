@@ -84,9 +84,6 @@ Therefore, the website design was designed to bring these characteristics to its
   - Scroll effects to give a better experience to users.
   - Skew-y effect on index page to break standard pattern with linear gradient using light-cyan and Selago colors.
 
-### Icons
-  - The icons used
-
 ### Wireframes
 The wireframes developed for this project was only taken three types of devices, desktop, tablet and mobile.
 In addition, the tool used to develop this wireframes was [Balsamiq](https://balsamiq.com/) giving the ability to a rapid design.
@@ -94,31 +91,71 @@ In addition, the tool used to develop this wireframes was [Balsamiq](https://bal
   - [Tablet devices](https://tour-project.s3-eu-west-1.amazonaws.com/static/images/readme_images/iPad_wireframes.png)
   - [Desktop devices](https://tour-project.s3-eu-west-1.amazonaws.com/static/images/readme_images/Desktop_wireframes.png)
 
-## Features
+# Features
 
 Tour Store website is composed by five different applications: `accounts`, `cart`, `checkout`, `search` and `tour_store`. Using MVC architecture from the Django framework, each application holds its own model, view and controller that interacts all together into the `main_tour_folder` which basically is the controller of the overall application.
 
-#### Accounts
+### Tour_store
+  tour_store app holds all the main pages in which the user will navigate. Such as:
+
+##### home page.
+       <img src="/static/images/readme_images/transparent_navbar.png">
+
+  - On the home page the navbar is displayed transparent to give a good UI to the project. However, once the user scroll the page down it becomes white to better contrast from the rest of the page and not confuse the user.
+
+    <img src="/static/images/readme_images/top_locations.png">
+
+  - The top location brings a set of three different location or retreats in which users can click and be redirect to the destination page.
+
+    <img src="/static/images/readme_images/testimonials.png">
+
+  - On the testimonials section the three different characters is displayed as one of the Tour Project past customers. Giving their experience to the user and how many stars the service bring in term of value to their lives.
+
+    <img src="/static/images/readme_images/aboutus.png">
+
+  - The about us section (on the right side) details the experience of the business (in which is fictitious) and display a contact form (on the left side) for users to send any query about the business.
+
+   <img src="/static/images/readme_images/footer.png">
+
+  - On the footer section the user will have a copy message, links for retreats and login or logout and the business contact such as phone numbers, email and address. Also icons of different social medias.
+
+#### Retreats
+<p align="center">
+ <img src="/static/images/readme_images/retreats_page.png" width="40%">
+ </p>
+  - The retreats page will display all of the retreats.
+  - However, the pagination system will only display three destinations per page to not overload the page if there are a large amount of items.
+
+#### Retreat details  
+<p align="center">
+ <img src="/static/images/readme_images/retreat_detail.png" width="40%">
+ </p>
+  - The page that gives the full detail about the retreat as well as the possibility to add it to cart. In addition, the formatting funcitonality in which was applied by the admin.
+
+### Accounts
  The accounts app holds the functionality of register, login, logout and the reset password.
 
 #### Register page
 <p align="center">
-<img src="/static/images/readme_images/register.png">
+<img src="/static/images/readme_images/register.png" width="40%">
 </p>
-- An username, email and password is required to create an account.
-- Username must be unique.
-- Password should not be short, must contain at least 8 characters and should not be common.
-- As soon as the user creates its username they are redirected to home page.
+  - An username, email and password is required to create an account.
+  - Username must be unique.
+  - Password should not be short, must contain at least 8 characters and should not be common.
+  - As soon as the user creates its username they are redirected to home page.
 
 #### Login page
 <p align="center">
-<img src="/static/images/readme_images/login.png">
+<img src="/static/images/readme_images/login.png" width="40%">
 </p>
   - The login page is a normal page that will ask for the name or email and the user password who already registered their account.
 
 #### Reset password
-  - Step 1 and 2, at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
-  - Step 3, 4 and 5, You will receive an email with a link that will ask you to add a different password and finally setting your account.
+  - Step 1: at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
+  - Step 2: Add the email from the account you need to reset the password.
+  - Step 3: You will receive an email with a link that will allow you to add a different password sending you to a reset password form.
+  - Step 4: Add a new password and confirm it.
+  - Step 5: Once the password is set you can login with the new password.
 
   <img src="/static/images/readme_images/passwordreset.png">
 
@@ -129,7 +166,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 <img src="/static/images/readme_images/cart_image.png">
 
-#### Checkout
+### Checkout
   - The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality.
   - In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
 
@@ -137,19 +174,13 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 <img src="/static/images/readme_images/checkout_image.png" width="40%">
 </p>
 
-#### Search
-  - Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model.
-#### Tour_store
-  - `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
+### Search
+  - Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model by the tour title as the key word retrieved.
+  - If a user adds one or multiple destinations that is in the database, it will be retrieved and shown on destination page.
+  - If the tour title plotted on the search bar doesn't have in the data base, a message will be displayed instead, describing that destination is not yet added in the database.
 
 
-
-
-
-##### Home Page
-
-
-##### Destinations
+## Features Left To Implement
 
 
 
@@ -176,18 +207,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 
 
-## Features
 
-- Register and have its own page.
-- Login.
-- Add new product from user page based on its login.
-- See product list on user page.
-- Be able to visualize, edit and delete its own product.
-- Navegate product pages.
-- View product on its own page.
-- Be able to add comments on product as well as delete it.
-
-## Features Left To Implement
 
 
 
