@@ -95,11 +95,39 @@ In addition, the tool used to develop this wireframes was [Balsamiq](https://bal
 
 Tour Store website is composed by five different applications: `accounts`, `cart`, `checkout`, `search` and `tour_store`. Using MVC architecture from the Django framework, each application holds its own model, view and controller that interacts all together into the `main_tour_folder` which basically is the controller of the overall application.
 
-### Tour_store
+## Accounts
+ The accounts app holds the functionality of register, login, logout and the reset password.
+
+### Register page
+<p align="center">
+<img src="/static/images/readme_images/register.png" width="40%">
+</p>
+  - An username, email and password is required to create an account.
+  - Username must be unique.
+  - Password should not be short, must contain at least 8 characters and should not be common.
+  - As soon as the user creates its username they are redirected to home page.
+
+### Login page
+<p align="center">
+<img src="/static/images/readme_images/login.png" width="40%">
+</p>
+  - The login page is a normal page that will ask for the name or email and the user password who already registered their account.
+
+### Reset password
+  - Step 1: at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
+  - Step 2: Add the email from the account you need to reset the password.
+  - Step 3: You will receive an email with a link that will allow you to add a different password sending you to a reset password form.
+  - Step 4: Add a new password and confirm it.
+  - Step 5: Once the password is set you can login with the new password.
+
+  <img src="/static/images/readme_images/passwordreset.png">
+
+## Tour_store
   tour_store app holds all the main pages in which the user will navigate. Such as:
 
-##### home page.
-       <img src="/static/images/readme_images/transparent_navbar.png">
+#### home page
+
+    <img src="/static/images/readme_images/transparent_navbar.png">
 
   - On the home page the navbar is displayed transparent to give a good UI to the project. However, once the user scroll the page down it becomes white to better contrast from the rest of the page and not confuse the user.
 
@@ -119,54 +147,26 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
   - On the footer section the user will have a copy message, links for retreats and login or logout and the business contact such as phone numbers, email and address. Also icons of different social medias.
 
-#### Retreats
+### Retreats
 <p align="center">
  <img src="/static/images/readme_images/retreats_page.png" width="40%">
  </p>
   - The retreats page will display all of the retreats.
   - However, the pagination system will only display three destinations per page to not overload the page if there are a large amount of items.
 
-#### Retreat details  
-<p align="center">
- <img src="/static/images/readme_images/retreat_detail.png" width="40%">
- </p>
-  - The page that gives the full detail about the retreat as well as the possibility to add it to cart. In addition, the formatting funcitonality in which was applied by the admin.
+### Retreat details  
+  - The page that gives the full detail about the retreat as well as the possibility to add it to cart.
+  - In addition, the formatting functionality that can be applied by the website admin.
+  - The user can also on the top right corner add the destination to cart.
 
-### Accounts
- The accounts app holds the functionality of register, login, logout and the reset password.
-
-#### Register page
-<p align="center">
-<img src="/static/images/readme_images/register.png" width="40%">
-</p>
-  - An username, email and password is required to create an account.
-  - Username must be unique.
-  - Password should not be short, must contain at least 8 characters and should not be common.
-  - As soon as the user creates its username they are redirected to home page.
-
-#### Login page
-<p align="center">
-<img src="/static/images/readme_images/login.png" width="40%">
-</p>
-  - The login page is a normal page that will ask for the name or email and the user password who already registered their account.
-
-#### Reset password
-  - Step 1: at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
-  - Step 2: Add the email from the account you need to reset the password.
-  - Step 3: You will receive an email with a link that will allow you to add a different password sending you to a reset password form.
-  - Step 4: Add a new password and confirm it.
-  - Step 5: Once the password is set you can login with the new password.
-
-  <img src="/static/images/readme_images/passwordreset.png">
-
-#### Cart
+## Cart
  The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
   - Besides the destination the user will have a card that will allow them to add how many people will go to the trip.
   - `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the booking should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
 
 <img src="/static/images/readme_images/cart_image.png">
 
-### Checkout
+## Checkout
   - The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality.
   - In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
 
@@ -174,7 +174,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 <img src="/static/images/readme_images/checkout_image.png" width="40%">
 </p>
 
-### Search
+## Search
   - Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model by the tour title as the key word retrieved.
   - If a user adds one or multiple destinations that is in the database, it will be retrieved and shown on destination page.
   - If the tour title plotted on the search bar doesn't have in the data base, a message will be displayed instead, describing that destination is not yet added in the database.
