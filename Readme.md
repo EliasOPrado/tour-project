@@ -124,7 +124,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 ## Tour_store
 
-    <img src="/static/images/readme_images/transparent_navbar.png">
+<img src="/static/images/readme_images/transparent_navbar.png">
 
   tour_store app holds all the main pages in which the user will navigate. Such as:
 
