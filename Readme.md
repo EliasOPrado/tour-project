@@ -123,12 +123,12 @@ Tour Store website is composed by five different applications: `accounts`, `cart
   <img src="/static/images/readme_images/passwordreset.png">
 
 ## Tour_store
-  tour_store app holds all the main pages in which the user will navigate. Such as:
-
-#### home page
 
     <img src="/static/images/readme_images/transparent_navbar.png">
 
+  tour_store app holds all the main pages in which the user will navigate. Such as:
+
+#### home page
   - On the home page the navbar is displayed transparent to give a good UI to the project. However, once the user scroll the page down it becomes white to better contrast from the rest of the page and not confuse the user.
 
     <img src="/static/images/readme_images/top_locations.png">
@@ -151,6 +151,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 <p align="center">
  <img src="/static/images/readme_images/retreats_page.png" width="40%">
  </p>
+
   - The retreats page will display all of the retreats.
   - However, the pagination system will only display three destinations per page to not overload the page if there are a large amount of items.
 
@@ -179,9 +180,42 @@ Tour Store website is composed by five different applications: `accounts`, `cart
   - If a user adds one or multiple destinations that is in the database, it will be retrieved and shown on destination page.
   - If the tour title plotted on the search bar doesn't have in the data base, a message will be displayed instead, describing that destination is not yet added in the database.
 
+## Admin page
+
+<p align="center">
+<img src="/static/images/readme_images/admin_login.png" width="40%">
+</p>
+
+  - The admin login page was changed by the name of the website.
+
+<p align="center">
+<img src="/static/images/readme_images/admin.png" width="40%">
+</p>
+
+  - The admin page was separated by three sections:
+     - Authentication and Authorization, where the admin can see and manage the users on the website.
+     - Checkout, where the admin can see the orders done by the customers.
+     - Tour store, where the admin will be able to check and approve comments and see the contacts done by prospects.
+
+<p align="center">
+<img src="/static/images/readme_images/wysiwyg.png" width="40%">
+</p>
+  - The WYSIWYG (what you see is what you get) functionality was implemented as a functionality from a third party application called [Ckeditor](https://ckeditor.com/). Where the normal text editor was changed to add more features such as:
+     - Alignment
+     - Tables
+     - Images
+     - Styling
+     - Add more html elements
+     - And much more.
+
 
 ## Features Left To Implement
-
+  1. Admin page graphs to display data from comments, sales and views.
+  2. Booking system to automate sales.
+  3. Add multiple images on retreat preview such as horizontal carousel.
+  4. Add tutor section for each retreat.
+  5. Add real location with maps at the bottom of each retreat detail page.
+  6. Add star based review.
 
 
 
