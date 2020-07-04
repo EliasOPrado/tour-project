@@ -32,20 +32,21 @@
 11. [Credits](#Credits)
  <!--te-->
 
-## About
+# About
 
 Project Milestone Four - Code Institute
 
 The Tour Store app was developed and deployed by Elias Prado as the last project for the Code Institute Software Development diploma.
 This website is to emulate a touristic retreat webpage that provides for tourists different places to retreat and relax.
 
-## UX:
+# UX
 
-#### User goals:
+## User goals
 The target audience of Tour Project are:
 - People who want to make a relax or spiritual trip.
 - People who are looking for the best locations.
 - Yoga practitioners who are looking for the best places to improve their spiritual, mind and body development.
+
 User goals:
 - Search for the retreat or destination by its keyword and receive a feedback by the website if it isn't available.
 - Find information about the company such as address phone number and its mission.
@@ -55,14 +56,36 @@ User goals:
 - Edit the shopping cart if required.
 - Checkout using card payment.
 
-##### The product view
+## Design choices
+The Tour project website is a tour application that has its main customers, people who want to have a relax and spiritual retreat.
+Therefore, the website design was designed to bring these characteristics to its users. In which all of its design details is aligned to its purpose.
 
+### Fonts
+- The font used in this project is [Roboto](https://fonts.google.com/specimen/Roboto#about) which is an user friendly mainly used by its creator Google to give a proper reading in different screen sizes.
 
+### Colors
+   - Cyan: ![#17a2b8](https://via.placeholder.com/15/17a2b8/000000?text=+) `#17a2b8`
+   - Light-cyan: ![#D7FFFE](https://via.placeholder.com/15/D7FFFE/000000?text=+) `#D7FFFE`
+   - Selago: ![#FFFEFF](https://via.placeholder.com/15/FFFEFF/000000?text=+) `#FFFEFF`
+   - Raven: ![#6c757d](https://via.placeholder.com/15/6c757d/000000?text=+) `#6c757d`
+   - Dark-gray: ![#343a40](https://via.placeholder.com/15/6c757d/000000?text=+) `#343a40`
+   - Green: ![#28a745](https://via.placeholder.com/15/28a745/000000?text=+) `#28a745`
+   - White: ![#fff](https://via.placeholder.com/15/fff/000000?text=+) `#fff`
+   - Light: ![#f8f9fa](https://via.placeholder.com/15/f8f9fa/000000?text=+) `#f8f9fa`
+   - These set of colors were chosen to bring a smooth experience to the users as same as to match with the purpose of the application.
 
-##### The User Account Page
+### Styling
+  - Box shadow in card to give a depth idea and contrast with the background.
+  - Scroll effects to give a better experience to users.
+  - Skew-y effect on index page to break standard pattern with linear gradient with light-cyan and selago.
 
+### Wireframes
+The wireframes developed for this project was only taken three types of devices, desktop, tablet and mobile.
+In addition, the tool used to develop this wireframes was (Balsamiq)[https://balsamiq.com/] giving the ability to a rapid design.
+  - [Mobile devices](static/images/readme_images/Mobile_wireframes.png)
+  - [Tablet devices](static/images/readme_images/iPad_wireframes.png)
+  - [Desktop devies](static/images/readme_images/Desktop_wireframes.png)
 
-#### Font
 
 
 
@@ -88,7 +111,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
  The accounts app holds the functionality of register, login, logout and the reset password.
 
 #### Register page
-<img src="/static/images/register.png">
+<img src="/static/images/readme_images/register.png">
 - An username, email and password is required to create an account.
 - Username must be unique.
 - Password should not be short, must contain at least 8 characters and should not be common.
@@ -101,21 +124,21 @@ Tour Store website is composed by five different applications: `accounts`, `cart
   - Step 1 and 2, at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
   - Step 3, 4 and 5, You will receive an email with a link that will ask you to add a different password and finally setting your account.
 
-  <img src="/static/images/passwordreset.png">
+  <img src="/static/images/readme_images/passwordreset.png">
 
 #### Cart
  The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
   - Besides the destination the user will have a card that will allow them to add how many people will go to the trip.
   - `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the booking should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
 
-<img src="/static/images/cart_image.png">
+<img src="/static/images/readme_images/cart_image.png">
 
 #### Checkout
   - The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality.
   - In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
 
 <p align="center">
-<img src="/static/images/checkout_image.png" width="40%">
+<img src="/static/images/readme_images/checkout_image.png" width="40%">
 </p>
 
 #### Search
