@@ -43,17 +43,17 @@ This website is to emulate a touristic retreat webpage that provides for tourist
 
 #### User goals:
 The target audience of Tour Project are:
-    - People who want to make a relax or spiritual trip.
-    - People who are looking for the best locations.
-    - Yoga practitioners who are looking for the best places to improve their spiritual, mind and body development.
+- People who want to make a relax or spiritual trip.
+- People who are looking for the best locations.
+- Yoga practitioners who are looking for the best places to improve their spiritual, mind and body development.
 User goals:
-    - Search for the retreat or destination by its keyword and receive a feedback by the website if it isn't available.
-    - Find information about the company such as address phone number and its mission.
-    - Finding the destination, the user can find details of it, such as text and picture based content related to the destination.
-    - The user can also add comments to the destination they want.
-    - Add one or multiple trips to the shopping cart with the maximum ten people each.
-    - Edit the shopping cart if required.
-    - Checkout using card payment.
+- Search for the retreat or destination by its keyword and receive a feedback by the website if it isn't available.
+- Find information about the company such as address phone number and its mission.
+- Finding the destination, the user can find details of it, such as text and picture based content related to the destination.
+- The user can also add comments to the destination they want.
+- Add one or multiple trips to the shopping cart with the maximum ten people each.
+- Edit the shopping cart if required.
+- Checkout using card payment.
 
 ##### The product view
 
@@ -89,10 +89,10 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 #### Register page
 <img src="/static/images/register.png">
-  - An username, email and password is required to create an account.
-  - Username must be unique.
-  - Password should not be short, must contain at least 8 characters and should not be common.
-  - As soon as the user creates its username they are redirected to home page.
+- An username, email and password is required to create an account.
+- Username must be unique.
+- Password should not be short, must contain at least 8 characters and should not be common.
+- As soon as the user creates its username they are redirected to home page.
 
 #### Login page
   - The login page is a normal page that will ask for for the name or email and the user password.
