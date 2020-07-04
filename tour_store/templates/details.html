@@ -76,11 +76,28 @@
         <br>
         <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{details.booking_start_date}} -  {{details.booking_end_date}}</strong></p>
 
+        <!-- Function from cart app -->
         <form method="POST" action="{% url 'add_to_cart' details.id %}">
           {% csrf_token %}
+
           <div class="input-group">
-            <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
-            <span class="input-group-btn">
+
+            <div class="form-group">
+    <label for="exampleFormControlSelect1">Number of people</label>
+    <select name="quantity" class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </div>
+            <span class="input-group-btn" style="margin-top: 32px;margin-left: 5px;">
 
               <button class="btn btn-success" type="submit">Add</button>
 

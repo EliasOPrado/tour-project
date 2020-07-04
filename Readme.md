@@ -39,11 +39,46 @@ Project Milestone Four - Code Institute
 The Tour Store app was developed and deployed by Elias Prado as the last project for the Code Institute Software Development diploma.
 This website is to emulate a touristic retreat webpage that provides for tourists different places to retreat and relax.
 
-## Goal
+## UX:
+
+#### User goals:
+The target audience of Tour Project are:
+    - People who want to make a relax or spiritual trip.
+    - People who are looking for the best locations.
+    - Yoga practitioners who are looking for the best places to improve their spiritual, mind and body development.
+User goals:
+    - Search for the retreat or destination by its keyword and receive a feedback by the website if it isn't available.
+    - Find information about the company such as address phone number and its mission.
+    - Finding the destination, the user can find details of it, such as text and picture based content related to the destination.
+    - The user can also add comments to the destination they want.
+    - Add one or multiple trips to the shopping cart with the maximum ten people each.
+    - Edit the shopping cart if required.
+    - Checkout using card payment.
+
+##### The product view
+
+
+
+##### The User Account Page
+
+
+#### Font
+
+
+
+#### Mobile Display
+
+<img src="/static/images/mobile.png" width="200">
+
+#### Tablet Display
+
+<img src="/static/images/ipad.png" width="200">
+
+### Goal
 
 The main goal of this project is to show the functionalities of an e-commerce using different technologies. Since this project is about retreat holidays, in this material I had a different approach in terms of showing to users full detail of the program or retreat. Therefore, in this project, the product or destination will be provided a full post to give users a good idea about what they will have in terms of trip.
 
-## Functionality
+## Features
 
 Tour Store website is composed by five different applications: `accounts`, `cart`, `checkout`, `search` and `tour_store`. Using MVC architecture from the Django framework, each application holds its own model, view and controller that interacts all together into the `main_tour_folder` which basically is the controller of the overall application.
 
@@ -88,7 +123,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 #### Tour_store
   - `tour_store` app holds the important `models` that will be linked to the other applications as many-to-many using `ForeignKey()` method. Also, this application holds the main page as same as destination and detail page.
 
-## UX:
+
 
 
 
@@ -99,24 +134,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 
 
-##### The product view
 
-
-
-##### The User Account Page
-
-
-#### Font
-
-
-
-#### Mobile Display
-
-<img src="/static/images/mobile.png" width="200">
-
-#### Tablet Display
-
-<img src="/static/images/ipad.png" width="200">
 
 ## Database Structure
 
