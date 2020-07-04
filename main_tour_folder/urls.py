@@ -20,6 +20,10 @@ from tour_store import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+admin.site.site_header = "Tour Project admin"
+admin.site.site_title = "Tour Project admin"
+admin.site.index_title = "Tour Project admin"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main_view, name="index" ),
