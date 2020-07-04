@@ -161,24 +161,33 @@ Tour Store website is composed by five different applications: `accounts`, `cart
   - The user can also on the top right corner add the destination to cart.
 
 ## Cart
+
+<img src="/static/images/readme_images/cart_image.png">
+
  The cart app gives the user the ability to `view`, `add` and `adjust` the cart as they wish. Including more or less retreats to their trip package.
   - Besides the destination the user will have a card that will allow them to add how many people will go to the trip.
   - `Important`: Since this project is to provide the user to add retreats to card, they will not be able to book the trip. Where in an actual case, once it's paid the booking should have done directly to the business management. Therefore, in the future a book system will be developed to provide a better experience to customers.
 
-<img src="/static/images/readme_images/cart_image.png">
-
 ## Checkout
-  - The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality.
-  - In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
 
 <p align="center">
 <img src="/static/images/readme_images/checkout_image.png" width="40%">
 </p>
 
+  - The checkout application holds and manipulates the `Stripe` API. In which empowers the overall application with the e-commerce functionality.
+  - In this application is developed and performed the forms users who are willing to buy any retreat, to plot their details into the checkout application forms and finalise the purchase.
+
+
 ## Search
   - Under the search application, a simple search functionality is used to find different destinations from the `Destinations` model by the tour title as the key word retrieved.
   - If a user adds one or multiple destinations that is in the database, it will be retrieved and shown on destination page.
   - If the tour title plotted on the search bar doesn't have in the data base, a message will be displayed instead, describing that destination is not yet added in the database.
+
+## 404 page
+
+<p align="center">
+<img src="/static/images/readme_images/four.png" width="40%">
+</p>
 
 ## Admin page
 
@@ -200,6 +209,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 <p align="center">
 <img src="/static/images/readme_images/wysiwyg.png" width="40%">
 </p>
+
   - The WYSIWYG (what you see is what you get) functionality was implemented as a functionality from a third party application called [Ckeditor](https://ckeditor.com/). Where the normal text editor was changed to add more features such as:
      - Alignment
      - Tables
