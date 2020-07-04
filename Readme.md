@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
 
-<img src="/static/images/mockup.png" >
+<img src="static/images/readme_images/mockup.png" >
 
 ## Table of contents
 <!--ts-->
@@ -51,10 +51,15 @@ User goals:
 - Search for the retreat or destination by its keyword and receive a feedback by the website if it isn't available.
 - Find information about the company such as address phone number and its mission.
 - Finding the destination, the user can find details of it, such as text and picture based content related to the destination.
+- The user can scroll on the retreat page and through different paginations.
+- Also, be able to see a preview image of the destination, date and price on a card container.
 - The user can also add comments to the destination they want.
-- Add one or multiple trips to the shopping cart with the maximum ten people each.
+- Add one or multiple trips to the shopping cart with the maximum ten people for each tour.
+- Clicking on add he or she will be redirected to the cart page.
+- If the user is not logged in they will be redirected to the login page before go to the cart page.
 - Edit the shopping cart if required.
 - Checkout using card payment.
+- Once the payment is done a success message is sent below the navbar and disappear on three seconds after the user be redirected to the home page.
 
 ## Design choices
 The Tour project website is a tour application that has its main customers, people who want to have a relax and spiritual retreat.
@@ -66,59 +71,50 @@ Therefore, the website design was designed to bring these characteristics to its
 ### Colors
    - Cyan: ![#17a2b8](https://via.placeholder.com/15/17a2b8/000000?text=+) `#17a2b8`
    - Light-cyan: ![#D7FFFE](https://via.placeholder.com/15/D7FFFE/000000?text=+) `#D7FFFE`
-   - Selago: ![#FFFEFF](https://via.placeholder.com/15/FFFEFF/000000?text=+) `#FFFEFF`
    - Raven: ![#6c757d](https://via.placeholder.com/15/6c757d/000000?text=+) `#6c757d`
-   - Dark-gray: ![#343a40](https://via.placeholder.com/15/6c757d/000000?text=+) `#343a40`
+   - Dark-gray: ![#343a40](https://via.placeholder.com/15/343a40/000000?text=+) `#343a40`
    - Green: ![#28a745](https://via.placeholder.com/15/28a745/000000?text=+) `#28a745`
    - White: ![#fff](https://via.placeholder.com/15/fff/000000?text=+) `#fff`
+   - Selago: ![#FFFEFF](https://via.placeholder.com/15/FFFEFF/000000?text=+) `#FFFEFF`
    - Light: ![#f8f9fa](https://via.placeholder.com/15/f8f9fa/000000?text=+) `#f8f9fa`
    - These set of colors were chosen to bring a smooth experience to the users as same as to match with the purpose of the application.
 
-### Styling
+#### Styling
   - Box shadow in card to give a depth idea and contrast with the background.
   - Scroll effects to give a better experience to users.
-  - Skew-y effect on index page to break standard pattern with linear gradient with light-cyan and selago.
+  - Skew-y effect on index page to break standard pattern with linear gradient using light-cyan and Selago colors.
+
+### Icons
+  - The icons used
 
 ### Wireframes
 The wireframes developed for this project was only taken three types of devices, desktop, tablet and mobile.
-In addition, the tool used to develop this wireframes was (Balsamiq)[https://balsamiq.com/] giving the ability to a rapid design.
-  - [Mobile devices](static/images/readme_images/Mobile_wireframes.png)
-  - [Tablet devices](static/images/readme_images/iPad_wireframes.png)
-  - [Desktop devies](static/images/readme_images/Desktop_wireframes.png)
-
-
-
-
-#### Mobile Display
-
-<img src="/static/images/mobile.png" width="200">
-
-#### Tablet Display
-
-<img src="/static/images/ipad.png" width="200">
-
-### Goal
-
-The main goal of this project is to show the functionalities of an e-commerce using different technologies. Since this project is about retreat holidays, in this material I had a different approach in terms of showing to users full detail of the program or retreat. Therefore, in this project, the product or destination will be provided a full post to give users a good idea about what they will have in terms of trip.
+In addition, the tool used to develop this wireframes was [Balsamiq](https://balsamiq.com/) giving the ability to a rapid design.
+  - [Mobile devices](https://tour-project.s3-eu-west-1.amazonaws.com/static/images/readme_images/Mobile_wireframes.png)
+  - [Tablet devices](https://tour-project.s3-eu-west-1.amazonaws.com/static/images/readme_images/iPad_wireframes.png)
+  - [Desktop devices](https://tour-project.s3-eu-west-1.amazonaws.com/static/images/readme_images/Desktop_wireframes.png)
 
 ## Features
 
 Tour Store website is composed by five different applications: `accounts`, `cart`, `checkout`, `search` and `tour_store`. Using MVC architecture from the Django framework, each application holds its own model, view and controller that interacts all together into the `main_tour_folder` which basically is the controller of the overall application.
 
-### Apps functionalities
-
 #### Accounts
  The accounts app holds the functionality of register, login, logout and the reset password.
 
 #### Register page
+<p align="center">
 <img src="/static/images/readme_images/register.png">
+</p>
 - An username, email and password is required to create an account.
 - Username must be unique.
 - Password should not be short, must contain at least 8 characters and should not be common.
 - As soon as the user creates its username they are redirected to home page.
 
 #### Login page
-  - The login page is a normal page that will ask for for the name or email and the user password.
+<p align="center">
+<img src="/static/images/readme_images/login.png">
+</p>
+  - The login page is a normal page that will ask for the name or email and the user password who already registered their account.
 
 #### Reset password
   - Step 1 and 2, at the login page, above of the button you can find the `forgot my password` link in which will lead to a form to add your account email.
