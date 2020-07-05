@@ -387,15 +387,15 @@ To make the deployment of this application to `Heroku` you will need to do the f
 
 | KEY            | VALUE         |
 |----------------|---------------|
-| AWS_ACCESS_KEY_ID | <your aws access key>  |
-| AWS_SECRET_ACCESS_KEY | <your aws secret access key>  |
-| DATABASE_URL| <your postgres database url>  |
-| EMAIL_ADDRESS| <your email address>  |
-| EMAIL_PASSWORD | <your email password>  |
-| SECRET_KEY | <your secret key>  |
-| STRIPE_PUBLISHABLE| <your stripe publishable key>  |
-| STRIPE_SECRET| <your stripe secret key>  |
-| AWS_ACCESS_KEY_ID | <your aws access key>  |
+| AWS_ACCESS_KEY_ID | `<your aws access key>`  |
+| AWS_SECRET_ACCESS_KEY | `<your aws secret access key>`  |
+| DATABASE_URL| `<your postgres database url>`  |
+| EMAIL_ADDRESS| `<your email address>`  |
+| EMAIL_PASSWORD | `<your email password>` |
+| SECRET_KEY | `<your secret key>`  |
+| STRIPE_PUBLISHABLE| `<your stripe publishable key>`  |
+| STRIPE_SECRET| `<your stripe secret key>`  |
+| AWS_ACCESS_KEY_ID | `<your aws access key>`  |
 
 12. Add a development (postgres) database:
   ```
