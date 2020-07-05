@@ -230,9 +230,9 @@ tour_store app holds all the main pages in which the user will navigate. Such as
   5. Add real location with maps at the bottom of each retreat detail page.
   6. Add star based review.
 
-## Technologies
+# Technologies
 
-### Tools
+## Tools
 
   - [Atom](https://atom.io/) as an IDE to develop this project.
   - [Stripe](https://stripe.com/ie) to receive payments.
@@ -247,7 +247,7 @@ tour_store app holds all the main pages in which the user will navigate. Such as
   - [Canva](https://www.canva.com/) was used to design images on the web.
   - [Balsamiq](https://balsamiq.com/) for the wireframes design.
 
-### Libraries and frameworks
+## Libraries and frameworks
 
   - [Django](https://www.djangoproject.com/) a high level python web-framework used to design this project.
   - [Bootstrap 4](https://getbootstrap.com/) a CSS library grid used for the development of this site.
@@ -259,72 +259,146 @@ tour_store app holds all the main pages in which the user will navigate. Such as
   - [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) a library that enables python code to modify AWS service.
   - [AOS](https://michalsnik.github.io/aos/) used to bring animation on scroll.
 
-### Languages
+## Languages
 
-- This project uses HTML, CSS, Javascript and Python programming languages.
-
-
-## Testing
-
-The testing information can be fount in a separated [Testing](TESTING.md) file.
+  - This project uses HTML, CSS, Javascript and Python programming languages.
 
 
+# Testing
 
-## Deployment
-
-To deploy to Heroku there are some steps to e followed:
-
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
+The testing information can be found in this separated [Testing](TESTING.md) file.
 
 
-9.
-10.
-11.
+# Deployment
+
+For the deployment you will need tool as:
+
+  - An IDE such as [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com/).
+  - Have installed in your machine [Python 3](https://www.python.org/downloads/) and [Git](https://git-scm.com/).
+
+To continue on the process of deployment you should have accounts on the following services:
+
+  - [Stripe](https://stripe.com/ie)
+  - [AWS](https://aws.amazon.com/s3/)
+  - [Gmail](https://gmail.com)
+
+### Instructions
+  1. Download a copy of this repository from the link https://github.com/EliasOPrado/tour-project as a download zip file. Or at your terminal do the following git command:
+
+    ```
+    git clone https://github.com/EliasOPrado/tour-project
+    ```
+  2. If you downloaded the project as a zip file, unzip it and add it in your directory.
+  3. To not run in some unexpected behaviours during development, a virtual environment is advised to be used before the project be installed in your machine. So create a virtual environment with the command:
+
+    ```
+   python -m venv venv
+    ```
+  4. After you already created the virtual environment folder you need to activate it:
+
+    ```
+    source venv/bin/activate
+    ```
+  5. Install requirements.txt file.
+
+    ```
+    pip install -r requirements.txt
+    ```
+  6. Create an `env.py` file to store environment variable keys.
+
+     ```
+     import os
+
+     os.environ.setdefault('SECRET_KEY', '<secrete key>')
+     os.environ.setdefault('DATABASE_URL', '<postgres key>')
+
+     """ STRIPE API Keys """
+     os.environ.setdefault('STRIPE_PUBLISHABLE', '<stripe publishable key>')
+     os.environ.setdefault('STRIPE_SECRET', '<stripe secret key>')
+
+     """ AWS API Keys """
+     os.environ.setdefault('AWS_ACCESS_KEY_ID', '<aws access key id>')
+     os.environ.setdefault('AWS_SECRET_ACCESS_KEY', '<aws secret access key>')
+
+     """ Email Keys """
+     os.environ.setdefault('EMAIL_ADDRESS', '<your email here>')
+     os.environ.setdefault('EMAIL_PASSWORD', '<your email password here>')
+     ```
+  7. Add a git ignore file to not submit sensitive data to Github repository.
+
+     ```
+     touch .gitignore
+     ```
+     - Then add the `env.py` to the `.gitignore` file.
+
+     ```
+     git update-index --assume-unchanged env.py
+     ```
+     - Depending where the the `env.py` is locate the path will change.
+
+  8. Migrate the models to crete a database template.
+
+    ```
+    python manage.py migrate
+    ```
+  9. In this step you will need to create a super user to have access to the admin page.
+
+    ```
+    python manage.py createsuperuser
+    ```
+  10. So, after you do all the steps to create a super user you can now run the server.
+
+    ```
+    python manage.py runserver
+    ```
+  11. After the server is running locally add the `/admin` path at the end of the url link. It might look like this if you are not running another application.
+
+    ```
+    http://127.0.0.1:8000/admin
+    ```
+
+# Deployment to Heroku
+
+To make the deployment of this application to `Heroku` you will need to do the following steps.
+
+  1. Signup for [Heroku](https://signup.heroku.com/)
+  2. Install [Heroku-CLI](https://devcenter.heroku.com/articles/heroku-cli)
+  3. After installing `Heroku toolbelt` add the following code into your termial and login into your account you already create.
+     ```
+     $ heroku login
+      Enter your Heroku credentials.
+      Email: your@email.com
+      Password (typing will be hidden):
+      Authentication successful.
+     ```
+  4. Save all the requirements into the `requirements.txt` as mentioned before with the command:
+     ```
+     pip freeze > requirements.txt
+     ```
+  5. Create a file named `Procfile` and add the following config.
+     ```
+     web: gunicorn main_tour_folder.wsgi
+     ```
+ 6. After all the setup is done `git add .`, `git commit` and `git push` your application to a repository you created on Github.
+ 7. In your `Heroku`account click new and create new app.
+ 9. Select your region and create a name for your project.
+10. In your `Heroku` settings click `reveal config vars`.
+11. Add the following config variables:
+
+| KEY            | VALUE         |
+|----------------|---------------|
+| AWS_ACCESS_KEY_ID | <your aws access key>  |
+| AWS_SECRET_ACCESS_KEY | <your aws secret access key>  |
+| DATABASE_URL| <your postgres database url>  |
+| EMAIL_ADDRESS| <your email address>  |
+| EMAIL_PASSWORD | <your email password>  |
+| SECRET_KEY | <your secret key>  |
+| STRIPE_PUBLISHABLE| <your stripe publishable key>  |
+| STRIPE_SECRET| <your stripe secret key>  |
+| AWS_ACCESS_KEY_ID | <your aws access key>  |
+
+
 
 ## Credits
 
 [Mdbootstrap](https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459 )
-
-## Tasks that should be accomplished
-
-| Task           | Time required | Assigned to   | Current Status | Finished |
-|----------------|---------------|---------------|----------------|-----------|
-| 1. Add template | > two days  | Elias | done 24/02 | <ul><li>- [x] </li></ul>
-| 2. Create tour_app | > A week  | Elias | done 26/02 | <ul><li>- [x] </li></ul>
-| 3. Create shopping-cart app  | > two weeks  | Elias | done 10/03 | <ul><li>- [x] </li></ul>
-| 4. Create authentication app | > A week  | Elias | done 09/03 | <ul><li>- [x] </li></ul>
-| 5. Add pagination functionality | > One hour| Elias | done 13/03 | <ul><li>- [x] </li></ul>
-| 6. Make deployment | > 3 weeks | Elias | done 23/03 | <ul><li>- [x] </li></ul>
-| 7. Add WYSIWYG functionality | 2 weeks  | Elias | done 20/04 | <ul><li>- [x] </li></ul>
-| 8. Exam and Exam preparantion (no code) | 2 months  | Elias | done 25/06 | :neckbeard:
-| 9. Improve UI/UX | 2 or 3 weeks  | Elias | done 20/06 | <ul><li>- [x] </li></ul>
-| 10. Initiate testing | 4 days  | Elias | done 25/06 | <ul><li>- [x] </li></ul>
-| 11. readme file | a week  | Elias | in progress | <ul><li>- [ ] </li></ul>
-
-
-1. ```Add template```: This task is simply add the template in the static folder and link within the code.
-2. ```Create authentication app```: This task will be used the CI authentication app. (If it is not working should be created from scratch).
-    1. This app have to have a form in which users can upload their photo, name, email and password.
-3. ```Create in-house admin app```: It will be needed to be created a in-house page for the owner of the application.
-
-    :paperclip: There will be needed to be added:
-    1. login required.
-    2. form that will add all the inputs for a new tour.
-    3. List of different added tours.
-    4. List of orders?
-    5. ....
-4. ```Create cart app```: This app will be the last and the hardest one.
-5. ```Create authentication app```: This app has to have signup, signin and logout functionality.
-6. ```Make deployment```: using AWS S3 and Heroku.
-7. ```Add WYSIWYG functionality```: Use a third party app and install into the application to give a better look/UX in term of reading.
-8. ```Exam and Exam preparation (no code)```: development stopped for two months.
-9. ```Improve UI/UX```: Use a third party library to speed up the development and improvement of the project interface.
-10. ```Initiate testing```: Add testing to all applications when needed.
-11. ```Prep readme doc```: Include all features, bugs, testing, challenges, clicks and what you learned.
