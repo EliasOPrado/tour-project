@@ -285,25 +285,25 @@ To continue on the process of deployment you should have accounts on the followi
 ### Instructions
   1. Download a copy of this repository from the link https://github.com/EliasOPrado/tour-project as a download zip file. Or at your terminal do the following git command:
 
-    ```
-    git clone https://github.com/EliasOPrado/tour-project
-    ```
+      ```
+      $ git clone https://github.com/EliasOPrado/tour-project
+      ```
   2. If you downloaded the project as a zip file, unzip it and add it in your directory.
   3. To not run in some unexpected behaviours during development, a virtual environment is advised to be used before the project be installed in your machine. So create a virtual environment with the command:
 
-    ```
-   python -m venv venv
-    ```
+      ```
+     $ python -m venv venv
+      ```
   4. After you already created the virtual environment folder you need to activate it:
 
-    ```
-    source venv/bin/activate
-    ```
+      ```
+      $ source venv/bin/activate
+      ```
   5. Install requirements.txt file.
 
-    ```
-    pip install -r requirements.txt
-    ```
+      ```
+      $ pip install -r requirements.txt
+      ```
   6. Create an `env.py` file to store environment variable keys.
 
      ```
@@ -327,35 +327,35 @@ To continue on the process of deployment you should have accounts on the followi
   7. Add a git ignore file to not submit sensitive data to Github repository.
 
      ```
-     touch .gitignore
+     $ touch .gitignore
      ```
      - Then add the `env.py` to the `.gitignore` file.
 
      ```
-     git update-index --assume-unchanged env.py
+     $ git update-index --assume-unchanged env.py
      ```
      - Depending where the the `env.py` is locate the path will change.
 
   8. Migrate the models to crete a database template.
 
-    ```
-    python manage.py migrate
-    ```
+      ```
+      $ python manage.py migrate
+      ```
   9. In this step you will need to create a super user to have access to the admin page.
 
-    ```
-    python manage.py createsuperuser
-    ```
+      ```
+      $ python manage.py createsuperuser
+      ```
   10. So, after you do all the steps to create a super user you can now run the server.
 
-    ```
-    python manage.py runserver
-    ```
+      ```
+      $ python manage.py runserver
+      ```
   11. After the server is running locally add the `/admin` path at the end of the url link. It might look like this if you are not running another application.
 
-    ```
-    http://127.0.0.1:8000/admin
-    ```
+      ```
+      http://127.0.0.1:8000/admin
+      ```
 
 # Deployment to Heroku
 
@@ -373,7 +373,7 @@ To make the deployment of this application to `Heroku` you will need to do the f
      ```
   4. Save all the requirements into the `requirements.txt` as mentioned before with the command:
      ```
-     pip freeze > requirements.txt
+     $ pip freeze > requirements.txt
      ```
   5. Create a file named `Procfile` and add the following config.
      ```
@@ -397,7 +397,26 @@ To make the deployment of this application to `Heroku` you will need to do the f
 | STRIPE_SECRET| <your stripe secret key>  |
 | AWS_ACCESS_KEY_ID | <your aws access key>  |
 
+12. Add a development (postgres) database:
+  ```
+  $ heroku addons:add heroku-postgresql:dev
 
+  heroku addons:add heroku-postgresql:dev
+  Adding heroku-postgresql on deploy_django... done, v13 (free)
+  Attached as HEROKU_POSTGRESQL_COPPER_URL
+  Database has been created and is available
+  ! This database is empty. If upgrading, you can transfer
+  ! data from another database with pgbackups:restore.
+  Use `heroku addons:docs heroku-postgresql` to view documentation.
+  $ heroku pg:promote HEROKU_POSTGRESQL_COPPER_URL
+  Promoting HEROKU_POSTGRESQL_COPPER_URL to DATABASE_URL... done
+   ```
+13. After adding the config into your dashboard add the following commands.
+  - `$ heroku login`
+  - `heroku git:remote -a test-app-to-deploy`
+  - `$ git push heroku master`
+
+14. On your `Heroku` dashboard click on `open app` button and check if the applicatin is running correctly.
 
 ## Credits
 
