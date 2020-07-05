@@ -124,11 +124,12 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 ## Tour_store
 
-<img src="/static/images/readme_images/transparent_navbar.png">
-
-  tour_store app holds all the main pages in which the user will navigate. Such as:
+tour_store app holds all the main pages in which the user will navigate. Such as:
 
 #### home page
+
+  <img src="/static/images/readme_images/transparent_navbar.png">
+
   - On the home page the navbar is displayed transparent to give a good UI to the project. However, once the user scroll the page down it becomes white to better contrast from the rest of the page and not confuse the user.
 
     <img src="/static/images/readme_images/top_locations.png">
@@ -189,6 +190,8 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 <img src="/static/images/readme_images/four.png" width="40%">
 </p>
 
+  - Simple page 404 for when an error occur and give the ability to not lost the user, sending them back to the home page.
+
 ## Admin page
 
 <p align="center">
@@ -227,64 +230,43 @@ Tour Store website is composed by five different applications: `accounts`, `cart
   5. Add real location with maps at the bottom of each retreat detail page.
   6. Add star based review.
 
-
-
-
-## Database Structure
-
-```
-
-```
-
 ## Technologies
 
-- HTML
-- CSS
-- Bootstrap
-- Python
-- Django
-- Jinja 2
-- Google fonts
-- Font awesome
+### Tools
 
-## Coding Challenges During Development
+  - [Atom](https://atom.io/) as an IDE to develop this project.
+  - [Stripe](https://stripe.com/ie) to receive payments.
+  - [Heroku](https://www.heroku.com/) for hosting the application and deploy.
+  - [AWS S3](https://aws.amazon.com/s3/) was used as a cloud service to host static files.
+  - [Github](https://github.com/) to share and store code remotely.
+  - [Git](https://git-scm.com/) was used to manage version control.
+  - [CkEditor](https://ckeditor.com/docs/) was used to better format texts without the need to do within the code.
+  - [Sqlite3](https://www.sqlite.org/index.html) a database provided by django for development.
+  - [PostgreSQL](https://www.postgresql.org/), a robust database provided by Heroku for production development.
+  - [Travis CI](https://travis-ci.org/) for continuous integration and testing.
+  - [Canva](https://www.canva.com/) was used to design images on the web.
+  - [Balsamiq](https://balsamiq.com/) for the wireframes design.
 
+### Libraries and frameworks
 
+  - [Django](https://www.djangoproject.com/) a high level python web-framework used to design this project.
+  - [Bootstrap 4](https://getbootstrap.com/) a CSS library grid used for the development of this site.
+  - [FontAwesome](https://fontawesome.com/) for the creation and implementation of icons.
+  - [Google fonts](https://fonts.google.com/) to bring custom font styling.
+  - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) a template language for python used to bring logic into templates.
+  - [Psycopg2-binary](https://pypi.org/project/psycopg2-binary/#description) used as the Python PostgreSQL adapter.
+  - [Jquery](https://jquery.com/) a Javascript library to simplify the code.
+  - [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) a library that enables python code to modify AWS service.
+  - [AOS](https://michalsnik.github.io/aos/) used to bring animation on scroll.
 
+### Languages
 
-
+- This project uses HTML, CSS, Javascript and Python programming languages.
 
 
 ## Testing
 
-The devices that the application was tested were:
-
-### Mobile
-
-- Galaxy S5
-- Pixel 2
-- Pixel 2 XL
-- iPhone 5 SE
-- iPhone 6, 7 and 8
-- iPhone 6, 7 and 8 Plus
-- iPhone X
-
-### Tablets
-
-- iPad
-- iPad Pro
-
-### Laptops
-
-- ThinkPad X1 Carbon
-- ThinkPad T430
-
-
-## Function Testing And Unsolved Bugs
-
-
-
-### Unsolved bugs
+The testing information can be fount in a separated [Testing](TESTING.md) file.
 
 
 
