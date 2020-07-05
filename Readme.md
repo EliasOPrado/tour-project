@@ -418,6 +418,22 @@ To make the deployment of this application to `Heroku` you will need to do the f
 
 14. On your `Heroku` dashboard click on `open app` button and check if the applicatin is running correctly.
 
-## Credits
+# Credits
+
+## Content
+
+  - The text from the
+  - The text from the
+  - The text from the
+  - The text from the
+  - The text from the
+
+## Media
+
+  - The photos used in this section
+
+## Acknowledgment
+
+  - I received inspiration for this project from
 
 [Mdbootstrap](https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459 )
