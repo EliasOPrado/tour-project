@@ -406,7 +406,9 @@ and (pointer: coarse)  {
   p img.wysiwyg-img{
     width: 290px;
   }
-
+  div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+    display: inline;
+  }
 }
 
 /* iphone 4/4s potrait */
@@ -580,8 +582,12 @@ and (orientation : portrait) {
     padding: 30px;
     width: 500px;
   }
-  div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
-    display: inline;
+  .row.skew1 {
+    transform-origin: left top;
+      transform: skewY(-4deg);
+      z-index: -2;
+      margin-top: 60px;
+      background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
   }
 }
 
@@ -640,6 +646,9 @@ and (orientation: portrait) {
       padding: 30px;
       width: 500px;
   }
+  div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+    display: none;
+  }
 }
 
 /* Ipad pro landscape */
@@ -659,6 +668,9 @@ and (orientation: portrait) {
   header video {
     display: none;
   }
+  div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+    display: none;
+  }
 }
 
 /* smartphones, iPhone, portrait 480x320 phones */
@@ -666,8 +678,8 @@ and (orientation: portrait) {
   .row.bg-light.skew1 {
     display: none;
   }
-
  }
+
 @media(max-width: 360px){
   .col-md-5.card.card-body.card-padding-bottom {
       margin-left: 30px;
