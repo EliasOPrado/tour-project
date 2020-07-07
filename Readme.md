@@ -428,5 +428,4 @@ To make the deployment of this application to `Heroku` you will need to do the f
   - The `accounts`, `cart` and `checkout` apps were recycled from the [Code Institute](https://github.com/Code-Institute-Org) lessons but modified to fit with the project purpose.
 
 ## Acknowledgment
-
   - I received inspiration for this project from the [Retreat Guru](https://retreat.guru/) website.

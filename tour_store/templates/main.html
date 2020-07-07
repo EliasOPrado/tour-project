@@ -36,12 +36,11 @@
 </header>
 
 
-
 <div class="container2">
   <h1 class="my-4 text-center font-weight-bold text-dark">Top locations</h1>
   <div class="row row2" >
-    {% for destination in show_destinations|slice:"3" %}
-    <div data-aos="fade-up" class="col-lg-4 col-sm-6 portfolio-item">
+    {% for destination in show_destinations|slice:"4" %}
+    <div data-aos="fade-up" id="this{{destination.id}}" class="col-lg-4 col-sm-6 portfolio-item aos-init aos-animate">
       <a class="card-title" href="{% url 'destinationDetails' id=destination.id %}">
         <div class="card text-white">
           <img src="{{ destination.image.url}}" class="card-img-top" alt="destination">

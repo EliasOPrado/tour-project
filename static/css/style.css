@@ -242,8 +242,6 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  /* background-color: black;
-  opacity: 0.5; */
   z-index: 1;
 }
 /* testimonial      */
@@ -368,6 +366,10 @@ h1.font-weight-bold.testimonials {
     }
 }
 
+div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+  display: none;
+}
+
 /* touch screen devices */
 @media (hover: none)
 and (pointer: coarse)  {
@@ -404,6 +406,7 @@ and (pointer: coarse)  {
   p img.wysiwyg-img{
     width: 290px;
   }
+
 }
 
 /* iphone 4/4s potrait */
@@ -467,6 +470,7 @@ and (max-device-width : 667px) {
     padding: 30px;
     width: 350px;
   }
+
 }
 
 /* iPhone 6, 7, & 8 in landscape */
@@ -521,6 +525,20 @@ and (orientation : landscape) {
   }
 }
 
+/* remove testimonial when streching in and out */
+@media only screen
+and (min-device-width : 737px)
+and (max-device-width : 767px){
+  .row.bg-light.skew1 {
+    display: none;
+  }
+  .col-md-5.card.card-body.card-padding-bottom {
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+}
+
 /* iPad potrait */
 @media only screen
 and (min-device-width : 768px)
@@ -561,6 +579,9 @@ and (orientation : portrait) {
     margin-right: auto;
     padding: 30px;
     width: 500px;
+  }
+  div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+    display: inline;
   }
 }
 
