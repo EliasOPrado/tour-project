@@ -541,7 +541,7 @@ and (max-device-width : 767px){
 }
 }
 
-/* iPad potrait */
+/*  potrait */
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -589,9 +589,12 @@ and (orientation : portrait) {
       margin-top: 60px;
       background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
   }
+  .col-md-6.py-5{
+    margin-top: 60px;
+  }
 }
 
-/* iPad landscape*/
+/*  landscape*/
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -606,9 +609,14 @@ and (orientation : landscape) {
     padding: 30px;
     width: 500px;
   }
+  .container.container2 {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 60px;
+}
 }
 
-/* Ipad pro potrait */
+/*  pro potrait */
 @media only screen
 and (min-device-width: 1024px)
 and (max-device-width: 1366px)
@@ -649,9 +657,12 @@ and (orientation: portrait) {
   div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
     display: none;
   }
+  .col-md-6.py-5 {
+    margin-top: 0;
+}
 }
 
-/* Ipad pro landscape */
+/*  pro landscape */
 @media only screen
   and (min-device-width: 1024px)
   and (max-device-width: 1366px)
@@ -678,6 +689,22 @@ and (orientation: portrait) {
   .row.bg-light.skew1 {
     display: none;
   }
+ }
+
+ /* remove unresnponsive skew when stretching the window */
+ @media(min-width: 500px)
+ and (max-width: 767px){
+   .row.bg-light.skew1 {
+     display: none;
+   }
+ }
+
+/* add the fourth square when stretching the window */
+ @media(min-width: 576px)
+ and (max-width: 991px){
+   div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+     display: inline;
+   }
  }
 
 @media(max-width: 360px){
@@ -708,6 +735,13 @@ and (orientation: portrait) {
   }
  }
 
+@media (min-width: 1367px)
+and (max-device-width: 1999px) {
+  header {
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
+    position: relative;
+  }
+}
 /* wide screen */
  @media (min-width: 2000px) {
   header {
@@ -731,5 +765,8 @@ and (orientation: portrait) {
   .card.card-style2.register-style {
     margin-left: 1000px;
     margin-right: 1000px;
+  }
+  div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
+    display: none;
   }
 }

@@ -14,7 +14,7 @@ This website is to emulate a touristic retreat webpage that provides for tourist
 
 1. [UX](#UX)
     1. [User goals](#User-goals)
-    2. [#Design choices](#Design-choices)
+    2. [Design choices](#Design-choices)
     3. [Colors](#Colors)
     4. [Wireframes](#Wireframes)
 2. [Features](#Features)
