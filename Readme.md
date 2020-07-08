@@ -4,40 +4,47 @@
 
 <img src="static/images/readme_images/mockup.png" >
 
-## Table of contents
-<!--ts-->
-
-1. [About](#about)
-    1. [Goal](#Goal)
-    2. [Functionality](#Functionality)
-2. [UX](#UX)
-    1. [Home Page](#Home-Page)
-    2. [Categories](#Categories)
-    3. [The Product View](#The-product-view)
-    4. [The User Account Page](#The-User-Account-Page)
-    5. [Font](#Font)
-    6. [Mobile Display](#Mobile-Display)
-    7. [Tablet Display](#Tablet-Display)
-3. [Database Structure](#Database-Structure)
-4. [Technologies](#Technologies)
-5. [Coding challenges during development](#Coding-Challenges-During-Development)   
-6. [Features](#Features)
-7. [Features Left To Implement](#Features-Left-To-Implement)
-8. [Testing](#Testing)
-    1. [Mobile](#Mobile)
-    2. [Tablets](#Tablets)
-    3. [Laptops](#Laptops)
-9. [Function Testing And Unsolved bugs](#Function-Testing-And-Unsolved-Bugs)
-10. [Deployment](#Deployment)
-11. [Credits](#Credits)
- <!--te-->
-
-# About
-
 Project Milestone Four - Code Institute
 
 The Tour Store app was developed and deployed by Elias Prado as the last project for the Code Institute Software Development diploma.
 This website is to emulate a touristic retreat webpage that provides for tourists different places to retreat and relax.
+
+## Table of contents
+<!--ts-->
+
+1. [UX](#UX)
+    1. [User goals](#User-goals)
+    2. [#Design choices](#Design-choices)
+    3. [Colors](#Colors)
+    4. [Wireframes](#Wireframes)
+2. [Features](#Features)
+    1. [Accounts](#Accounts)
+        1. [Register page](#Register-page)
+        2. [Login page](#Login-page)
+        3. [Reset password](#Reset-password)
+    2. [Tour store](#Tour-store)
+        1. [Home page](#Home-page)
+        2. [Retreats](#Retreats)
+        3. [Retreat details](#Retreat-details)
+    3. [Cart](#Cart)
+    4. [Checkout](#Checkout)
+    5. [Search](#Search)
+    6. [404 page](#404-page)
+    7. [Admin page](#Admin-page)
+    8. [Features left to implement](#Features-left-to-implement)
+3. [Technologies](#Technologies)
+    1. [Tools](#Tools)
+    2. [Libraries and frameworks](#Libraries-and-frameworks)
+    3. [Languages](#Languages)
+4. [Testing](#Testing)
+5. [Deployment](#Deployment)
+    1. [Instructions](#Instructions)
+    2. [Deployment to Heroku](#Deployment-to-Heroku)
+6. [Credits](#Credits)
+    1. [Media](#Media)
+    2. [Code](#Code)
+    3. [Acknowledgment](#Acknowledgment)
+ <!--te-->
 
 # UX
 
@@ -122,9 +129,9 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
   <img src="/static/images/readme_images/passwordreset.png">
 
-## Tour_store
+## Tour store
 
-tour_store app holds all the main pages in which the user will navigate. Such as:
+Tour store app holds all the main pages in which the user will navigate. Such as:
 
 #### home page
 
@@ -400,16 +407,16 @@ To make the deployment of this application to `Heroku` you will need to do the f
 12. Add a development (postgres) database:
   ```
   $ heroku addons:add heroku-postgresql:dev
+    heroku addons:add heroku-postgresql:dev
+    Adding heroku-postgresql on deploy_django... done, v13 (free)
+    Attached as HEROKU_POSTGRESQL_COPPER_URL
+    Database has been created and is available
+    ! This database is empty. If upgrading, you can transfer
+    ! data from another database with pgbackups:restore.
+    Use `heroku addons:docs heroku-postgresql` to view documentation.
 
-  heroku addons:add heroku-postgresql:dev
-  Adding heroku-postgresql on deploy_django... done, v13 (free)
-  Attached as HEROKU_POSTGRESQL_COPPER_URL
-  Database has been created and is available
-  ! This database is empty. If upgrading, you can transfer
-  ! data from another database with pgbackups:restore.
-  Use `heroku addons:docs heroku-postgresql` to view documentation.
   $ heroku pg:promote HEROKU_POSTGRESQL_COPPER_URL
-  Promoting HEROKU_POSTGRESQL_COPPER_URL to DATABASE_URL... done
+    Promoting HEROKU_POSTGRESQL_COPPER_URL to DATABASE_URL... done
    ```
 13. After adding the config into your dashboard add the following commands.
   - `$ heroku login`
