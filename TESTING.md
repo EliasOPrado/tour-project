@@ -39,9 +39,10 @@ Instead you should configurate the local database to run the tests.
 
 The configuration for this project is to run with two types of databases Postgres and Sqlite3 (local):
 
-`
+```
 # Comment the first db to run the test
 # Production db
+
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -55,7 +56,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
             }
         }
-`
+```
 
 So to run the test and check the output, you need to remove or comment the first database (Postgres) and run the command to see the test output
 
@@ -65,13 +66,15 @@ So to run the test and check the output, you need to remove or comment the first
 
    - Output:
 
-    ```
-    ----------------------------------------------------------------------
-    Ran 37 tests in 10.288s
+```
+----------------------------------------------------------------------
+Ran 37 tests in 10.288s
 
-    OK
-    Destroying test database for alias 'default'...
-    ```
+OK
+Destroying test database for alias 'default'...
+```
+
+
 ## Travis-CI
 
 In this project was used travis for continuous integration service. In which a test is done every time the project is deployed to github.
