@@ -38,14 +38,14 @@
         </div>
         {% endfor %}
       </div>
-      <!--/ Comments Form -->
+      <!--/ Comments -->
 
+      {% if new_comment %}
+      <div class="alert alert-success my-4" role="alert">
+        Your comment is awaiting moderation
+      </div>
+      {% else %}
       <div class="card card-body card-padding-bottom comment-margin-bottom mb-5 shadow-sm">
-        {% if new_comment %}
-        <div class="alert alert-success" role="alert">
-          Your comment is awaiting moderation
-        </div>
-        {% else %}
 
         <div class=" my-4">
           <h5>Leave a Comment:</h5>
@@ -57,11 +57,14 @@
             </div>
             <button type="submit" class="btn btn-info">Submit</button>
           </form>
-          {% endif %}
+
         </div>
+
       </div>
+      {% endif %}
     </div>
 
+<!-- Add to cart -->
     <div class="col-md-4">
 
       <div class="card card-body col-md-12 my-4 shadow-sm">
@@ -98,6 +101,7 @@
         </form>
       </div>
     </div>
+    <!--/ Add to cart -->
   </div>
 </div>
 <!-- /.row -->

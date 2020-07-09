@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 """
 Set debug = True when developing and False to deploy.
 """
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
 
