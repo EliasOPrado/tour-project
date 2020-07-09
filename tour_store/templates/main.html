@@ -143,21 +143,23 @@
 
   <!-- contact form -->
     <div class=" col-md-5 card card-body card-padding-bottom shadow" data-aos="zoom-out">
-
+          {% if new_contact %}
+          <div class="alert alert-success" role="alert">
+            Our team will contact you as soon as possible.
+          </div>
+          {% endif %}
 
           <div class=" my-1">
             <h5>Get in touch:</h5>
 
                   <div class="form-group">
-              <form method="post">
-
-                  {{ contact_form.as_p}}
+              <form method="POST">
                   {% csrf_token %}
-
+                  {{ contact_form.as_p}}
                 <button type="submit" class="btn btn-info">Submit</button>
               </form>
               </div>
-              {% endif %}
+
             </div>
           </div>
       <!--/ contact form -->

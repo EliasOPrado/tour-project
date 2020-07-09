@@ -735,13 +735,16 @@ and (orientation: portrait) {
   }
  }
 
-@media (min-width: 1367px)
+/* add retreat8 image to avoid the header on homescreen breaks when streaching
+loading other image instead and leaving with white space around it.
+Not necessary since there are the video already and there'snt touch screen on this size*/
+/* @media (min-width: 1367px)
 and (max-device-width: 1999px) {
   header {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
     position: relative;
   }
-}
+} */
 /* wide screen */
  @media (min-width: 2000px) {
   header {
