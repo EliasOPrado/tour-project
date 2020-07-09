@@ -21,11 +21,11 @@
 5. [Cart app](#Cart-app)
 6. [Checkout](#Checkout)
 7. [Web testing](#Web-testing)
-    7. [Mobile](#Mobile)
-    7. [Tablet](#Tablet)
-    7. [Laptop](#Laptop)
-    7. [Screen](#Screen)
-8.[Validation services](#Validation-services)
+    1. [Mobile](#Mobile)
+    2. [Tablet](#Tablet)
+    3. [Laptop](#Laptop)
+    4. [Screen](#Screen)
+8. [Validation services](#Validation-services)
 
 
 ## Django TestCase
@@ -39,10 +39,9 @@ Instead you should configurate the local database to run the tests.
 
 The configuration for this project is to run with two types of databases Postgres and Sqlite3 (local):
 
-```
+`
 # Comment the first db to run the test
 # Production db
-
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -56,7 +55,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
             }
         }
-```
+`
 
 So to run the test and check the output, you need to remove or comment the first database (Postgres) and run the command to see the test output
 
