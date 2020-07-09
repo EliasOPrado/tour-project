@@ -43,4 +43,4 @@ class Contact(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Contact {} by {}'.format(self.contact, self.name)
+        return 'Contact {} by {}'.format(self.message, self.name)

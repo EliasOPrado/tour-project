@@ -14,12 +14,12 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(active=True)
 
 @admin.register(Contact)
-class CommentAdmin(admin.ModelAdmin):
+class ContactAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'subject', 'message', 'created_on', 'active')
     list_filter = ('active', 'created_on')
     search_fields = ('name', 'email', 'body')
 
-    def approve_comments(self, request, queryset):
+    def approve_contact(self, request, queryset):
         queryset.update(active=True)
 
 admin.site.register(Destinations)

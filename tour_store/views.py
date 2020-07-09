@@ -1,7 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CommentForm, ContactForm
+from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Destinations
+from django.urls import reverse
 
 # Create your views here.
 def main_view(request):
@@ -23,6 +25,8 @@ def main_view(request):
             #new_contact.post = details
             # Save the comment to the database
             new_contact.save()
+            messages.success(request, 'Our team will contact you as soon as possible.')
+            return redirect(reverse('index'))
     else:
         contact_form = ContactForm()
 
