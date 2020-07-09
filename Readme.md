@@ -109,6 +109,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 <p align="center">
 <img src="/static/images/readme_images/register.png" width="40%">
 </p>
+
   - An username, email and password is required to create an account.
   - Username must be unique.
   - Password should not be short, must contain at least 8 characters and should not be common.
@@ -116,6 +117,7 @@ Tour Store website is composed by five different applications: `accounts`, `cart
 
 ### Login page
 <p align="center">
+
 <img src="/static/images/readme_images/login.png" width="40%">
 </p>
   - The login page is a normal page that will ask for the name or email and the user password who already registered their account.
