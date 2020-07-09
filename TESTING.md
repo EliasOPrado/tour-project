@@ -1,7 +1,7 @@
 # Tour Project - Testing
 
-[Main README file](Readme.md)
-[Live website](https://tour-application.herokuapp.com/)
+  - [Main README file](Readme.md)
+  - [Live website](https://tour-application.herokuapp.com/)
 
 ## Table of contents
 
