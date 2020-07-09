@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 """
 Set debug = True when developing and False to deploy.
 """
-DEBUG = True    
+DEBUG = True
 
 ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
 
@@ -159,48 +159,48 @@ USE_TZ = True
 
 ##### uncomment from the line below:#######
 
-# """ AWS configuration """
-# AWS_S3_OBJECT_PARAMETERS = {
-#     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-#     'CacheControl': 'max-age=94608000'
-# }
-# AWS_STORAGE_BUCKET_NAME = 'tour-project'
-# AWS_S3_REGION_NAME = 'eu-west-1'
-# AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-# AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-# AWS_DEFAULT_ACL = None
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-#
-# MEDIA_URL = 'https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)/'
-#
-# """ Main  files config """
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# STATICFILES_LOCATION = 'static'
-# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-# MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-# # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# MEDIAFILES_LOCATION = 'media'
-# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage' #for deployment
-#
-# """ ADD ENV TO AVOID SHOWING THE REAL KEYS """
-# STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
-# STRIPE_SECRET = os.getenv('STRIPE_SECRET')
-#
-# """ Ckeditor configuration """
-# CKEDITOR_UPLOAD_PATH = "uploads/"
-# CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-# CKEDITOR_IMAGE_BACKEND = 'pillow'
-#
-# #config for differnt type of WYSIWYG functionalities
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': None,
-#     },
-# }
+""" AWS configuration """
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000'
+}
+AWS_STORAGE_BUCKET_NAME = 'tour-project'
+AWS_S3_REGION_NAME = 'eu-west-1'
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_DEFAULT_ACL = None
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+MEDIA_URL = 'https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)/'
+
+""" Main  files config """
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage' #for deployment
+
+""" ADD ENV TO AVOID SHOWING THE REAL KEYS """
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
+""" Ckeditor configuration """
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+#config for differnt type of WYSIWYG functionalities
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
 
 ##### uncomment from the line above:#######
 
@@ -211,31 +211,31 @@ USE_TZ = True
 
 ##### uncomment from the line below:#######
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #for deployment
-
-"""ADD ENV TO AVOID SHOWING THE REAL KEYS """
-STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
-STRIPE_SECRET = os.getenv('STRIPE_SECRET')
-
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-CKEDITOR_IMAGE_BACKEND = 'pillow'
-
-#config for differnt type of WYSIWYG functionalities
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': None,
-    },
- }
+# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+#
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+#
+# MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #for deployment
+#
+# """ADD ENV TO AVOID SHOWING THE REAL KEYS """
+# STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+# STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+#
+# CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+# CKEDITOR_IMAGE_BACKEND = 'pillow'
+#
+# #config for differnt type of WYSIWYG functionalities
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': None,
+#     },
+#  }
 ##### uncomment from the line above:#######
 
 #========================#DONT COMMENT#==================================
