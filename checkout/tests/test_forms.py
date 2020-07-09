@@ -18,15 +18,13 @@ class TestForms(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_payment_form_not_valid(self):
-        #test if the form is not valid 
+        #test if the form is not valid
         form = MakePaymentForm(data={
             # expirY_month and 'expiry_year' already have its values.
             'credit_card_number':'',
-            'cvv': '',
-            'stripe_id':'',
         })
         self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors),3)
+        self.assertEquals(len(form.errors),1)
 
 
     def test_order_form_form(self):
