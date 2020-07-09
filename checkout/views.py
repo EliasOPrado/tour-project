@@ -21,6 +21,7 @@ def checkout(request):
 
         # Then will check if both forms are valid if yes, save
         if order_form.is_valid() and payment_form.is_valid():
+            print(order_form.is_valid(), payment_form.is_valid())
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()

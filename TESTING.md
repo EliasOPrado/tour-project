@@ -39,13 +39,11 @@ So to run the test and check the output, you need to remove or comment the first
    - Output:
 
     ```
-
     ----------------------------------------------------------------------
     Ran 37 tests in 10.288s
 
     OK
     Destroying test database for alias 'default'...
-
     ```
 ## Travis-CI
 

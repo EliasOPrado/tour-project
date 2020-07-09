@@ -22,15 +22,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  {% block head_js %}
-  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script type="text/javascript">
-    //<![CDATA[
-    Stripe.publishableKey = '{{ publishable }}';
-    //]]>
-  </script>
-  <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-  {% endblock head_js%}
 
 </head>
 <body>
@@ -192,6 +183,16 @@ setTimeout(function(){
 delete_message.style.display = "none";
 }, 3000);
   </script>
+
+  {% block head_js %}
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+  </script>
+  <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+  {% endblock head_js%}
 </body>
 
 </html>
