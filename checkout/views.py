@@ -20,6 +20,8 @@ def checkout(request):
         payment_form = MakePaymentForm(request.POST)
 
         # Then will check if both forms are valid if yes, save
+        print(order_form.is_valid(), payment_form.is_valid())
+        print(payment_form.errors)
         if order_form.is_valid() and payment_form.is_valid():
             print(order_form.is_valid(), payment_form.is_valid())
             order = order_form.save(commit=False)

@@ -1,5 +1,4 @@
 $(function() {
-  console.log(response);
     $("#payment-form").submit(function() {
         var form = this;
         var card = {
