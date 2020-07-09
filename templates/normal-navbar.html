@@ -59,15 +59,3 @@
     </div>
   </div>
 </nav>
-{% if messages %}
-<div id="message_container"class="alert alert-success" >
-  <br><br><br>
-  <div class="messages">
-    <!-- Message will auto delete in 3 seconds -->
-    {% for message in messages %}
-    {{ message }}
-    <!-- <a  href="#"class="del-msg"></a> -->
-    {% endfor %}
-  </div>
-</div>
-{% endif %}
