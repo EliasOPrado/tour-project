@@ -67,6 +67,12 @@
                     <div class="p-2 px-3 text-uppercase">Product</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
+                    <div class="p-2 px-3 text-uppercase">Start</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="p-2 px-3 text-uppercase">End</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">Price</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
@@ -78,7 +84,7 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- PRODUCT WILL LOOP HERE -->
+                <!-- PRODUCT WILL LOOP HERE  cart_items from context.py -->
                 {% for item in cart_items %}
                 <tr>
                   <th scope="row" class="border-0">
@@ -92,12 +98,14 @@
                       </div>
                     </div>
                   </th>
+                  <td class="text-dark border-0 align-middle"><strong>{{ item.destination.booking_start_date }}</strong></td>
+                  <td class="text-dark border-0 align-middle"><strong>{{ item.destination.booking_end_date  }}</strong></td>
                   <!-- PRICE -->
-                  <td class="border-0 align-middle"><strong>€{{ item.price }}</strong></td>
+                  <td class="text-dark border-0 align-middle"><strong>€{{ item.price }}</strong></td>
                   <!-- QUANTITY -->
-                  <td class="border-0 align-middle"><strong>{{item.quantity}}</strong></td>
+                  <td class="text-dark border-0 align-middle"><strong>{{item.quantity}}</strong></td>
                 <!-- ADD DELETE FUNCTION HERE -->
-                  <td class="border-0 align-middle"><a href="{% url 'adjust_cart' item.id%}" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  <td class="text-dark border-0 align-middle"><a href="{% url 'adjust_cart' item.id%}" class="text-dark"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 {% endfor %}
                 <!-- PRODUCT WILL LOOP HERE -->
@@ -112,7 +120,7 @@
         <div class="col">
           <div class="bg-light rounded-pill px-4 py-3 text-center text-uppercase font-weight-bold">Order summary </div>
           <div class="p-4">
-            <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+            <p class="font-italic mb-4">Additional costs are calculated based on values you have entered.</p>
             <ul class="list-unstyled mb-4">
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>€{{ total }}</strong></li>
               <!-- <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$0.00</strong></li> -->

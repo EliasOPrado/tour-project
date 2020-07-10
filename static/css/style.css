@@ -250,15 +250,18 @@ header .overlay {
   height: 200px;
 }
 
+/* testimonial stars */
 .orange-text .fa-star, .fa-star-half-alt {
     color: orange;
 }
 
+/* skewed container home page */
 .z-depth-1, .card.gradient-card:focus-within .card-image {
     -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
 }
 
+/* testimonial subtitle */
 p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle{
   width: 40%;
 }
@@ -292,6 +295,7 @@ h1.font-weight-bold.testimonials {
     resize: none;
 }
 
+/* register and login cards  */
 .card.card-style.login-style,
 .card.card-style2.register-style {
   margin-top: 150px;
@@ -299,6 +303,7 @@ h1.font-weight-bold.testimonials {
   margin-left: 400px;
   margin-right: 400px;
   padding: 30px;
+  min-width: 300px
 }
 
 .embed-responsive {

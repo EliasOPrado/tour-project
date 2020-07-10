@@ -58,7 +58,7 @@ else:
         }
 ```
 
-So to run the test and check the output, you need to remove or comment the first database (Postgres) and run the command to see the test output
+So to run the test and check the output, you need to remove or comment the first database (Postgres) and run the command to see the test output.
 
 ### Command used to trigger the tests
   - `$ python manage.py test`
@@ -72,6 +72,8 @@ Ran 37 tests in 10.288s
 OK
 Destroying test database for alias 'default'...
 ```
+
+You can also see the tests running by clicking in this link -> [![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
 
 ## Travis-CI
 
