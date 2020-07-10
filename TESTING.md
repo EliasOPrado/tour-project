@@ -73,7 +73,6 @@ OK
 Destroying test database for alias 'default'...
 ```
 
-
 ## Travis-CI
 
 In this project was used travis for continuous integration service. In which a test is done every time the project is deployed to github.
