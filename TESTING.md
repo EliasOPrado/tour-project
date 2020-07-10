@@ -73,7 +73,6 @@ OK
 Destroying test database for alias 'default'...
 ```
 
-You can also see the tests running by clicking in this link -> [![Build Status](https://travis-ci.org/EliasOPrado/tour-project.svg?branch=master)](https://travis-ci.org/EliasOPrado/tour-project)
 
 ## Travis-CI
 
@@ -108,12 +107,12 @@ In this project was used travis for continuous integration service. In which a t
          1. Error found: The `if` conditional container was inside of the same comment card container. Making it to break the responsiveness.
          2. To solve this I removed the `if` conditional container with the message to outside of the comment card container.
   3. Testing the add to cart.
-      1. Under the Number of people form chose how many people with max 10 people.
+      1. Under the Number of people form chose how many people with max of 10 people.
       2. Click the add button.
-      3. The add button will redirect to the cart page and add the amount of people choosed to cart icon on navbar.
+      3. The add button will redirect to the cart page and add the amount of people chosed to cart icon on navbar.
 
 #### 404 page
-  1.  On Home page url `https://tour-application.herokuapp.com/random` add a random name at the end and check if the 404 page is working.
+  1.  On Home page url `https://tour-application.herokuapp.com/` add a random name at the end of the url and check if the 404 page is working.
 
 ### Accounts app
 
