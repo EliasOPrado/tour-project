@@ -41,6 +41,7 @@ This website is to emulate a touristic retreat webpage that provides for tourist
 5. [Deployment](#Deployment)
     1. [Instructions](#Instructions)
     2. [Deployment to Heroku](#Deployment-to-Heroku)
+    3. [Add static files to AWS s3](#Add-static-files-to-AWS-s3)
 6. [Credits](#Credits)
     1. [Media](#Media)
     2. [Code](#Code)
@@ -152,7 +153,7 @@ Tour store app holds all the main pages in which the user will navigate. Such as
 
     <img src="/static/images/readme_images/aboutus.png">
 
-  - The about us section (on the right side) details the experience of the business (in which is fictitious) and display a contact form (on the left side) for users to send any query about the business.
+  - The about us section (on the left side) details the experience of the business (in which is fictitious) and display a contact form (on the right side) for users to send any query about the business.
 
    <img src="/static/images/readme_images/footer.png">
 
@@ -367,7 +368,7 @@ To continue on the process of deployment you should have accounts on the followi
       http://127.0.0.1:8000/admin
       ```
 
-# Deployment to Heroku
+### Deployment to Heroku
 
 To make the deployment of this application to `Heroku` you will need to do the following steps.
 
@@ -428,11 +429,15 @@ To make the deployment of this application to `Heroku` you will need to do the f
 
 14. On your `Heroku` dashboard click on `open app` button and check if the application is running correctly.
 
+### Add static files to AWS s3
+
+1. If there is a need to add your static files to AWS S3 you can follow [this stutorial](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html).
+
 # Credits
 
 ## Media
   - The photos and video used in the project were downloaded from [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/). Platforms that provides no-copyright media and free downloads.
-  
+
 ## Code
   - This application was developed using [StartBootstrap](https://startbootstrap.com/templates/) templates and [snippets](https://startbootstrap.com/snippets/). But during the development good part of the original template and snippets were modified.
   - The 404 page snippet was acquired from [Bootsnipp](https://bootsnipp.com/snippets/).

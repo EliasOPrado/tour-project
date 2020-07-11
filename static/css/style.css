@@ -1,93 +1,89 @@
 /* Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)*/
 
 
-html,body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  /* padding-top: 56px; only use this command when using a normal navbar. <<*/
-  /* removes the x-asis scrolling */
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .alert {
-    position: relative;
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    border: 1px solid transparent;
-    border-radius: .25rem;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: .25rem;
 }
 
 /* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar << */
 .navbar {
-    transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .navbar .nav-link {
-    color: #fff;
+  color: #fff;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
+
 /* To fix BRAND - FLOWER icon color */
-
 .navbar .navbar-brand {
-    /* color: #17a2b8; */
-    color: #fff;
+  color: #fff;
 }
-
 
 /* Change navbar styling on scroll  */
 .navbar.active {
-    background: #fff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.active .nav-link {
-    color: #555;
+  color: #555;
 }
 
 .navbar.active .nav-link:hover,
 .navbar.active .nav-link:focus {
-    color: #555;
-    text-decoration: none;
+  color: #555;
+  text-decoration: none;
 }
 
 .navbar.active .navbar-brand {
-    color: #555;
+  color: #555;
 }
-.btn.btn-info.rounded.py-2.btn-block{
-  margin-top: 25px;
 
+.btn.btn-info.rounded.py-2.btn-block {
+  margin-top: 25px;
 }
 
 /* Bootstrapious above https://bootstrapious.com/p/transparent-navbar << */
 
 .navbar-toggler {
-    padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    border: 1px solid #555;
-    border-radius: .25rem;
-    color: rgba(0,0,0,.5);
-    border-color: rgba(0,0,0,.1);
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border: 1px solid #555;
+  border-radius: .25rem;
+  color: rgba(0, 0, 0, .5);
+  border-color: rgba(0, 0, 0, .1);
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-light .navbar-toggler {
-    color: rgba(0,0,0,.5);
-    border-color: rgba(0,0,0,.1);
+  color: rgba(0, 0, 0, .5);
+  border-color: rgba(0, 0, 0, .1);
 }
 
-.padding.px-4.px-lg-0.bg-light{
+.padding.px-4.px-lg-0.bg-light {
   padding-top: 50px;
 }
 
@@ -95,7 +91,7 @@ html,body {
   padding-top: 60px;
 }
 
-.navbar-brand.brand-style{
+.navbar-brand.brand-style {
   color: #555;
 }
 
@@ -160,12 +156,12 @@ form.header__search {
   padding: 1.25rem;
 }
 
-.col-md-5.card.card-body.card-padding-bottom{
+.col-md-5.card.card-body.card-padding-bottom {
   margin-bottom: 50px;
 }
 
-.card.card-body.card-padding-bottom.comment-margin-bottom{
-    margin-bottom: 50px;
+.card.card-body.card-padding-bottom.comment-margin-bottom {
+  margin-bottom: 50px;
 }
 
 .card.card-style {
@@ -198,13 +194,11 @@ section.py-5.bg-light {
 
 .container.container2 {
   padding: 100px;
-
 }
 
-.dark-grey-text{
-  color:black;
+.dark-grey-text {
+  color: black;
 }
-
 
 /* startbootstrap code below  <<<< */
 header {
@@ -244,27 +238,29 @@ header .overlay {
   width: 100%;
   z-index: 1;
 }
+
 /* testimonial      */
-.img-fluid.alter_img{
+.img-fluid.alter_img {
   max-width: 100%;
   height: 200px;
 }
 
 /* testimonial stars */
 .orange-text .fa-star, .fa-star-half-alt {
-    color: orange;
+  color: orange;
 }
 
 /* skewed container home page */
 .z-depth-1, .card.gradient-card:focus-within .card-image {
-    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
 }
 
 /* testimonial subtitle */
-p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle{
+p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle {
   width: 40%;
 }
+
 .testimonial p {
   width: 70%;
   margin-left: 70px;
@@ -272,27 +268,28 @@ p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle{
 
 .row.skew1 {
   transform-origin: left top;
-    transform: skewY(-4deg);
-    z-index: -2;
-    margin-top: 100px;
-    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+  transform: skewY(-4deg);
+  z-index: -2;
+  margin-top: 100px;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 }
+
 .testimonial.skew2.container-fluid {
   transform-origin: left top;
-transform: skewY(4deg);
-padding-bottom: 700px;
-width: 100%;
-height: 200px;
+  transform: skewY(4deg);
+  padding-bottom: 700px;
+  width: 100%;
+  height: 200px;
 }
 
 h1.font-weight-bold.testimonials {
-  margin-bottom: 3rem!important;
+  margin-bottom: 3rem !important;
 }
 
- textarea.form-control {
-    height: 5rem;
-    /* changes resize to scroll */
-    resize: none;
+textarea.form-control {
+  height: 5rem;
+  /* changes resize to scroll */
+  resize: none;
 }
 
 /* register and login cards  */
@@ -307,54 +304,54 @@ h1.font-weight-bold.testimonials {
 }
 
 .embed-responsive {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 294px;
-    padding: 0;
-    overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 294px;
+  padding: 0;
+  overflow: hidden;
 }
+
 /* startbootstrap code abve  <<<<  */
-
-.pagination > li > a
-{
-    background-color: white;
-    color: #555;
-    border: 1px solid #17a2b8;;
+.pagination>li>a {
+  background-color: white;
+  color: #555;
+  border: 1px solid #17a2b8;
+  ;
 }
 
-.pagination > li > a:focus,
-.pagination > li > a:hover,
-.pagination > li > span:focus,
-.pagination > li > span:hover {
-    color: #17a2b8;
-    background-color: #eee;
-    border-color: #ddd;
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+  color: #17a2b8;
+  background-color: #eee;
+  border-color: #ddd;
 }
 
-.pagination > .active > a {
-    color: white;
-    background-color: #17a2b8;
-    border: solid 1px #17a2b8;
+.pagination>.active>a {
+  color: white;
+  background-color: #17a2b8;
+  border: solid 1px #17a2b8;
 }
 
-.pagination > .active > a:hover {
-    background-color: #555;
-    border: solid 1px #17a2b8;
+.pagination>.active>a:hover {
+  background-color: #555;
+  border: solid 1px #17a2b8;
 }
 
 .page-item.active .page-link {
-    z-index: 3;
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+  z-index: 3;
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }
 
-.footer-color{
+.footer-color {
   background-color: #45526e !important;
 }
 
-.page-footer{
+.page-footer {
   color: #fff;
 }
 
@@ -371,6 +368,7 @@ h1.font-weight-bold.testimonials {
     }
 }
 
+/* to not display four destination on home page  */
 div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
   display: none;
 }
@@ -400,7 +398,6 @@ and (pointer: coarse)  {
     left: 0;
     height: 100%;
     width: 100%;
-
     z-index: 1;
   }
 
@@ -535,15 +532,16 @@ and (orientation : landscape) {
 /* remove testimonial when streching in and out */
 @media only screen
 and (min-device-width : 737px)
-and (max-device-width : 767px){
+and (max-device-width : 767px) {
   .row.bg-light.skew1 {
     display: none;
   }
+
   .col-md-5.card.card-body.card-padding-bottom {
     margin-bottom: 50px;
     margin-left: 30px;
     margin-right: 30px;
-}
+  }
 }
 
 /*  potrait */
@@ -587,6 +585,7 @@ and (orientation : portrait) {
     padding: 30px;
     width: 500px;
   }
+
   .row.skew1 {
     transform-origin: left top;
       transform: skewY(-4deg);
@@ -614,11 +613,12 @@ and (orientation : landscape) {
     padding: 30px;
     width: 500px;
   }
+
   .container.container2 {
     padding-right: 0;
     padding-left: 0;
     padding-top: 60px;
-}
+  }
 }
 
 /*  pro potrait */
@@ -628,43 +628,48 @@ and (max-device-width: 1366px)
 and (-webkit-min-device-pixel-ratio: 1.5)
 and (orientation: portrait) {
     header {
-      background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat9.png") white no-repeat center scroll;
-      position: relative;
-    }
-    .carousel-caption.d-md-block h1 {
-        padding-bottom: 430px;
-    }
+    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat9.png") white no-repeat center scroll;
+    position: relative;
+  }
 
-    /* to avoid video appear in this media query*/
-    header video {
-      display: none;
-    }
+  .carousel-caption.d-md-block h1 {
+    padding-bottom: 430px;
+  }
 
-    /* about us */
+  /* to avoid video appear in this media query*/
+  header video {
+    display: none;
+  }
+
+  /* about us */
   .container.container2 {
-      padding: 0;
-      padding-top: 70px;
+    padding: 0;
+    padding-top: 70px;
   }
 
   /* form */
   .col-md-5.card.card-body.card-padding-bottom {
-      margin-bottom: 50px;
-      height: 500px;
+    margin-bottom: 50px;
+    height: 500px;
   }
+
   .card.card-style.login-style, .card.card-style2.register-style {
-      margin-top: 300px;
-      margin-bottom: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 30px;
-      width: 500px;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 500px;
   }
+
+  /* to not display four destination on home page  */
   div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
     display: none;
   }
+
   .col-md-6.py-5 {
     margin-top: 0;
-}
+  }
 }
 
 /*  pro landscape */
@@ -684,6 +689,7 @@ and (orientation: portrait) {
   header video {
     display: none;
   }
+  /* to not display four destination on home page  */
   div#this1.col-lg-4.col-sm-6.portfolio-item.aos-init.aos-animate {
     display: none;
   }
@@ -740,23 +746,12 @@ and (orientation: portrait) {
   }
  }
 
-/* add retreat8 image to avoid the header on homescreen breaks when streaching
-loading other image instead and leaving with white space around it.
-Not necessary since there are the video already and there'snt touch screen on this size*/
-/* @media (min-width: 1367px)
-and (max-device-width: 1999px) {
-  header {
-    background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
-    position: relative;
-  }
-} */
 /* wide screen */
  @media (min-width: 2000px) {
   header {
     background: url("https://tour-project.s3-eu-west-1.amazonaws.com/static/images/retreat8.png") white no-repeat center scroll;
     position: relative;
   }
-
 
   .row.row2 {
     padding: 30px;

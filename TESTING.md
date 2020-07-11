@@ -25,6 +25,8 @@
     2. [Tablet](#Tablet)
     3. [Laptop](#Laptop)
     4. [Screen](#Screen)
+8. [Bugs found and solved](#Bugs-found-and-solved)
+9. [Bugs or errors that need to be fixed](#Bugs-or-errors-that-need-to-be-fixed)
 8. [Validation services](#Validation-services)
 
 
@@ -40,9 +42,8 @@ Instead you should configurate the local database to run the tests.
 The configuration for this project is to run with two types of databases Postgres and Sqlite3 (local):
 
 ```
-# Comment the first db to run the test
-# Production db
 
+# Production db
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -176,3 +177,12 @@ For the web testing I used Chrome dev tools and Safari web tools to find bugs, e
   - [W3C Markup validation](https://validator.w3.org/)
   - [W3C CSS validation](https://jigsaw.w3.org/css-validator/)
   - [JS Hint](https://jshint.com/)
+
+## Bugs found and solved
+  - There had a bug on checkout where I could not see what it was. The error was on loading the stripe publishable key twice. Thus, I removed on from checkout template and it worked.
+  - The checkout wasn't accepting the payments because the `jQuery` link was after the `stripe.js` script.
+  - There had an issue with the header video which wasn't shrinking when applied zoom on it. Thus, I removed this issue with CSS.
+  - The three destinations on the home page were un-responsible on small devices. So, I needed to add another one with a for loop (`|slice:"4"`) in template looping `id="this{{item.id}}"` and remove one on large screens with the usage of media-queries aiming the `#this1` id to be removed.   
+
+## Bugs or errors that need to be fixed
+  - There are an `tour-application.herokuapp.com/:395 Uncaught TypeError: Cannot read property 'style' of null` in the base template.
