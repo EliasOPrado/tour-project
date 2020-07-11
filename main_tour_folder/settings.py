@@ -93,13 +93,12 @@ WSGI_APPLICATION = 'main_tour_folder.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-# Production db
+
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
-    # Development db
     print("Postgres URL not found, using sqlite instead")
     DATABASES = {
         'default': {
@@ -128,10 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-"""
-Added from Code Institute Blog Project,
-to allow user authentication (accounts app)
-"""
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.CaseInsensitiveAuth'
@@ -196,6 +192,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     },
 }
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True

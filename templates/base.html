@@ -22,6 +22,8 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{% static 'font-awesome/css/fontawesome.min.css' %}">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!--Case sensitive: jQuery must be at the top of the stripe.js file -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <!-- Stripe publishable key -->
   {% block head_js %}
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
@@ -144,7 +146,7 @@
   </footer>
   <!-- Footer -->
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
   <!-- Conditional to allow django display the 'active'class instead of JavaScript displaying the links -->
   {% if not message %}
