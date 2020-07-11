@@ -3,6 +3,7 @@ from tour_store.models import Destinations
 
 # Create your models here.
 class Order(models.Model):
+    """ model to be used in contact form"""
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)
@@ -20,6 +21,7 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """ model to be added in admin"""
     order = models.ForeignKey(Order, on_delete=models.CASCADE,)
     destination = models.ForeignKey(Destinations, on_delete=models.CASCADE,)
     quantity = models.IntegerField(blank=False)

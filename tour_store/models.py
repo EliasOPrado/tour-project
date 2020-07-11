@@ -4,6 +4,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Destinations(models.Model):
+    """ model to add destinations to the db """
     author = models.CharField(max_length=200, unique=False)
     tour_title = models.CharField(max_length=250)
     # RichTextUploadingField() is for the WYSIWYG fucntionality
@@ -18,6 +19,7 @@ class Destinations(models.Model):
         return self.tour_title
 
 class Comment(models.Model):
+    """model to accept comments through the comment form"""
     post = models.ForeignKey(Destinations,on_delete=models.CASCADE,related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
@@ -32,6 +34,7 @@ class Comment(models.Model):
         return 'Comment {} by {}'.format(self.comment, self.name)
 
 class Contact(models.Model):
+    """ model for the contact form used on home page """
     name = models.CharField(max_length=80)
     email = models.EmailField()
     subject = models.CharField(max_length=40)

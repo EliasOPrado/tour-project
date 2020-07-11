@@ -3,11 +3,13 @@ from django import forms
 
 #https://djangocentral.com/creating-comments-system-with-django/
 class CommentForm(forms.ModelForm):
+    """model comment form displayed on destinations detail page """
     class Meta:
         model = Comment
         fields = ('name', 'email', 'comment')
 
 class ContactForm(forms.ModelForm):
+    """model contact form displayed on home page """
     class Meta:
         model = Contact
         fields = ('name', 'email', 'subject','message')
@@ -20,4 +22,3 @@ class ContactForm(forms.ModelForm):
             'subject':forms.TextInput(attrs={'class': 'form-control'}),
             'message':forms.Textarea(attrs={'class': 'form-control','height': '5rem'}),
         }
-        

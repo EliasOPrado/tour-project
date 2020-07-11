@@ -6,8 +6,6 @@ from django.contrib.auth.decorators import login_required
 def view_cart(request):
     """A view that renders the cart contents page """
     cart = request.session.get('cart', {})
-    # if trying to open cart page this view without a product in cart
-    # this view will redirect to destination
     if not cart:
         return redirect(reverse('destination'))
     return render(request, 'cart.html')
@@ -17,7 +15,7 @@ def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     #Gets the name='quantity' from input form
     quantity = int(request.POST.get('quantity'))
-    
+
     cart = request.session.get('cart', {})
     if id in cart:
         cart[id] = int(cart[id]) + quantity
@@ -31,9 +29,9 @@ def add_to_cart(request, id):
 def adjust_cart(request, id):
     """
     Adjust the quantity of the specified product to the specified
-    amount
+    amount.
 
-    url for this function should be <str:id> not <int:id>
+    Url for this function should be <str:id> not <int:id>
     - otherwise you need to add str() method for each dict representation.
     """
     cart = request.session.get('cart', {})

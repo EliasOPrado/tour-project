@@ -18,7 +18,6 @@ def main_view(request):
     if request.method == 'POST':
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
-
             # Create contact object but don't save to database yet
             new_contact = contact_form.save(commit=False)
             # Assign the current post to the comment
@@ -27,18 +26,19 @@ def main_view(request):
             new_contact.save()
             messages.success(request, 'Our team will contact you as soon as possible.')
             return redirect(reverse('index'))
+    elif request.user.is_authenticated:
+        # Added username and email as default for contact form if user is authenticated
+        contact_form = ContactForm(initial={'name':request.user.username, 'email': request.user.email})
     else:
+        # Leave empty contact form for Anonymous User
         contact_form = ContactForm()
 
     # show_destinations is to loop destinations in the main page.
     return render(request, 'main.html', {
         'show_destinations': show_destinations,
-
         'new_contact': new_contact,
         'contact_form': contact_form
     })
-
-    #make multiples carousels with different slides <<<<
 
 def destinations(request):
     """
@@ -78,14 +78,17 @@ def destination_details(request, id):
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
             # Assign the current post to the comment
             new_comment.post = details
             # Save the comment to the database
             new_comment.save()
+    elif request.user.is_authenticated:
+        # Added username and email as default for comment form if user is authenticated
+        comment_form = CommentForm(initial={'name':request.user.username, 'email': request.user.email})
     else:
+        # Leave empty comment form for Anonymous User
         comment_form = CommentForm()
 
     return render(request, 'details.html', {'details':details,

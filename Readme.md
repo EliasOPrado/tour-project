@@ -432,9 +432,11 @@ To make the deployment of this application to `Heroku` you will need to do the f
 
 ## Media
   - The photos and video used in the project were downloaded from [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/). Platforms that provides no-copyright media and free downloads.
+  
 ## Code
   - This application was developed using [StartBootstrap](https://startbootstrap.com/templates/) templates and [snippets](https://startbootstrap.com/snippets/). But during the development good part of the original template and snippets were modified.
   - The 404 page snippet was acquired from [Bootsnipp](https://bootsnipp.com/snippets/).
+  - The transparent navigation bar was acquired from [Bootstrapious](https://bootstrapious.com/p/transparent-navbar)
   - The `accounts`, `cart` and `checkout` apps were recycled from the [Code Institute](https://github.com/Code-Institute-Org) lessons but modified to fit with the project purpose.
 
 ## Acknowledgment

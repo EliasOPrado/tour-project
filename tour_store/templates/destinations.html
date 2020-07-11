@@ -3,42 +3,38 @@
 {% block content %}
 {% include 'transparent-navbar.html' %}
 {% include 'header.html' %}
-<div class="container" >
+
+<div class="container">
   <hr><br>
-  <!--  -->
   {% for destination in destinations %}
   <div class="row " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
     <div class="col-md-7">
       <a href="{% url 'destinationDetails' id=destination.id %}">
-        <img class=" embed-responsive img-fluid rounded mb-3 mb-md-0 shadow-sm" src="{{ destination.image.url}}"  alt="">
+        <img class=" embed-responsive img-fluid rounded mb-3 mb-md-0 shadow-sm" src="{{ destination.image.url}}" alt="">
       </a>
     </div>
     <div class="col-md-5 ">
       <h3>{{destination.tour_title}}</h3>
       <h6>{{destination.location}}</h6>
-      <p >{{destination.description|safe|slice:":150"}}...</p>
-
-      <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{destination.booking_start_date}} -  {{destination.booking_end_date}}</strong></p>
-
+      <p>{{destination.description|safe|slice:":150"}}...</p>
+      <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{destination.booking_start_date}} - {{destination.booking_end_date}}</strong></p>
       <h3>€ {{destination.price}}</h3>
       <a class="btn btn-info rounded py-2 btn-block" href="{% url 'destinationDetails' id=destination.id %}"> View Retreat
       </a>
     </div>
   </div>
-    <hr>
-    <!-- empty tag is a result message if there's no destinaions or the search dont match any query -->
-    {% empty %}
-    <div class="row justify-content-center mb-4  ">
+  <hr>
+  <!-- empty tag is a result message if there's no destinaions or the search dont match any query -->
+  {% empty %}
+  <div class="row justify-content-center mb-4  ">
     <h1>Sorry, we dont have this destination yet!</h1>
-    </div>
+  </div>
   {% endfor %}
-
   <!-- Pagination -->
   <!-- The function of this pagination is at tour_store.views.destinations -->
   <nav aria-label="Page navigation example">
     {% if destinations.has_other_pages %}
     <ul class="mt-4 mb-4 pagination justify-content-center">
-
       <!-- conditional to display whether the previows (<<) button shold be activated or deactivated  -->
       {% if destinations.has_previous %}
       <li class="page-item">
@@ -48,12 +44,11 @@
       </li>
       {% else %}
       <li class="page-item disabled">
-        <a class="page-link" href=""aria-label="Previous">
-        <span>&laquo;</span>
+        <a class="page-link" href="" aria-label="Previous">
+          <span>&laquo;</span>
         </a>
       </li>
       {% endif %}
-
       <!-- Loop pagination displays the pagination numbers and the actived current page (Bootstrap 4.4)-->
       {% for page in destinations.paginator.page_range %}
       {% if destinations.number == page %}
@@ -66,7 +61,6 @@
       <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
       {% endif %}
       {% endfor %}
-
       <!-- conditional to display whether the next (>>) button should be activated or deactivated   -->
       {% if destinations.has_next %}
       <li class="page-item">
@@ -76,16 +70,15 @@
       </li>
       {% else %}
       <li class="page-item disabled">
-        <a class="page-link" href=""aria-label="Next">
-        <span>&raquo;</span>
+        <a class="page-link" href="" aria-label="Next">
+          <span>&raquo;</span>
         </a>
       </li>
       {% endif %}
     </ul>
     {% endif %}
   </nav>
-<!--/ Pagination -->
-
+  <!--/ Pagination -->
 </div>
 
 {% endblock content %}

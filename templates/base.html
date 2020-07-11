@@ -12,16 +12,17 @@
   <link rel="icon" href="{% static 'images/favicon.png'%}">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{% static 'font-awesome/css/fontawesome.min.css' %}">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Stripe publishable key -->
   {% block head_js %}
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <script type="text/javascript">
@@ -31,14 +32,12 @@
   </script>
   <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
   {% endblock head_js%}
-
 </head>
-<body>
 
+<body>
   {% block content %}
 
   {% endblock content %}
-
   <footer class="page-footer font-small footer-color pt-4">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -51,7 +50,7 @@
             With Tour Project you will be cared from the purchase of your tickets to your dream place until your entire trip.
             <br>At Tour Project, we have the best sabbatical trips you are always dreaming, with affordable prices but with high standards.
             With us, you will be on good hands.
-            </p>
+          </p>
         </div>
         <!-- Grid column -->
         <hr class="w-100 clearfix d-md-none">
@@ -61,15 +60,6 @@
           <p>
             <a class="text-white" href="{% url 'destination' %}">Retreats</a>
           </p>
-          <!-- <p>
-            <a href="#!">MDWordPress</a>
-          </p>
-          <p>
-            <a href="#!">BrandFlow</a>
-          </p>
-          <p>
-            <a href="#!">Bootstrap Angular</a>
-          </p> -->
         </div>
         <!-- Grid column -->
         <hr class="w-100 clearfix d-md-none">
@@ -78,21 +68,19 @@
           <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
           {% if user.is_authenticated %}
           <p>
-            <a class="text-white" href="{% url 'register' %}">Register</a>
-          </p>
-          <p>
             <a class="text-white" href="{% url 'logout' %}">Logout</a>
           </p>
           {% else %}
+          <p>
+            <a class="text-white" href="{% url 'register' %}">Register</a>
+          </p>
           <p>
             <a class="text-white" href="{% url 'login' %}">Login</a>
           </p>
           {% endif %}
         </div>
-
         <!-- Grid column -->
         <hr class="w-100 clearfix d-md-none">
-
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
@@ -106,31 +94,22 @@
             <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
-
       </div>
       <!-- Footer links -->
-
       <hr>
-
       <!-- Grid row -->
       <div class="row d-flex align-items-center">
-
         <!-- Grid column -->
         <div class="col-md-7 col-lg-8">
-
           <!--Copyright-->
           <p class="text-center text-md-left text-white">© 2020 Copyright:
             <a href="">
               <strong class="text-light"> Tour Project</strong>
             </a>
           </p>
-
         </div>
         <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-5 col-lg-4 ml-lg-0">
-
           <!-- Social buttons -->
           <div class="text-center text-md-right">
             <ul class="list-unstyled list-inline">
@@ -145,7 +124,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.instagram.com/"class="btn-floating btn-sm rgba-white-slight mx-1 text-light" target="_blank">
+                <a href="https://www.instagram.com/" class="btn-floating btn-sm rgba-white-slight mx-1 text-light" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
@@ -156,20 +135,16 @@
               </li>
             </ul>
           </div>
-
         </div>
         <!-- Grid column -->
-
       </div>
       <!-- Grid row -->
-
     </div>
     <!-- Footer Links -->
-
   </footer>
   <!-- Footer -->
 
-
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
   <!-- Conditional to allow django display the 'active'class instead of JavaScript displaying the links -->
   {% if not message %}
@@ -178,20 +153,18 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
   <!-- AOS -->
-
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-  // for AOS effects
-AOS.init();
-// for message time on screen
-// will delete image
-var delete_message = document.getElementById("message_container");
+    // for AOS effects
+    AOS.init();
+    // for message time on screen
+    // will delete image
+    var delete_message = document.getElementById("message_container");
 
-setTimeout(function(){
-delete_message.style.display = "none";
-}, 3000);
+    setTimeout(function() {
+      delete_message.style.display = "none";
+    }, 3000);
   </script>
 </body>
 

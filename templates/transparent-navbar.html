@@ -1,28 +1,22 @@
 
 <!-- Added conditional to alert message be displayed below navbar and display active class.
- As there is another conditional around the style.js link on base.html (line 274) to deactivate the script
+ As there is another conditional around the style.js link on base.html (line 147) to deactivate the script
  - when message is displayed adding the .active class with django. -->
 <nav class="navbar  navbar-expand-lg {%if not messages %} fixed-top {%else%}fixed-top active{%endif%} py-3">
   <div class="container">
-
     <a class="navbar-brand" href="{% url 'index' %}"><i class="fas fa-spa fa-lg" ></i> Tour Project</a>
-
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-
         <li class="align-self-start d-none d-md-block  search">
-
         </li>
         <li class="nav-item">
           <!-- FOR TOUR_STORE APP -->
           <a class="nav-link" href="{% url 'destination' %}">Retreats</a>
         </li>
         {% if user.is_authenticated %}
-
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
@@ -31,8 +25,6 @@
           <a class="nav-link" href="{% url 'register' %}">Register</a>
         </li>
         <li class="nav-item">
-          <!-- FOR AUTHENTICATION APP -->
-          <!-- dont forget to add if/else based on session -->
           <a class="nav-link" href="{% url 'login' %}">Login</a>
         </li>
         {% endif %}
@@ -42,23 +34,17 @@
           <!-- the view cart button will log you into the cart.html url -->
           <a class="nav-link" href="{% url 'view_cart' %}">
             <i class="fas fa-cart-arrow-down"></i>
-
             <label class="badge badge-warning">{{ destination_count }}</label>
           </a>
         </li>
         {% else %}
         <li class="nav-item" disabled>
-          <!-- the view cart button will log you into the cart.html url -->
+          <!-- the view cart button will log user into the cart.html url -->
           <a class="nav-link"disabled>
             <i class="fas fa-shopping-cart"></i>
           </a>
         </li>
         {% endif %}
-        <!-- THIS IS THE ORIGINAL CART LIST -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="services.html">Cart</a>
-        </li> -->
-
       </ul>
     </div>
   </div>
