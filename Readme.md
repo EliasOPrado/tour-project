@@ -431,7 +431,7 @@ To make the deployment of this application to `Heroku` you will need to do the f
 
 ### Add static files to AWS s3
 
-1. If there is a need to add your static files to AWS S3 you can follow [this stutorial](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html).
+1. If there is a need to add your static files to AWS S3 you can follow [this stutorial](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html). 
 
 # Credits
 

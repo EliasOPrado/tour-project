@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 """
 Set debug = True when developing and False to deploy.
 """
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
 
@@ -153,7 +153,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-
 """ AWS configuration """
 AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -196,8 +195,6 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     },
 }
-
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
