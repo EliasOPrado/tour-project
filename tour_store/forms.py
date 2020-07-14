@@ -1,7 +1,6 @@
 from .models import Comment, Contact
 from django import forms
 
-#https://djangocentral.com/creating-comments-system-with-django/
 class CommentForm(forms.ModelForm):
     """model comment form displayed on destinations detail page """
     class Meta:

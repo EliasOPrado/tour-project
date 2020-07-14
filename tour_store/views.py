@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect
 from .forms import CommentForm, ContactForm
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -84,6 +85,9 @@ def destination_details(request, id):
             new_comment.post = details
             # Save the comment to the database
             new_comment.save()
+            messages.success(request, 'Your comment is awaiting moderation.')
+            # redirect user to the same page after submit a comment
+            return redirect(reverse('destinationDetails', args=[details.id]))
     elif request.user.is_authenticated:
         # Added username and email as default for comment form if user is authenticated
         comment_form = CommentForm(initial={'name':request.user.username, 'email': request.user.email})
