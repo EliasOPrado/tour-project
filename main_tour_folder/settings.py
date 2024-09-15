@@ -33,7 +33,7 @@ Set debug = True when developing and False to deploy.
 """
 DEBUG = True
 
-ALLOWED_HOSTS = ['tour-application.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0']
 
 
 # Application definition
