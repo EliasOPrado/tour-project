@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include, re_path
 from tour_store import views
@@ -25,15 +26,15 @@ admin.site.site_title = "Tour Project admin"
 admin.site.index_title = "Tour Project admin"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.main_view, name="index" ),
-    #Include tour_store apps
-    path('accounts/', include('accounts.urls')), #account reset url
-    path('store/', include("tour_store.urls")),
-    path('cart/', include("cart.urls")),
-    path('search/', include("search.urls")),
-    path('chekout/', include("checkout.urls")),
-    re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    path("admin/", admin.site.urls),
+    path("", views.main_view, name="index"),
+    # Include tour_store apps
+    path("accounts/", include("accounts.urls")),  # account reset url
+    path("store/", include("tour_store.urls")),
+    path("cart/", include("cart.urls")),
+    path("search/", include("search.urls")),
+    path("chekout/", include("checkout.urls")),
+    re_path(r"^ckeditor/", include("ckeditor_uploader.urls")),
 ]
 
 if settings.DEBUG:
