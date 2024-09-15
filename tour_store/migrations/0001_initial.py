@@ -7,22 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='tour_destinations',
+            name="tour_destinations",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('author', models.CharField(max_length=200, unique=True)),
-                ('tour_title', models.CharField(max_length=250)),
-                ('description', models.TextField(max_length='')),
-                ('image', models.ImageField(blank=True, upload_to='product')),
-                ('location', models.CharField(max_length=250)),
-                ('booking_start_date', models.DateField()),
-                ('booking_end_date', models.DateField()),
-                ('price', models.DecimalField(decimal_places=2, max_digits=6)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("author", models.CharField(max_length=200, unique=True)),
+                ("tour_title", models.CharField(max_length=250)),
+                ("description", models.TextField(max_length="")),
+                ("image", models.ImageField(blank=True, upload_to="product")),
+                ("location", models.CharField(max_length=250)),
+                ("booking_start_date", models.DateField()),
+                ("booking_end_date", models.DateField()),
+                ("price", models.DecimalField(decimal_places=2, max_digits=6)),
             ],
         ),
     ]

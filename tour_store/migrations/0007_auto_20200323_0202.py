@@ -6,13 +6,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tour_store', '0006_comment'),
+        ("tour_store", "0006_comment"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='comment',
-            old_name='body',
-            new_name='comment',
+            model_name="comment",
+            old_name="body",
+            new_name="comment",
         ),
     ]
