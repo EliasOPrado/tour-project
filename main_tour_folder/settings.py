@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 """
 Set debug = True when developing and False to deploy.
 """
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0"]
 
