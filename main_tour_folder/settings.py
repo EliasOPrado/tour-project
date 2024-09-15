@@ -159,12 +159,13 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_LOCATION = 'static'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage' #for deployment
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 """ ADD ENV TO AVOID SHOWING THE REAL KEYS """
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
