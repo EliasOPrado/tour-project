@@ -10,7 +10,7 @@
   <div class="row " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
     <div class="col-md-7">
       <a href="{% url 'destinationDetails' id=destination.id %}">
-        <img class=" embed-responsive img-fluid rounded mb-3 mb-md-0 shadow-sm" src="{{ destination.image.url}}" alt="">
+        <img class=" embed-responsive img-fluid rounded mb-3 mb-md-0 shadow-sm" src="{{ destination.image.path}}" alt="">
       </a>
     </div>
     <div class="col-md-5 ">

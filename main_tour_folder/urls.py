@@ -20,6 +20,7 @@ from tour_store import views
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
 
 admin.site.site_header = "Tour Project admin"
 admin.site.site_title = "Tour Project admin"
@@ -35,6 +36,8 @@ urlpatterns = [
     path("search/", include("search.urls")),
     path("chekout/", include("checkout.urls")),
     re_path(r"^ckeditor/", include("ckeditor_uploader.urls")),
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
 
 if settings.DEBUG:

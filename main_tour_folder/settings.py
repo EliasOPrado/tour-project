@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 """
 Set debug = True when developing and False to deploy.
 """
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["tour-project-xszt.onrender.com", "127.0.0.1", "localhost", "0.0.0.0"]
 
@@ -56,8 +56,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -151,7 +151,7 @@ USE_TZ = True
 
 """ Main  files config """
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(PROJECT_ROOT, "staticfiles")
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 MEDIA_URL = "/media/"
