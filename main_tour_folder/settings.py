@@ -33,7 +33,7 @@ Set debug = True when developing and False to deploy.
 """
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://tour-project-xszt.onrender.com/", "127.0.0.1", "localhost", "0.0.0.0"]
+ALLOWED_HOSTS = ["tour-project-xszt.onrender.com", "127.0.0.1", "localhost", "0.0.0.0"]
 
 
 # Application definition
