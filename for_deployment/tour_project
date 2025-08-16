@@ -1,0 +1,15 @@
+# /etc/nginx/sites-available/tour_project                                                                      
+server {
+    listen 80;
+    server_name server_domain_or_IP;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/elias-prado/software_projects/tour_project;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
