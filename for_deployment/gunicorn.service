@@ -1,0 +1,20 @@
+# /etc/systemd/system/gunicorn.service *                                                 
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=elias-prado
+Group=www-data
+WorkingDirectory=/home/elias-prado/software_projects/tour_project
+ExecStart=/home/elias-prado/software_projects/tour_project/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          main_tour_folder.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
