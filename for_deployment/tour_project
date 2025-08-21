@@ -1,21 +1,26 @@
 # /etc/nginx/sites-available/tour_project                                                                      
 server {
     listen 80;
-    server_name <your_server_domain_or_IP>;
+    server_name localhost;
 
-    location = /favicon.ico { access_log off; log_not_found off; }
-    location /static/ {
-        alias /home/elias-prado/software_projects/tour_project/static;
+    # Django app via Gunicorn socket
+    location / {
+        proxy_pass http://unix:/run/gunicorn.sock;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 
+    # Static files
+    location /static/ {
+        alias /home/elias-prado/software_projects/tour_project/main_tour_folder/staticfiles/;
+    }
+
+
+    # Media files
     location /media/ {
         alias /home/elias-prado/software_projects/tour_project/media/;
-    }
-    
-
-    location / {
-        include proxy_params;
-        proxy_pass http://unix:/run/gunicorn.sock;
     }
 }
 
