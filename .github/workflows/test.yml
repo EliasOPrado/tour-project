@@ -1,0 +1,20 @@
+name: Training github actions
+
+on:
+  push:
+    branches:
+      - github-actions-configuration # Troque pelo nome da sua branch (ex: dev, feature/minha-branch)
+  workflow_dispatch: # Mantém a opção de rodar manualmente se quiser
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      # First step
+      - name: First test
+        run: echo "Hello World"
+
+      # Second step
+      - name: Second test
+        run: echo "Done, Goodbye World"
