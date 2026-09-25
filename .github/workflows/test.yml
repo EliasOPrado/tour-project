@@ -1,14 +1,17 @@
 name: Training github actions
-on: workflow_dispatch
+
+on:
+  workflow_dispatch:
+
 jobs:
   first-job:
     runs-on: ubuntu-latest
-    steps:
-    
-        # First step
-      - name: First test
-        echo: "Hello World"
 
-        # Second step
+    steps:
+      # First step
+      - name: First test
+        run: echo "Hello World"
+
+      # Second step
       - name: Second test
-        echo: "Done, Goodbye World"
+        run: echo "Done, Goodbye World"
