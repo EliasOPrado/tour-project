@@ -1,21 +1,30 @@
-name: Training github actions
+name: Django Tests
 
 on:
   push:
     branches:
-        - master
-        - github-actions-configuration # Troque pelo nome da sua branch (ex: dev, feature/minha-branch)
-  workflow_dispatch: # Mantém a opção de rodar manualmente se quiser
+      - main
+      - develop
+
+  pull_request:
+    branches:
+      - main
+      - develop
 
 jobs:
-  first-job:
+  test:
+    name: Build and Test
     runs-on: ubuntu-latest
 
     steps:
-      # First step
-      - name: First test
-        run: echo "Hello World"
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # Second step
-      - name: Second test
-        run: echo "Done, Goodbye World"
+      - name: Build Docker image
+        run: docker build -t django-test .
+
+      - name: Run Django tests
+        run: |
+          docker run --rm \\
+            django-test \\
+            python manage.py test --verbosity=2
