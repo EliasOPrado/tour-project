@@ -2,7 +2,7 @@ from django.test import TestCase
 from tour_store.models import Destinations, Comment, Contact
 from django.utils import timezone
 import datetime
-from mock import patch
+from unittest.mock import patch
 
 
 class TestModels(TestCase):
@@ -19,13 +19,13 @@ class TestModels(TestCase):
             image="image.png",
         )
         destination.save()
-        self.assertEquals(destination.tour_title, "test1")
-        self.assertEquals(destination.booking_start_date, "2021-05-30")
-        self.assertEquals(destination.booking_end_date, "2022-05-30")
-        self.assertEquals(destination.price, 2000)
-        self.assertEquals(destination.description, "test1")
-        self.assertEquals(destination.author, "test1")
-        self.assertEquals(destination.image, "image.png")
+        self.assertEqual(destination.tour_title, "test1")
+        self.assertEqual(destination.booking_start_date, "2021-05-30")
+        self.assertEqual(destination.booking_end_date, "2022-05-30")
+        self.assertEqual(destination.price, 2000)
+        self.assertEqual(destination.description, "test1")
+        self.assertEqual(destination.author, "test1")
+        self.assertEqual(destination.image, "image.png")
 
     def test_comment_model(self):
         # test if Comment model is related to Destinations model
@@ -49,7 +49,7 @@ class TestModels(TestCase):
             active=False,
         )
         comment.save()
-        self.assertEquals(comment.post, destination)
+        self.assertEqual(comment.post, destination)
 
     def test_cotact_model(self):
         # Add mock and patch to match both datetime.
@@ -66,9 +66,9 @@ class TestModels(TestCase):
                 active=False,
             )
             contact.save()
-            self.assertEquals(contact.name, "neil")
-            self.assertEquals(contact.email, "neil@email.com")
-            self.assertEquals(contact.subject, "this is a test.")
-            self.assertEquals(contact.message, "test")
-            self.assertEquals(contact.created_on, timezone.now())
-            self.assertEquals(contact.active, False)
+            self.assertEqual(contact.name, "neil")
+            self.assertEqual(contact.email, "neil@email.com")
+            self.assertEqual(contact.subject, "this is a test.")
+            self.assertEqual(contact.message, "test")
+            self.assertEqual(contact.created_on, timezone.now())
+            self.assertEqual(contact.active, False)

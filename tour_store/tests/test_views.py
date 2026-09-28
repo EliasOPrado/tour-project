@@ -8,14 +8,14 @@ class TestViews(TestCase):
     # test_main_view_GET test is displayed on the main url in main_tour_folder
     def test_home_page(self):
         page = self.client.get("/")
-        self.assertEquals(page.status_code, 200)
+        self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "main.html")
 
     def test_destinations_GET(self):
         client = Client()
         response = client.get(reverse("destination"))
 
-        self.assertEquals(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "destinations.html")
 
     def test_detail_GET(self):
@@ -38,5 +38,5 @@ class TestViews(TestCase):
         # response = client.get("/destination-details/{0}".format(id))
         response = client.get(reverse("destinationDetails", args=[id]))
 
-        self.assertEquals(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "details.html")

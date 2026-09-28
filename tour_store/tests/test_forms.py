@@ -20,7 +20,7 @@ class TestForms(TestCase):
         # test if the form sends an error messaage for each field
         form = CommentForm(data={})
         self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors), 3)
+        self.assertEqual(len(form.errors), 3)
 
     def test_contact_form(self):
         # test if the form is valid
@@ -39,4 +39,4 @@ class TestForms(TestCase):
         # test if the form sends an error messaage for each field
         form = ContactForm(data={})
         self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors), 4)
+        self.assertEqual(len(form.errors), 4)

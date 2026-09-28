@@ -1,0 +1,29 @@
+name: Django Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - github-actions-configuration
+
+  pull_request:
+    branches:
+      - main
+      - develop
+      - github-actions-configuration
+
+jobs:
+  test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t django-test .
+
+      - name: Run Django tests
+        run: docker run --rm -e SECRET_KEY=ci-test-secret django-test python manage.py test --verbosity=2

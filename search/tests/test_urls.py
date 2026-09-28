@@ -10,4 +10,4 @@ class TestUrls(TestCase):
 
         url = reverse("search")
         print(resolve(url))
-        self.assertEquals(resolve(url).func, do_search)
+        self.assertEqual(resolve(url).func, do_search)
