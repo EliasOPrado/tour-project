@@ -27,7 +27,7 @@ class TestForms(TestCase):
             }
         )
         self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors), 1)
+        self.assertEqual(len(form.errors), 1)
 
     def test_order_form_form(self):
         # test if the form is valid
@@ -62,4 +62,4 @@ class TestForms(TestCase):
             }
         )
         self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors), 6)
+        self.assertEqual(len(form.errors), 6)

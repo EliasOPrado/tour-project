@@ -26,4 +26,4 @@ jobs:
         run: docker build -t django-test .
 
       - name: Run Django tests
-        run: docker run --rm django-test python manage.py test --verbosity=2
+        run: docker run --rm -e SECRET_KEY=ci-test-secret django-test python manage.py test --verbosity=2

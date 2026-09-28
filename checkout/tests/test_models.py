@@ -25,14 +25,14 @@ class TestModels(TestCase):
                 date=timezone.now(),
             )
             order.save()
-            self.assertEquals(order.full_name, "John test testing")
-            self.assertEquals(order.phone_number, "0987654321")
-            self.assertEquals(order.country, "Ireland")
-            self.assertEquals(order.postcode, "0o9i8u7y6t5r")
-            self.assertEquals(order.town_or_city, "Dublin")
-            self.assertEquals(order.street_address1, "4 Leinster avenue")
-            self.assertEquals(order.county, "Dublin 99")
-            self.assertEquals(order.date, timezone.now())
+            self.assertEqual(order.full_name, "John test testing")
+            self.assertEqual(order.phone_number, "0987654321")
+            self.assertEqual(order.country, "Ireland")
+            self.assertEqual(order.postcode, "0o9i8u7y6t5r")
+            self.assertEqual(order.town_or_city, "Dublin")
+            self.assertEqual(order.street_address1, "4 Leinster avenue")
+            self.assertEqual(order.county, "Dublin 99")
+            self.assertEqual(order.date, timezone.now())
 
     def test_order_line_item_model(self):
         with patch.object(
@@ -64,7 +64,7 @@ class TestModels(TestCase):
                 order=order, destination=destination, quantity=1
             )
             # test if OrderLineItem.order field is related to order model
-            self.assertEquals(order_line_item.order, order)
+            self.assertEqual(order_line_item.order, order)
             # test if OrderLineItem.destination field is related to order model
-            self.assertEquals(order_line_item.destination, destination)
-            self.assertEquals(order_line_item.quantity, 1)
+            self.assertEqual(order_line_item.destination, destination)
+            self.assertEqual(order_line_item.quantity, 1)

@@ -10,4 +10,4 @@ class TestUrls(TestCase):
     def test_checkout_url_is_resolved(self):
         # destination url name
         url = reverse("checkout")
-        self.assertEquals(resolve(url).func, checkout)
+        self.assertEqual(resolve(url).func, checkout)
