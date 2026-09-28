@@ -5,11 +5,13 @@ on:
     branches:
       - main
       - develop
+      - github-actions-configuration
 
   pull_request:
     branches:
       - main
       - develop
+      - github-actions-configuration
 
 jobs:
   test:
