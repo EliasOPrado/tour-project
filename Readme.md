@@ -40,8 +40,9 @@ This website is to emulate a touristic retreat webpage that provides for tourist
       - You can find the [TESTING.md](TESTING.md) file here.
 5. [Deployment](#Deployment)
     1. [Instructions](#Instructions)
-    2. [Deployment to Heroku](#Deployment-to-Heroku)
-    3. [Add static files to AWS s3](#Add-static-files-to-AWS-s3)
+  2. [Docker e GitHub Actions](DEPLOYMENT.md)
+  3. [Deployment to Heroku](#Deployment-to-Heroku)
+  4. [Add static files to AWS s3](#Add-static-files-to-AWS-s3)
 6. [Credits](#Credits)
     1. [Media](#Media)
     2. [Code](#Code)
@@ -281,6 +282,8 @@ The testing information can be found in this separated [Testing](TESTING.md) fil
 
 
 # Deployment
+
+O procedimento atual de VPS com Docker e GitHub Actions está no guia [Docker e GitHub Actions](DEPLOYMENT.md). As instruções históricas para Heroku e AWS permanecem abaixo.
 
 For the deployment you will need tool as:
 
