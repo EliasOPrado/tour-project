@@ -10,14 +10,14 @@ class TestUrls(TestCase):
     def test_register_url_is_resolved(self):
         # destination url name
         url = reverse("register")
-        self.assertEquals(resolve(url).func, register)
+        self.assertEqual(resolve(url).func, register)
 
     def test_logout_url_is_resolved(self):
         # destination url name
         url = reverse("logout")
-        self.assertEquals(resolve(url).func, logout)
+        self.assertEqual(resolve(url).func, logout)
 
     def test_login_url_is_resolved(self):
         # destination url name
         url = reverse("login")
-        self.assertEquals(resolve(url).func, login)
+        self.assertEqual(resolve(url).func, login)
