@@ -1,0 +1,12 @@
+services:
+  web:
+    image: ghcr.io/eliasoprado/tour-project:latest
+    container_name: tour-project-app
+    env_file:
+      - .env.production
+    ports:
+      - "127.0.0.1:8009:8000"
+    volumes:
+      - ./data/db.sqlite3:/app/db.sqlite3
+      - ./media:/app/media
+    restart: unless-stopped
