@@ -25,7 +25,7 @@ jobs:
 
   deploy:
     name: Publish image and deploy to VPS
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     needs: test
     runs-on: ubuntu-latest
     permissions:
